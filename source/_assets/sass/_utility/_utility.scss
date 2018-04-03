@@ -1,0 +1,19 @@
+.u-hide-desktop {
+  @include tablet {
+    display: none;
+  }
+}
+.u-hide-mobile {
+  @include mobile {
+    display: none;
+  }
+}
+
+
+.is-size-6-light {
+  font-size: 0.9rem !important;
+}
+
+.has-text-spaced {
+  letter-spacing: 0.1em;
+}

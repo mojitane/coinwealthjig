@@ -1,0 +1,37 @@
+/* ===============
+    BULMA IMPORT,
+     OVERWRITES
+   =============== */
+
+@import "~bulma/sass/utilities/initial-variables";
+@import "~bulma/sass/utilities/functions";
+
+// 2. Set your own initial variables
+$blue: #72d0eb;
+$green: #80ce5e;
+
+$primary: $green;
+$link: $primary;
+$footer-background-color: #232323;
+
+$family-sans-serif: 'Roboto', Tahoma, sans-serif;
+$weight-light: 300;
+$weight-normal: 400;
+$weight-medium: 700;
+$weight-semibold: 700;
+$weight-bold: 700;
+
+$radius: 0;
+
+// $desktop: 900px;
+// $tablet: $desktop;
+$widescreen: 1052px + (2 * $gap);
+$fullhd: $widescreen;
+
+$navbar-item-color: $white;
+$navbar-item-hover-color: $primary;
+$navbar-item-hover-background-color: transparent;
+
+$table-head-cell-border-width: 0;
+
+@import "~bulma/bulma";

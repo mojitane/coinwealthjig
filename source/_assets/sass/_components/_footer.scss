@@ -1,0 +1,27 @@
+.cw-footer__nav {
+  margin-bottom: 2rem;
+  li {
+    padding-bottom: 1rem;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+  @include tablet {
+    li {
+      display: inline;
+      padding-bottom: 0;
+      &:after {
+        content: '|';
+        color: #d4d4d4;
+        padding: 0 1rem;
+      }
+      &:last-child:after {
+        content: '';
+        padding: 0;
+      }
+    }
+  }
+  a {
+    color: #d4d4d4;
+  }
+}

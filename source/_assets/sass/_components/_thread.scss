@@ -1,0 +1,101 @@
+.c-thread__post {
+  padding-bottom: 3rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid $grey-light;
+}
+
+.c-thread__header {
+  margin-bottom: 2rem;
+  > .columns {
+    padding: 0.5rem;
+  }
+  @include tablet {
+    background-color: $white-ter;
+  }
+}
+
+.c-thread__title {
+  margin-bottom: 0.5rem!important;
+  font-size: 1.2rem;
+  @include tablet {
+    font-size: 1.4rem;
+  }
+}
+
+.c-thread__avatar {
+  width: 4rem;
+  margin: 0 auto 1rem;
+  > div > img {
+    border-radius: 999px;
+    border: 1px solid $grey-lighter;
+  }
+}
+
+.c-thread__meta {
+  color: $grey;
+  margin-bottom: 0.5rem;
+  > li {
+    display: inline-block;
+    margin-right: 1rem;
+  }
+  .icon {
+    color: $grey-light;
+  }
+}
+
+.c-thread__datetime {
+  color: $grey;
+}
+
+.c-thread__source {
+  margin-bottom: 1rem;
+}
+
+// reply
+.c-thread__replies {
+  margin-bottom: 3rem;
+}
+
+.c-thread-reply {
+  margin-bottom: 1.5rem;
+  @include mobile {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid lightgrey;
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+
+.c-thread-reply__avatar {
+  width: 4rem;
+  > div > img {
+    border-radius: 999px;
+    border: 1px solid $grey-lighter;
+  }
+  @include tablet {
+    margin: 0 auto 1rem;
+  }
+}
+
+.c-thread-reply__footer {
+  margin-top: 1rem;
+  li {
+    display: inline;
+    margin-right: 0.5rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  @include touch {
+    .level, .level-left, .level-right {
+      display: block;
+    }
+    .level-item {
+      justify-content: left;
+    }
+    .level-left + .level-right {
+      margin-top: 0.5rem;
+    }
+  }
+}

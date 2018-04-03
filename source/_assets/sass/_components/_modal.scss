@@ -1,0 +1,47 @@
+.cw-modal {
+  .modal-content {
+    max-width: 400px;
+  }
+}
+
+.cw-modal-card {
+  background-color: $white;
+  padding: 6rem 3rem 4rem;
+}
+
+.cw-modal-card__header {
+  margin-bottom: 2rem;
+}
+
+.cw-modal-card__form  {
+  margin-bottom: 2rem;
+}
+
+.cw-modal-card__alert-form {
+  margin-bottom: 1.5rem;
+}
+
+.cw-modal-card__alert-item {
+  justify-content: center;
+  > div {
+    flex-grow: 0!important;
+    padding: 0 0.2rem;
+  }
+}
+
+.cw-modal__select {
+  font-weight: 700;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+  background-color: $white;
+}
+
+// Modal IE Fix
+@media screen and (min-width:769px) {
+  .modal-content, .modal-card {
+      margin: 0;
+  }
+}

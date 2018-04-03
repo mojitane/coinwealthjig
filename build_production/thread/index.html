@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+  </head>
+  <body>
+
+    <nav id="menu" class="cw-side-menu">
+      <header class="cw-side-menu__header has-text-right">
+        <p class="title is-uppercase has-text-primary has-text-spaced is-6">Main menu</p>
+      </header>
+      <div class="cw-side-menu__body">
+        <ul class="cw-side-menu__links has-text-right">
+          <li><a href="#" class="modal-button js-modal-button" data-target="modal-login">Login</a></li>
+          <li><a href="#" class="modal-button js-modal-button" data-target="modal-register">Register</a></li>
+          <!-- <li><a href="index.html">Start preview</a></li>
+          <li><a href="thread.html">Thread preview</a></li> -->
+        </ul>
+      </div>
+    </nav>
+
+    <div id="panel">
+    <div class="c-navbar">
+  <div class="container">
+    <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          <h1 class="title is-uppercase has-text-primary is-4 c-navbar__sitetitle"><span class="has-text-weight-light">Coin</span>wealth</h1>
+        </a>
+        <div class="navbar-burger js-slide-menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="navbar-menu">
+        <div class="navbar-end is-size-6-light">
+          <div class="navbar-item">
+            <div class="c-searchbar">
+              <div class="field">
+                <p class="control has-icons-right">
+                  <input class="input is-small c-searchbar__input" type="text" placeholder="Search">
+                  <span class="icon is-small is-right has-text-primary">
+                    <i class="fas fa-caret-right"></i>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="navbar-item c-navbar__item c-navbar__item--border-right modal-button js-modal-button" data-target="modal-login">Login</a>
+          <a href="#" class="navbar-item c-navbar__item modal-button js-modal-button" data-target="modal-register">Register</a>
+          <a href="#" class="navbar-item o-burger js-slide-menu-toggle-desktop">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+<div class="c-searchbar--mobile u-hide-desktop">
+  <div class="field">
+    <p class="control has-icons-right">
+      <input class="input c-searchbar__input" type="text" placeholder="Search">
+      <span class="icon is-small is-right has-text-primary">
+        <i class="fas fa-caret-right"></i>
+      </span>
+    </p>
+  </div>
+</div>
+<div class="cw-ticker has-text-weight-normal">
+  <div class="container">
+    <ul class="cw-ticker__list">
+      <li class="cw-ticker__item">cryptocurrencies in our universe: <span class="has-text-primary">255</span></li>
+      <li class="cw-ticker__item">total market cap: <span class="has-text-primary">$648B (+5% today)</span></li>
+      <li class="cw-ticker__item">24hr volume: <span class="has-text-primary">$65B</span></li>
+    </ul>
+  </div>
+</div>
+    <div class="modal cw-modal" id="modal-alert">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <div class="cw-modal-card">
+      <div class="cw-modal-card__header">
+        <p class="title has-text-centered is-uppercase has-text-spaced is-5">Create a price alert</p>
+      </div>
+      <div class="cw-modal-card__body has-text-centered">
+        <div class="cw-modal-card__alert-form has-text-spaced">
+          <div class="cw-modal-card__alert-item level">
+            <div class="level-item">
+              Notify me if the
+            </div>
+            <div class="level-item">
+              <select class="cw-modal__select is-uppercase is-size-6 has-text-spaced">
+                <option>volume</option>
+                <option>other</option>
+              </select>
+            </div>
+          </div>
+          <div class="cw-modal-card__alert-item level">
+            <div class="level-item">
+              of Biance
+            </div>
+            <div class="level-item">
+              <select class="cw-modal__select is-uppercase is-size-6 has-text-spaced">
+                <option>increases</option>
+                <option>decreases</option>
+              </select>
+            </div>
+          </div>
+          <div class="cw-modal-card__alert-item level">
+            <div class="level-item">
+              by more than
+            </div>
+            <div class="level-item">
+              <select class="cw-modal__select is-uppercase is-size-6 has-text-spaced">
+                <option>10%</option>
+                <option>20%</option>
+                <option>30%</option>
+              </select>
+            </div>
+          </div>
+          <div class="cw-modal-card__alert-item level">
+            <div class="level-item">
+              in less than
+            </div>
+            <div class="level-item">
+              <select class="cw-modal__select is-uppercase is-size-6 has-text-spaced">
+                <option>6</option>
+                <option>12</option>
+                <option>24</option>
+              </select>
+            </div>
+            <div class="level-item">
+              hours
+            </div>
+          </div>
+          <div class="cw-modal-card__alert-item level">
+            <div class="level-item">
+              via
+            </div>
+            <div class="level-item">
+              <select class="cw-modal__select is-uppercase is-size-6 has-text-spaced">
+                <option>cell</option>
+                <option>email</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div><a href="#" class="cw-modal-card__action button is-primary has-text-spaced">Set alert &gt;</a></div>
+      </div>
+    </div>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+<div class="modal cw-modal" id="modal-register">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <div class="cw-modal-card">
+      <div class="cw-modal-card__header">
+        <p class="title has-text-centered is-uppercase has-text-spaced is-5">Register now<br>to join the community</p>
+      </div>
+      <div class="cw-modal-card__body">
+        <div class="cw-modal-card__form">
+          <div class="field">
+            <div class="control">
+              <input class="input" type="text" placeholder="First Name">
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <input class="input" type="text" placeholder="Last Name">
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <input class="input" type="text" placeholder="E-Mail">
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <input class="input" type="text" placeholder="Password">
+            </div>
+          </div>
+          <p class="is-size-6-light has-text-spaced">Already a member? Sign in</p>
+        </div>
+        <div class="has-text-centered"><a href="#" class="cw-modal-card__action button is-primary has-text-spaced">Join now &gt;</a></div>
+
+      </div>
+    </div>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+<div class="modal cw-modal" id="modal-login">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <div class="cw-modal-card">
+      <div class="cw-modal-card__header">
+        <p class="title has-text-centered is-uppercase has-text-spaced is-5">Sign In</p>
+      </div>
+      <div class="cw-modal-card__body">
+        <div class="cw-modal-card__form">
+          <div class="field">
+            <div class="control">
+              <input class="input" type="text" placeholder="Email">
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <input class="input" type="text" placeholder="Password">
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <label class="checkbox">
+                <input type="checkbox">
+                Remember me!
+              </label>
+            </div>
+          </div>
+          <p class="is-size-6-light has-text-spaced">Not a member yet? Register now</p>
+        </div>
+        <div class="has-text-centered"><a href="#" class="cw-modal-card__action button is-primary has-text-spaced">Login &gt;</a></div>
+      </div>
+    </div>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+    
+<main>
+  <div class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-9">
+          <div class="ad u-hide-mobile" style="width:100%; height: 6rem;"></div>
+          <section class="c-thread">
+            <article class="c-thread__post">
+              <header class="c-thread__header u-hide-desktop">
+                <div class="columns is-mobile is-multiline is-paddingless">
+                  <div class="column is-narrow">
+                    <div class="c-thread__avatar">
+                      <div class="image is-1by1">
+                        <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jadlimcaco/128.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <p class="has-text-weight-bold is-uppercase has-text-spaced is-size-6-light">James Smith</p>
+                    <p class="c-thread__datetime is-size-7 is-uppercase has-text-spaced">Posted <time datetime="2018-03-27 12:00:00">23 hours</time> ago</p>
+                    <ul class="c-thread__meta is-size-7">
+                      <li><span class="icon is-small"><i class="far fa-dot-circle"></i></span> 11</li>
+                      <li><span class="icon is-small"><i class="fas fa-eye"></i></span> 5</li>
+                    </ul>
+                  </div>
+                  <div class="column is-12">
+                    <h1 class="c-thread__title title has-text-spaced">UK, US Agencies Join Forces To Study And Regulate Cryptocurrencies</h1>
+                  </div>
+                </div>
+              </header>
+              <header class="c-thread__header u-hide-mobile">
+                <div class="columns is-paddingless">
+                  <div class="column is-3">
+                    <div class="c-thread__avatar">
+                      <div class="image is-1by1">
+                        <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jadlimcaco/128.jpg" alt="">
+                      </div>
+                    </div>
+                    <p class="has-text-weight-bold has-text-centered is-uppercase has-text-spaced is-size-6-light">James Smith</p>
+                  </div>
+                  <div class="column is-9">
+                    <h1 class="c-thread__title title has-text-spaced">UK, US Agencies Join Forces To Study And Regulate Cryptocurrencies</h1>
+                    <ul class="c-thread__meta is-size-7">
+                      <li><span class="icon is-small"><i class="far fa-dot-circle"></i></span> 11</li>
+                      <li><span class="icon is-small"><i class="fas fa-eye"></i></span> 5</li>
+                    </ul>
+                    <p class="c-thread__datetime is-size-7 is-uppercase has-text-spaced">Posted <time datetime="2018-03-27 12:00:00">23 hours</time> ago</p>
+                  </div>
+                </div>
+              </header>
+              <div class="c-thread__body">
+                <div class="columns is-widescreen">
+                  <div class="column is-9 is-offset-3">
+                    <p class="c-thread__source has-text-weight-bold has-text-spaced is-uppercase is-size-6-light">Link: news.com</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta perferendis neque consectetur officiis sunt, itaque amet sequi, iste expedita nihil nobis, dignissimos doloremque ullam recusandae nemo reiciendis nesciunt eligendi! Quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et placeat quasi perferendis officia aspernatur incidunt, facilis autem officiis saepe veritatis suscipit eum deleniti. Aliquam recusandae, quaerat. Nemo accusamus officiis nisi.</p>
+                  </div>
+
+                </div>
+                <div class="ad u-hide-desktop" style="width:100%; height: 12rem;"></div>
+              </div>
+            </article>
+
+            <div class="c-thread__replies">
+              <article class="c-thread-reply">
+  <div class="columns">
+    <div class="column is-3">
+      <header class="c-thread-reply__header u-hide-mobile">
+        <div class="c-thread-reply__avatar">
+          <div class="image is-1by1">
+            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jadlimcaco/128.jpg" alt="">
+          </div>
+        </div>
+        <p class="has-text-weight-bold has-text-centered is-uppercase has-text-spaced is-size-6-light">James Smith</p>
+        <p class="has-text-grey has-text-centered is-size-6-light">Posted 23 hours ago</p>
+      </header>
+      <header class="c-thread-reply__header u-hide-desktop">
+        <div class="columns is-mobile">
+          <div class="column is-narrow">
+            <div class="c-thread-reply__avatar">
+              <div class="image is-1by1">
+                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jadlimcaco/128.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <p class="has-text-weight-bold is-uppercase has-text-spaced is-size-6-light">James Smith</p>
+            <p class="has-text-grey is-size-6-light">Posted 23 hours ago</p>
+          </div>
+        </div>
+      </header>
+    </div>
+    <div class="column is-9">
+      <p><span>Lorem ipsum dolor quisquam laborum iure nisi voluptates quos cum cupiditate porro, ducimus laboriosam!</span><span>Incidunt voluptates doloribus praesentium blanditiis labore nam officia, suscipit voluptatem eveniet temporibus, tempora, dolorem in, repellendus cumque alias aliquam reprehenderit voluptate iusto vel ad magni quam asperiores doloremque et? Quo.</span></p>
+      <div class="c-thread-reply__footer is-uppercase is-size-7 has-text-spaced">
+        <div class="level is-mobile">
+          <div class="level-left">
+            <ul class="level-item is-narrow">
+              <li>In <a href="#">Bitcoin</a></li>
+              <li><span class="icon is-small"><i class="far fa-dot-circle"></i></span> 11</li>
+              <li><span class="icon is-small"><i class="fas fa-eye"></i></span> 5</li>
+            </ul>
+            <ul class="level-item c-thread-reply__votes">
+              <li class="c-post-teaser__vote js-post-teaser-vote c-post-teaser__vote--up"><span class="icon is-small has-text-weight-bold"><i class="fas fa-caret-up"></i></span> 25</li>
+              <li class="c-post-teaser__vote js-post-teaser-vote c-post-teaser__vote--down"><span class="icon is-small has-text-weight-bold"><i class="fas fa-caret-down"></i></span> 32</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+              <article class="c-thread-reply">
+  <div class="columns">
+    <div class="column is-3">
+      <header class="c-thread-reply__header u-hide-mobile">
+        <div class="c-thread-reply__avatar">
+          <div class="image is-1by1">
+            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jadlimcaco/128.jpg" alt="">
+          </div>
+        </div>
+        <p class="has-text-weight-bold has-text-centered is-uppercase has-text-spaced is-size-6-light">James Smith</p>
+        <p class="has-text-grey has-text-centered is-size-6-light">Posted 23 hours ago</p>
+      </header>
+      <header class="c-thread-reply__header u-hide-desktop">
+        <div class="columns is-mobile">
+          <div class="column is-narrow">
+            <div class="c-thread-reply__avatar">
+              <div class="image is-1by1">
+                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jadlimcaco/128.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <p class="has-text-weight-bold is-uppercase has-text-spaced is-size-6-light">James Smith</p>
+            <p class="has-text-grey is-size-6-light">Posted 23 hours ago</p>
+          </div>
+        </div>
+      </header>
+    </div>
+    <div class="column is-9">
+      <p><span>Lorem ipsum dolor quisquam laborum iure nisi voluptates quos cum cupiditate porro, ducimus laboriosam!</span><span>Incidunt voluptates doloribus praesentium blanditiis labore nam officia, suscipit voluptatem eveniet temporibus, tempora, dolorem in, repellendus cumque alias aliquam reprehenderit voluptate iusto vel ad magni quam asperiores doloremque et? Quo.</span></p>
+      <div class="c-thread-reply__footer is-uppercase is-size-7 has-text-spaced">
+        <div class="level is-mobile">
+          <div class="level-left">
+            <ul class="level-item is-narrow">
+              <li>In <a href="#">Bitcoin</a></li>
+              <li><span class="icon is-small"><i class="far fa-dot-circle"></i></span> 11</li>
+              <li><span class="icon is-small"><i class="fas fa-eye"></i></span> 5</li>
+            </ul>
+            <ul class="level-item c-thread-reply__votes">
+              <li class="c-post-teaser__vote js-post-teaser-vote c-post-teaser__vote--up"><span class="icon is-small has-text-weight-bold"><i class="fas fa-caret-up"></i></span> 25</li>
+              <li class="c-post-teaser__vote js-post-teaser-vote c-post-teaser__vote--down"><span class="icon is-small has-text-weight-bold"><i class="fas fa-caret-down"></i></span> 32</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+              <article class="c-thread-reply">
+  <div class="columns">
+    <div class="column is-3">
+      <header class="c-thread-reply__header u-hide-mobile">
+        <div class="c-thread-reply__avatar">
+          <div class="image is-1by1">
+            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jadlimcaco/128.jpg" alt="">
+          </div>
+        </div>
+        <p class="has-text-weight-bold has-text-centered is-uppercase has-text-spaced is-size-6-light">James Smith</p>
+        <p class="has-text-grey has-text-centered is-size-6-light">Posted 23 hours ago</p>
+      </header>
+      <header class="c-thread-reply__header u-hide-desktop">
+        <div class="columns is-mobile">
+          <div class="column is-narrow">
+            <div class="c-thread-reply__avatar">
+              <div class="image is-1by1">
+                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jadlimcaco/128.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <p class="has-text-weight-bold is-uppercase has-text-spaced is-size-6-light">James Smith</p>
+            <p class="has-text-grey is-size-6-light">Posted 23 hours ago</p>
+          </div>
+        </div>
+      </header>
+    </div>
+    <div class="column is-9">
+      <p><span>Lorem ipsum dolor quisquam laborum iure nisi voluptates quos cum cupiditate porro, ducimus laboriosam!</span><span>Incidunt voluptates doloribus praesentium blanditiis labore nam officia, suscipit voluptatem eveniet temporibus, tempora, dolorem in, repellendus cumque alias aliquam reprehenderit voluptate iusto vel ad magni quam asperiores doloremque et? Quo.</span></p>
+      <div class="c-thread-reply__footer is-uppercase is-size-7 has-text-spaced">
+        <div class="level is-mobile">
+          <div class="level-left">
+            <ul class="level-item is-narrow">
+              <li>In <a href="#">Bitcoin</a></li>
+              <li><span class="icon is-small"><i class="far fa-dot-circle"></i></span> 11</li>
+              <li><span class="icon is-small"><i class="fas fa-eye"></i></span> 5</li>
+            </ul>
+            <ul class="level-item c-thread-reply__votes">
+              <li class="c-post-teaser__vote js-post-teaser-vote c-post-teaser__vote--up"><span class="icon is-small has-text-weight-bold"><i class="fas fa-caret-up"></i></span> 25</li>
+              <li class="c-post-teaser__vote js-post-teaser-vote c-post-teaser__vote--down"><span class="icon is-small has-text-weight-bold"><i class="fas fa-caret-down"></i></span> 32</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+              <article class="c-thread-reply">
+  <div class="columns">
+    <div class="column is-3">
+      <header class="c-thread-reply__header u-hide-mobile">
+        <div class="c-thread-reply__avatar">
+          <div class="image is-1by1">
+            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jadlimcaco/128.jpg" alt="">
+          </div>
+        </div>
+        <p class="has-text-weight-bold has-text-centered is-uppercase has-text-spaced is-size-6-light">James Smith</p>
+        <p class="has-text-grey has-text-centered is-size-6-light">Posted 23 hours ago</p>
+      </header>
+      <header class="c-thread-reply__header u-hide-desktop">
+        <div class="columns is-mobile">
+          <div class="column is-narrow">
+            <div class="c-thread-reply__avatar">
+              <div class="image is-1by1">
+                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jadlimcaco/128.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <p class="has-text-weight-bold is-uppercase has-text-spaced is-size-6-light">James Smith</p>
+            <p class="has-text-grey is-size-6-light">Posted 23 hours ago</p>
+          </div>
+        </div>
+      </header>
+    </div>
+    <div class="column is-9">
+      <p><span>Lorem ipsum dolor quisquam laborum iure nisi voluptates quos cum cupiditate porro, ducimus laboriosam!</span><span>Incidunt voluptates doloribus praesentium blanditiis labore nam officia, suscipit voluptatem eveniet temporibus, tempora, dolorem in, repellendus cumque alias aliquam reprehenderit voluptate iusto vel ad magni quam asperiores doloremque et? Quo.</span></p>
+      <div class="c-thread-reply__footer is-uppercase is-size-7 has-text-spaced">
+        <div class="level is-mobile">
+          <div class="level-left">
+            <ul class="level-item is-narrow">
+              <li>In <a href="#">Bitcoin</a></li>
+              <li><span class="icon is-small"><i class="far fa-dot-circle"></i></span> 11</li>
+              <li><span class="icon is-small"><i class="fas fa-eye"></i></span> 5</li>
+            </ul>
+            <ul class="level-item c-thread-reply__votes">
+              <li class="c-post-teaser__vote js-post-teaser-vote c-post-teaser__vote--up"><span class="icon is-small has-text-weight-bold"><i class="fas fa-caret-up"></i></span> 25</li>
+              <li class="c-post-teaser__vote js-post-teaser-vote c-post-teaser__vote--down"><span class="icon is-small has-text-weight-bold"><i class="fas fa-caret-down"></i></span> 32</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+            </div>
+            <a href="#" class="button is-primary is-outlined has-text-spaced is-uppercase">Reply to thread</a>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+    </div>
+
+    <div class="cw-ticker cw-ticker--mobile-spacers has-text-centered has-text-weight-normal">
+  <div class="container">
+    <ul class="cw-ticker__list">
+      <li class="cw-ticker__item">AAON 1.30%</li>
+      <li class="cw-ticker__item">APLP -0.69%</li>
+      <li class="cw-ticker__item">HABT 1.16%</li>
+      <li class="cw-ticker__item">MASI 0.86%</li>
+      <li class="cw-ticker__item">GHDX 0.77%</li>
+    </ul>
+  </div>
+</div>
+<div class="footer">
+  <nav class="cw-footer__nav has-text-centered is-size-6-light">
+    <ul>
+      <li><a href="#">Communities</a></li>
+      <li><a href="#">Currencies</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Exchanges</a></li>
+      <li><a href="#">Sitemap</a></li>
+    </ul>
+  </nav>
+  <p class="is-uppercase is-size-7 has-text-weight-bold has-text-spaced has-text-centered has-text-white-ter">
+    COPYRIGHT 2018 COINWEALTH
+  </p>
+</div>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    <script defer src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highstock/6.0.3/highstock.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <link rel="stylesheet" href="/css/main.css?id=fed08f4b468413d98945">
+    <script src="/js/main.js?id=0936caea194110d87192"></script>
+  </body>
+</html>

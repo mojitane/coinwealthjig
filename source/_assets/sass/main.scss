@@ -1,0 +1,97 @@
+/* ===============
+      IMPORTS
+   =============== */
+
+@import "_initialize/initialize";
+
+@import "_components/components";
+@import "_objects/objects";
+@import "_utility/utility";
+
+::selection {
+  background: $primary;
+  color: $white;
+}
+
+.ad {
+  border: 1px solid $primary;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+.ad--mobile {
+  @include tablet {
+    display: none;
+  }
+}
+.ad--desktop {
+  @include mobile {
+    display: none;
+  }
+}
+
+// Tooltip Plugin
+
+.tippy-tooltip.light-theme {
+  border: 1px solid $grey-lighter;
+  color: $black;
+  border-radius: 1px;
+  box-shadow: 0 1px #FFFFFF inset, 0 2px 4px rgba(34, 25, 25, 0.2);
+  padding: 0.2em 0.4em;
+}
+
+.tippy-tooltip.light-theme .tippy-backdrop {
+  background-color: $white;
+}
+
+// Bulma Modal Fix for IE11
+
+.modal {
+  height: 100vh;
+}
+
+.cw-main {
+  @include tablet {
+    padding: 0 3rem;
+  }
+}
+
+.highcharts-container {
+  height: 200px;
+}
+
+.highcharts-sub {
+  font-size: 0.8rem;
+  @include tablet-only {
+    font-size: 0.6rem;
+  }
+}
+
+.cw-highchart__container {
+  @include mobile {
+    padding: 0;
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+}
+.cw-highchart__columns:after {
+  content: 'flickity';
+  display: none;
+}
+.cw-highchart__column {
+  padding: 0 3rem;
+}
+@include tablet {
+  .cw-highchart__columns {
+    display: flex;
+    &:after {
+      content: '';
+    }
+  }
+  .cw-highchart__column {
+    width: 33.333%;
+    padding: 0;
+  }
+}
+.flickity-button-icon {
+  color: #80ce5e;
+}

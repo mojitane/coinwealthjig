@@ -1,0 +1,35 @@
+.cw-ticker {
+  padding: 0.5rem 1rem;
+  background-color: $black;
+  color: $white;
+}
+
+.cw-ticker__item {
+  text-align: center;
+  @include tablet {
+    display: inline;
+    text-align: left;
+    &:after {
+      content: '|';
+      padding: 0 1rem;
+    }
+    &:last-child:after {
+      content: '';
+      padding: 0;
+    }
+  }
+}
+.cw-ticker--mobile-spacers {
+  .cw-ticker__item {
+    display: inline;
+    text-align: left;
+    &:after {
+      content: '|';
+      padding: 0 1rem;
+    }
+    &:last-child:after {
+      content: '';
+      padding: 0;
+    }
+  }
+}

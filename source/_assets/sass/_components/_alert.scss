@@ -1,0 +1,41 @@
+.cw-alert {
+  .column:first-child {
+    flex-grow: 2;
+  }
+}
+.cw-alert--desktop {
+  .cw-alert__title {
+    text-align: right;
+  }
+  .cw-alert__cta {
+    text-align: left;
+  }
+  @include mobile {
+    display: none;
+  }
+  @include tablet-only {
+    > .columns {
+      display: block;
+    }
+    .cw-alert__title, .cw-alert__cta {
+      text-align: center;
+    }
+  }
+}
+
+.cw-alert--mobile {
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  padding: 3rem 1.5rem;
+  background-color: $white-ter;
+  margin-bottom: 3rem;
+  .cw-alert__cta {
+    text-align: center;
+  }
+  .cw-alert__title {
+    text-align: center;
+  }
+  @include tablet {
+    display: none;
+  }
+}

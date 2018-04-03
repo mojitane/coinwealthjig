@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+  </head>
+  <body>
+
+    <nav id="menu" class="cw-side-menu">
+      <header class="cw-side-menu__header has-text-right">
+        <p class="title is-uppercase has-text-primary has-text-spaced is-6">Main menu</p>
+      </header>
+      <div class="cw-side-menu__body">
+        <ul class="cw-side-menu__links has-text-right">
+          <li><a href="#" class="modal-button js-modal-button" data-target="modal-login">Login</a></li>
+          <li><a href="#" class="modal-button js-modal-button" data-target="modal-register">Register</a></li>
+          <!-- <li><a href="index.html">Start preview</a></li>
+          <li><a href="thread.html">Thread preview</a></li> -->
+        </ul>
+      </div>
+    </nav>
+
+    <div id="panel">
+    <div class="c-navbar">
+  <div class="container">
+    <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          <h1 class="title is-uppercase has-text-primary is-4 c-navbar__sitetitle"><span class="has-text-weight-light">Coin</span>wealth</h1>
+        </a>
+        <div class="navbar-burger js-slide-menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="navbar-menu">
+        <div class="navbar-end is-size-6-light">
+          <div class="navbar-item">
+            <div class="c-searchbar">
+              <div class="field">
+                <p class="control has-icons-right">
+                  <input class="input is-small c-searchbar__input" type="text" placeholder="Search">
+                  <span class="icon is-small is-right has-text-primary">
+                    <i class="fas fa-caret-right"></i>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="navbar-item c-navbar__item c-navbar__item--border-right modal-button js-modal-button" data-target="modal-login">Login</a>
+          <a href="#" class="navbar-item c-navbar__item modal-button js-modal-button" data-target="modal-register">Register</a>
+          <a href="#" class="navbar-item o-burger js-slide-menu-toggle-desktop">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+<div class="c-searchbar--mobile u-hide-desktop">
+  <div class="field">
+    <p class="control has-icons-right">
+      <input class="input c-searchbar__input" type="text" placeholder="Search">
+      <span class="icon is-small is-right has-text-primary">
+        <i class="fas fa-caret-right"></i>
+      </span>
+    </p>
+  </div>
+</div>
+<div class="cw-ticker has-text-weight-normal">
+  <div class="container">
+    <ul class="cw-ticker__list">
+      <li class="cw-ticker__item">cryptocurrencies in our universe: <span class="has-text-primary">255</span></li>
+      <li class="cw-ticker__item">total market cap: <span class="has-text-primary">$648B (+5% today)</span></li>
+      <li class="cw-ticker__item">24hr volume: <span class="has-text-primary">$65B</span></li>
+    </ul>
+  </div>
+</div>
+    <div class="modal cw-modal" id="modal-alert">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <div class="cw-modal-card">
+      <div class="cw-modal-card__header">
+        <p class="title has-text-centered is-uppercase has-text-spaced is-5">Create a price alert</p>
+      </div>
+      <div class="cw-modal-card__body has-text-centered">
+        <div class="cw-modal-card__alert-form has-text-spaced">
+          <div class="cw-modal-card__alert-item level">
+            <div class="level-item">
+              Notify me if the
+            </div>
+            <div class="level-item">
+              <select class="cw-modal__select is-uppercase is-size-6 has-text-spaced">
+                <option>volume</option>
+                <option>other</option>
+              </select>
+            </div>
+          </div>
+          <div class="cw-modal-card__alert-item level">
+            <div class="level-item">
+              of Biance
+            </div>
+            <div class="level-item">
+              <select class="cw-modal__select is-uppercase is-size-6 has-text-spaced">
+                <option>increases</option>
+                <option>decreases</option>
+              </select>
+            </div>
+          </div>
+          <div class="cw-modal-card__alert-item level">
+            <div class="level-item">
+              by more than
+            </div>
+            <div class="level-item">
+              <select class="cw-modal__select is-uppercase is-size-6 has-text-spaced">
+                <option>10%</option>
+                <option>20%</option>
+                <option>30%</option>
+              </select>
+            </div>
+          </div>
+          <div class="cw-modal-card__alert-item level">
+            <div class="level-item">
+              in less than
+            </div>
+            <div class="level-item">
+              <select class="cw-modal__select is-uppercase is-size-6 has-text-spaced">
+                <option>6</option>
+                <option>12</option>
+                <option>24</option>
+              </select>
+            </div>
+            <div class="level-item">
+              hours
+            </div>
+          </div>
+          <div class="cw-modal-card__alert-item level">
+            <div class="level-item">
+              via
+            </div>
+            <div class="level-item">
+              <select class="cw-modal__select is-uppercase is-size-6 has-text-spaced">
+                <option>cell</option>
+                <option>email</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div><a href="#" class="cw-modal-card__action button is-primary has-text-spaced">Set alert &gt;</a></div>
+      </div>
+    </div>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+<div class="modal cw-modal" id="modal-register">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <div class="cw-modal-card">
+      <div class="cw-modal-card__header">
+        <p class="title has-text-centered is-uppercase has-text-spaced is-5">Register now<br>to join the community</p>
+      </div>
+      <div class="cw-modal-card__body">
+        <div class="cw-modal-card__form">
+          <div class="field">
+            <div class="control">
+              <input class="input" type="text" placeholder="First Name">
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <input class="input" type="text" placeholder="Last Name">
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <input class="input" type="text" placeholder="E-Mail">
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <input class="input" type="text" placeholder="Password">
+            </div>
+          </div>
+          <p class="is-size-6-light has-text-spaced">Already a member? Sign in</p>
+        </div>
+        <div class="has-text-centered"><a href="#" class="cw-modal-card__action button is-primary has-text-spaced">Join now &gt;</a></div>
+
+      </div>
+    </div>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+<div class="modal cw-modal" id="modal-login">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <div class="cw-modal-card">
+      <div class="cw-modal-card__header">
+        <p class="title has-text-centered is-uppercase has-text-spaced is-5">Sign In</p>
+      </div>
+      <div class="cw-modal-card__body">
+        <div class="cw-modal-card__form">
+          <div class="field">
+            <div class="control">
+              <input class="input" type="text" placeholder="Email">
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <input class="input" type="text" placeholder="Password">
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <label class="checkbox">
+                <input type="checkbox">
+                Remember me!
+              </label>
+            </div>
+          </div>
+          <p class="is-size-6-light has-text-spaced">Not a member yet? Register now</p>
+        </div>
+        <div class="has-text-centered"><a href="#" class="cw-modal-card__action button is-primary has-text-spaced">Login &gt;</a></div>
+      </div>
+    </div>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+    
+<main>
+  <div class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-5">
+          <div class="c-ranking" data-slideout-ignore>
+  <table class="table is-hoverable c-ranking__table">
+    <thead class="c-ranking__head">
+      <tr>
+        <th>Rank</th>
+        <th>Coin</th>
+        <th>Market Cap</th>
+        <th>Price</th>
+        <th>Change</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="c-ranking__row c-ranking__row--toggle">1
+          <span class="icon is-small js-ranking-toggle c-ranking__toggle c-ranking__toggle--fav is-active animated bounceIn"><i class="fas fa-star"></i></span>
+          <span class="icon is-small js-ranking-toggle c-ranking__toggle c-ranking__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
+        </td>
+        <td class="c-ranking__row c-ranking__row--currency" title="Bitcoin"><span class="c-ranking__currency"><i class="cc BTC"></i></span> Bitcoin</td>
+        <td class="c-ranking__row c-ranking__row--cap">$171.48B</td>
+        <td class="c-ranking__row c-ranking__row--price"><span class="has-text-primary">$770.82</span></td>
+        <td class="c-ranking__row c-ranking__row--change">12.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
+      </tr>
+      <tr>
+        <td class="c-ranking__row c-ranking__row--toggle">2
+          <span class="icon is-small js-ranking-toggle c-ranking__toggle c-ranking__toggle--fav is-active animated bounceIn"><i class="fas fa-star"></i></span>
+          <span class="icon is-small js-ranking-toggle c-ranking__toggle c-ranking__toggle--alert is-active animated bounceIn"><i class="fas fa-exclamation-triangle"></i></span>
+        </td>
+        <td class="c-ranking__row c-ranking__row--currency" title="Ethereum"><span class="c-ranking__currency"><i class="cc ETH-alt"></i></span> Ethereum</td>
+        <td class="c-ranking__row c-ranking__row--cap">$98.48B</td>
+        <td class="c-ranking__row c-ranking__row--price"><span class="has-text-primary">$658.94</span></td>
+        <td class="c-ranking__row c-ranking__row--change">4.0% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
+      </tr>
+      <tr>
+        <td class="c-ranking__row c-ranking__row--toggle">3
+          <span class="icon is-small js-ranking-toggle c-ranking__toggle c-ranking__toggle--fav"><i class="fas fa-star"></i></span>
+          <span class="icon is-small js-ranking-toggle c-ranking__toggle c-ranking__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
+        </td>
+        <td class="c-ranking__row c-ranking__row--currency" title="Ripple"><span class="c-ranking__currency"><i class="cc XRP-alt"></i></span> Ripple</td>
+        <td class="c-ranking__row c-ranking__row--cap">$88.48B</td>
+        <td class="c-ranking__row c-ranking__row--price"><span class="has-text-primary">$544.86</span></td>
+        <td class="c-ranking__row c-ranking__row--change">2.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+        </div>
+        <div class="ad ad--mobile" style="width: 100%; max-width: 320px; height: 100px;"></div>
+        <div class="column is-7">
+          <div class="cw-highchart__container">
+  <div class="cw-highchart__columns js-cw-highcharts-carousel" data-slideout-ignore>
+    <div class="cw-highchart__column">
+      <div class="highcharts-container" id="js-highcharts-container-1"></div>
+      <div class="highcharts-sub is-uppercase has-text-spaced has-text-weight-bold">
+        <div class="level is-mobile">
+          <div class="level-left">
+            <div class="level-item">Bitcoin | BTC</div>
+          </div>
+          <div class="level-right">
+            <div class="level-item">
+              <div class="has-text-centered"><span class="has-text-primary">$770.20</span><br>2.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cw-highchart__column">
+      <div class="highcharts-container" id="js-highcharts-container-2"></div>
+      <div class="highcharts-sub is-uppercase has-text-spaced has-text-weight-bold">
+        <div class="level is-mobile">
+          <div class="level-left">
+            <div class="level-item">Ethereum | ETH</div>
+          </div>
+          <div class="level-right">
+            <div class="level-item">
+              <div class="has-text-centered"><span class="has-text-primary">$770.20</span><br>2.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cw-highchart__column">
+      <div class="highcharts-container" id="js-highcharts-container-3"></div>
+      <div class="highcharts-sub is-uppercase has-text-spaced has-text-weight-bold">
+        <div class="level is-mobile">
+          <div class="level-left">
+            <div class="level-item">Ripple | XRP</div>
+          </div>
+          <div class="level-right">
+            <div class="level-item">
+              <div class="has-text-centered"><span class="has-text-danger">-$470.20</span><br>2.5% <span class="icon is-small has-text-danger"><i class="fas fa-caret-down"></i></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="container">
+      <div class="cw-main">
+        <div class="columns">
+          <section class="column is-6">
+            <div class="cw-alert cw-alert--mobile">
+              <div class="columns is-marginless">
+                <div class="column cw-alert__title">
+                  <p class="title is-6 is-uppercase has-text-spaced">Want to know when something interesting happens?</p>
+                </div>
+                <div class="column cw-alert__cta">
+                  <a href="#" class="button is-primary has-text-spaced has-text-weight-light modal-button js-modal-button" data-target="modal-alert">Set an alert &gt;</a>
+                </div>
+              </div>
+            </div>
+            <div class="cw-posts">
+              <div class="cw-posts__header">
+                <h1 class="title is-5 cw-posts__header-title has-text-spaced is-uppercase">From our communities</h1><a href="#" class="button is-primary cw-posts__header-cta has-text-weight-light has-text-spaced">Start a Post &gt;</a>
+              </div>
+              <article class="c-post-teaser">
+  <div class="columns is-mobile">
+    <div class="column is-3">
+      <div class="image is-4by3"><img src="img/thumb.jpg" alt=""></div>
+    </div>
+    <div class="column">
+      <h1 class="title is-6 is-marginless">Headline from post</h1>
+      <p>Lorem Ipsum dor sit amet, consectetur loreumdg adipcisekd elit sed lorem ipsum dolor sit dsede</p>
+      <div class="c-post-teaser__footer is-uppercase is-size-7 has-text-spaced">
+        <div class="level">
+          <div class="level-left">
+            <ul class="level-item">
+              <li>In <a href="#">Bitcoin</a></li>
+              <li><span class="icon is-small"><i class="far fa-dot-circle"></i></span> 11</li>
+              <li><span class="icon is-small"><i class="fas fa-eye"></i></span> 5</li>
+            </ul>
+          </div>
+          <div class="level-right has-text-right c-post-teaser__votes">
+            <ul class="level-item">
+              <li class="c-post-teaser__vote js-post-teaser-vote c-post-teaser__vote--up"><span class="icon is-small has-text-weight-bold"><i class="fas fa-caret-up"></i></span> 25</li>
+              <li class="c-post-teaser__vote js-post-teaser-vote c-post-teaser__vote--down"><span class="icon is-small has-text-weight-bold"><i class="fas fa-caret-down"></i></span> 32</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+              <article class="c-post-teaser">
+  <div class="columns is-mobile">
+    <div class="column is-3">
+      <div class="image is-4by3"><img src="img/thumb.jpg" alt=""></div>
+    </div>
+    <div class="column">
+      <h1 class="title is-6 is-marginless">Headline from post</h1>
+      <p>Lorem Ipsum dor sit amet, consectetur loreumdg adipcisekd elit sed lorem ipsum dolor sit dsede</p>
+      <div class="c-post-teaser__footer is-uppercase is-size-7 has-text-spaced">
+        <div class="level">
+          <div class="level-left">
+            <ul class="level-item">
+              <li>In <a href="#">Bitcoin</a></li>
+              <li><span class="icon is-small"><i class="far fa-dot-circle"></i></span> 11</li>
+              <li><span class="icon is-small"><i class="fas fa-eye"></i></span> 5</li>
+            </ul>
+          </div>
+          <div class="level-right has-text-right c-post-teaser__votes">
+            <ul class="level-item">
+              <li class="c-post-teaser__vote js-post-teaser-vote c-post-teaser__vote--up"><span class="icon is-small has-text-weight-bold"><i class="fas fa-caret-up"></i></span> 25</li>
+              <li class="c-post-teaser__vote js-post-teaser-vote c-post-teaser__vote--down"><span class="icon is-small has-text-weight-bold"><i class="fas fa-caret-down"></i></span> 32</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+              <article class="c-post-teaser">
+  <div class="columns is-mobile">
+    <div class="column is-3">
+      <div class="image is-4by3"><img src="img/thumb.jpg" alt=""></div>
+    </div>
+    <div class="column">
+      <h1 class="title is-6 is-marginless">Headline from post</h1>
+      <p>Lorem Ipsum dor sit amet, consectetur loreumdg adipcisekd elit sed lorem ipsum dolor sit dsede</p>
+      <div class="c-post-teaser__footer is-uppercase is-size-7 has-text-spaced">
+        <div class="level">
+          <div class="level-left">
+            <ul class="level-item">
+              <li>In <a href="#">Bitcoin</a></li>
+              <li><span class="icon is-small"><i class="far fa-dot-circle"></i></span> 11</li>
+              <li><span class="icon is-small"><i class="fas fa-eye"></i></span> 5</li>
+            </ul>
+          </div>
+          <div class="level-right has-text-right c-post-teaser__votes">
+            <ul class="level-item">
+              <li class="c-post-teaser__vote js-post-teaser-vote c-post-teaser__vote--up"><span class="icon is-small has-text-weight-bold"><i class="fas fa-caret-up"></i></span> 25</li>
+              <li class="c-post-teaser__vote js-post-teaser-vote c-post-teaser__vote--down"><span class="icon is-small has-text-weight-bold"><i class="fas fa-caret-down"></i></span> 32</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+              <article class="c-post-teaser">
+  <div class="columns is-mobile">
+    <div class="column is-3">
+      <div class="image is-4by3"><img src="img/thumb.jpg" alt=""></div>
+    </div>
+    <div class="column">
+      <h1 class="title is-6 is-marginless">Headline from post</h1>
+      <p>Lorem Ipsum dor sit amet, consectetur loreumdg adipcisekd elit sed lorem ipsum dolor sit dsede</p>
+      <div class="c-post-teaser__footer is-uppercase is-size-7 has-text-spaced">
+        <div class="level">
+          <div class="level-left">
+            <ul class="level-item">
+              <li>In <a href="#">Bitcoin</a></li>
+              <li><span class="icon is-small"><i class="far fa-dot-circle"></i></span> 11</li>
+              <li><span class="icon is-small"><i class="fas fa-eye"></i></span> 5</li>
+            </ul>
+          </div>
+          <div class="level-right has-text-right c-post-teaser__votes">
+            <ul class="level-item">
+              <li class="c-post-teaser__vote js-post-teaser-vote c-post-teaser__vote--up"><span class="icon is-small has-text-weight-bold"><i class="fas fa-caret-up"></i></span> 25</li>
+              <li class="c-post-teaser__vote js-post-teaser-vote c-post-teaser__vote--down"><span class="icon is-small has-text-weight-bold"><i class="fas fa-caret-down"></i></span> 32</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+              <article class="c-post-teaser">
+  <div class="columns is-mobile">
+    <div class="column is-3">
+      <div class="image is-4by3"><img src="img/thumb.jpg" alt=""></div>
+    </div>
+    <div class="column">
+      <h1 class="title is-6 is-marginless">Headline from post</h1>
+      <p>Lorem Ipsum dor sit amet, consectetur loreumdg adipcisekd elit sed lorem ipsum dolor sit dsede</p>
+      <div class="c-post-teaser__footer is-uppercase is-size-7 has-text-spaced">
+        <div class="level">
+          <div class="level-left">
+            <ul class="level-item">
+              <li>In <a href="#">Bitcoin</a></li>
+              <li><span class="icon is-small"><i class="far fa-dot-circle"></i></span> 11</li>
+              <li><span class="icon is-small"><i class="fas fa-eye"></i></span> 5</li>
+            </ul>
+          </div>
+          <div class="level-right has-text-right c-post-teaser__votes">
+            <ul class="level-item">
+              <li class="c-post-teaser__vote js-post-teaser-vote c-post-teaser__vote--up"><span class="icon is-small has-text-weight-bold"><i class="fas fa-caret-up"></i></span> 25</li>
+              <li class="c-post-teaser__vote js-post-teaser-vote c-post-teaser__vote--down"><span class="icon is-small has-text-weight-bold"><i class="fas fa-caret-down"></i></span> 32</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+              <div class="cw-posts__more">
+                <a href="#" class="is-uppercase has-text-spaced has-text-weight-bold">Load more +</a>
+              </div>
+              <div class="cw-posts__join">
+                <a href="#" class="button is-primary is-outlined is-uppercase">Join our community &gt;</a>
+              </div>
+            </div>
+          </section>
+          <div class="column is-5 is-offset-1">
+            <section class="cw-alert cw-alert--desktop">
+              <div class="columns is-marginless">
+                <div class="column cw-alert__title">
+                  <p class="title is-6 is-uppercase has-text-spaced">Want to know when something interesting happens?</p>
+                </div>
+                <div class="column cw-alert__cta">
+                  <a href="#" class="button is-primary has-text-spaced has-text-weight-light modal-button js-modal-button" data-target="modal-alert">Set an alert &gt;</a>
+                </div>
+              </div>
+            </section>
+            <div class="ad ad--desktop" style="height: 200px; width: 80%;"></div>
+            <section class="cw-track">
+              <div class="cw-track__header">
+                <div class="cw-track__header-green">
+                  <h1 class="title is-5 is-uppercase has-text-spaced cw-track__header-title">Track your favorites</h1>
+                  <h2 class="subtitle is-7 is-uppercase has-text-spaced cw-track__header-subtitle" style="">Star the coins you want to track!</h2>
+                </div>
+              </div>
+              <div class="c-ranking" data-slideout-ignore>
+  <table class="table is-hoverable c-ranking__table">
+    <thead class="c-ranking__head">
+      <tr>
+        <th>Rank</th>
+        <th>Coin</th>
+        <th>Market Cap</th>
+        <th>Price</th>
+        <th>Change</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="c-ranking__row c-ranking__row--toggle">1
+          <span class="icon is-small js-ranking-toggle c-ranking__toggle c-ranking__toggle--fav is-active animated bounceIn"><i class="fas fa-star"></i></span>
+          <span class="icon is-small js-ranking-toggle c-ranking__toggle c-ranking__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
+        </td>
+        <td class="c-ranking__row c-ranking__row--currency" title="Bitcoin"><span class="c-ranking__currency"><i class="cc BTC"></i></span> Bitcoin</td>
+        <td class="c-ranking__row c-ranking__row--cap">$171.48B</td>
+        <td class="c-ranking__row c-ranking__row--price"><span class="has-text-primary">$770.82</span></td>
+        <td class="c-ranking__row c-ranking__row--change">12.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
+      </tr>
+      <tr>
+        <td class="c-ranking__row c-ranking__row--toggle">2
+          <span class="icon is-small js-ranking-toggle c-ranking__toggle c-ranking__toggle--fav is-active animated bounceIn"><i class="fas fa-star"></i></span>
+          <span class="icon is-small js-ranking-toggle c-ranking__toggle c-ranking__toggle--alert is-active animated bounceIn"><i class="fas fa-exclamation-triangle"></i></span>
+        </td>
+        <td class="c-ranking__row c-ranking__row--currency" title="Ethereum"><span class="c-ranking__currency"><i class="cc ETH-alt"></i></span> Ethereum</td>
+        <td class="c-ranking__row c-ranking__row--cap">$98.48B</td>
+        <td class="c-ranking__row c-ranking__row--price"><span class="has-text-primary">$658.94</span></td>
+        <td class="c-ranking__row c-ranking__row--change">4.0% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
+      </tr>
+      <tr>
+        <td class="c-ranking__row c-ranking__row--toggle">3
+          <span class="icon is-small js-ranking-toggle c-ranking__toggle c-ranking__toggle--fav"><i class="fas fa-star"></i></span>
+          <span class="icon is-small js-ranking-toggle c-ranking__toggle c-ranking__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
+        </td>
+        <td class="c-ranking__row c-ranking__row--currency" title="Ripple"><span class="c-ranking__currency"><i class="cc XRP-alt"></i></span> Ripple</td>
+        <td class="c-ranking__row c-ranking__row--cap">$88.48B</td>
+        <td class="c-ranking__row c-ranking__row--price"><span class="has-text-primary">$544.86</span></td>
+        <td class="c-ranking__row c-ranking__row--change">2.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+              <div class="cw-track__more">
+                <a href="#" class="is-uppercase has-text-spaced has-text-weight-bold">Load more +</a>
+              </div>
+              <div class="cw-track__top">
+                <a href="#" class="button is-primary is-outlined is-uppercase">View top 100 &gt;</a>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+    </div>
+
+    <div class="cw-ticker cw-ticker--mobile-spacers has-text-centered has-text-weight-normal">
+  <div class="container">
+    <ul class="cw-ticker__list">
+      <li class="cw-ticker__item">AAON 1.30%</li>
+      <li class="cw-ticker__item">APLP -0.69%</li>
+      <li class="cw-ticker__item">HABT 1.16%</li>
+      <li class="cw-ticker__item">MASI 0.86%</li>
+      <li class="cw-ticker__item">GHDX 0.77%</li>
+    </ul>
+  </div>
+</div>
+<div class="footer">
+  <nav class="cw-footer__nav has-text-centered is-size-6-light">
+    <ul>
+      <li><a href="#">Communities</a></li>
+      <li><a href="#">Currencies</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Exchanges</a></li>
+      <li><a href="#">Sitemap</a></li>
+    </ul>
+  </nav>
+  <p class="is-uppercase is-size-7 has-text-weight-bold has-text-spaced has-text-centered has-text-white-ter">
+    COPYRIGHT 2018 COINWEALTH
+  </p>
+</div>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    <script defer src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highstock/6.0.3/highstock.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <link rel="stylesheet" href="/css/main.css?id=58668475734173e0f56f">
+    <script src="/js/main.js?id=7810270b66949e320a6b"></script>
+  </body>
+</html>
