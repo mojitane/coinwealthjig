@@ -15,8 +15,9 @@
         <ul class="cw-side-menu__links has-text-right">
           <li><a href="#" class="modal-button js-modal-button" data-target="modal-login">Login</a></li>
           <li><a href="#" class="modal-button js-modal-button" data-target="modal-register">Register</a></li>
-          <!-- <li><a href="index.html">Start preview</a></li>
-          <li><a href="thread.html">Thread preview</a></li> -->
+          <li><a href="#"></a></li>
+          <li><a href="/">Start</a></li>
+          <li><a href="/thread">Thread</a></li>
         </ul>
       </div>
     </nav>
