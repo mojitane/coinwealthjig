@@ -7,7 +7,7 @@
     <div class="container">
       <div class="columns">
         <div class="column is-5">
-          @include('_partials.ranking')
+          @include('_partials.ranking', ['number' => 1])
         </div>
         <div class="ad ad--mobile" style="width: 100%; max-width: 320px; height: 100px;"></div>
         <div class="column is-7">
@@ -67,7 +67,7 @@
                   <h2 class="subtitle is-7 is-uppercase has-text-spaced cw-track__header-subtitle" style="">Star the coins you want to track!</h2>
                 </div>
               </div>
-              @include('_partials.ranking')
+              @include('_partials.ranking', ['number' => 3])
               <div class="cw-track__more">
                 <a href="#" class="is-uppercase has-text-spaced has-text-weight-bold">Load more +</a>
               </div>

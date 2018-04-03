@@ -10,6 +10,7 @@
       </tr>
     </thead>
     <tbody>
+      @for ($i = 0; $i < $number; $i++)
       <tr>
         <td class="c-ranking__row c-ranking__row--toggle">1
           <span class="icon is-small js-ranking-toggle c-ranking__toggle c-ranking__toggle--fav is-active animated bounceIn"><i class="fas fa-star"></i></span>
@@ -40,6 +41,7 @@
         <td class="c-ranking__row c-ranking__row--price"><span class="has-text-primary">$544.86</span></td>
         <td class="c-ranking__row c-ranking__row--change">2.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
       </tr>
+      @endfor
     </tbody>
   </table>
 </div>
