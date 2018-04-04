@@ -18,6 +18,7 @@
           <li><a href="#"></a></li>
           <li><a href="/">Start</a></li>
           <li><a href="/thread">Thread</a></li>
+          <li><a href="/crypto">All currencies</a></li>
         </ul>
       </div>
     </nav>
