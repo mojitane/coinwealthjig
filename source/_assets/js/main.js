@@ -239,7 +239,7 @@ ready(function() {
       enabled: false
     },
   });
-  if (document.querySelector('.js-highcharts-container-1') !== null) {
+  if (document.getElementById('js-highcharts-container-1') !== null) {
     Highcharts.stockChart('js-highcharts-container-1', {
       series: [{
         name: 'BTC',
@@ -251,7 +251,10 @@ ready(function() {
       }]
     });
   }
-  if (document.querySelector('.js-highcharts-container-2') !== null) {
+  else {
+    console.log('no chart 1')
+  }
+  if (document.getElementById('js-highcharts-container-2') !== null) {
     Highcharts.stockChart('js-highcharts-container-2', {
       series: [{
         name: 'ETH',
@@ -263,7 +266,10 @@ ready(function() {
       }]
     });
   }
-  if (document.querySelector('.js-highcharts-container-3') !== null) {
+  else {
+    console.log('no chart 2')
+  }
+  if (document.getElementById('js-highcharts-container-3') !== null) {
     Highcharts.stockChart('js-highcharts-container-3', {
       series: [{
         name: 'XRP',
@@ -275,7 +281,9 @@ ready(function() {
       }]
     });
   }
-
+  else {
+    console.log('no chart 3')
+  }
   // carousel flickity
   if (document.querySelector('.js-cw-highcharts-carousel') !== null) {
     var flkty = new Flickity( '.js-cw-highcharts-carousel', {
