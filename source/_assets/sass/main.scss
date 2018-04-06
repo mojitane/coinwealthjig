@@ -14,6 +14,10 @@
   color: $white;
 }
 
+[v-cloak] {
+  display: none;
+}
+
 .ad {
   border: 1px solid $primary;
   margin: 0 auto;

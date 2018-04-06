@@ -13698,6 +13698,10 @@ body {
   color: white;
 }
 
+[v-cloak] {
+  display: none;
+}
+
 .ad {
   border: 1px solid #80ce5e;
   margin: 0 auto;

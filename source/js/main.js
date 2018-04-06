@@ -12590,6 +12590,9 @@ ready(function () {
   }
 
   // Vue for currency conversion
+  function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
   __WEBPACK_IMPORTED_MODULE_5_money___default.a.base = "USD";
   __WEBPACK_IMPORTED_MODULE_5_money___default.a.rates = {
     "EUR": 0.814080, // eg. 1 USD === 0.745101 EUR
@@ -12617,7 +12620,7 @@ ready(function () {
       configSymbolPosition: 'front',
       configSymbolSpacing: true,
       cryptoData: [//rank, name, cap,
-      { rank: 1, icon: 'cc BTC', currency: 'Bitcoin', cap: 171.48, price: 770.82, change: 14, low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }]
+      { rank: 1, toggleStar: true, toggleAlert: true, icon: 'cc BTC', currency: 'Bitcoin', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }, { rank: 2, toggleStar: false, toggleAlert: true, icon: 'cc ETH-alt', currency: 'Ethereum', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }, { rank: 3, toggleStar: false, toggleAlert: false, icon: 'cc XRP-alt', currency: 'Ripple', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }, { rank: 4, toggleStar: false, toggleAlert: false, icon: 'cc BTC', currency: 'Bitcoin', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }, { rank: 5, toggleStar: false, toggleAlert: true, icon: 'cc ETH-alt', currency: 'Ethereum', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }, { rank: 6, toggleStar: false, toggleAlert: false, icon: 'cc XRP-alt', currency: 'Ripple', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }, { rank: 7, toggleStar: false, toggleAlert: false, icon: 'cc BTC', currency: 'Bitcoin', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }, { rank: 8, toggleStar: false, toggleAlert: false, icon: 'cc ETH-alt', currency: 'Ethereum', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }, { rank: 9, toggleStar: false, toggleAlert: false, icon: 'cc XRP-alt', currency: 'Ripple', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }, { rank: 10, toggleStar: true, toggleAlert: false, icon: 'cc BTC', currency: 'Bitcoin', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }, { rank: 11, toggleStar: false, toggleAlert: false, icon: 'cc ETH-alt', currency: 'Ethereum', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }, { rank: 12, toggleStar: false, toggleAlert: false, icon: 'cc XRP-alt', currency: 'Ripple', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }]
     },
     computed: {
       cryptoDataLocal: function cryptoDataLocal() {
