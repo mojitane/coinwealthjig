@@ -20,6 +20,9 @@
     },
     "dependencies": {
         "bulma": "^0.6.2",
-        "slideout": "^1.0.1"
+        "money": "^0.2.0",
+        "slideout": "^1.0.1",
+        "vue": "^2.5.16",
+        "vue-currency-filter": "^2.1.1"
     }
 }

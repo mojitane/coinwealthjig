@@ -3,6 +3,9 @@
 import Slideout from 'slideout';
 import jsonSampleData from './data.json';
 import jsonSampleData2 from './data2.json';
+import Vue from 'vue';
+import VueCurrencyFilter from 'vue-currency-filter';
+import fx from 'money';
 
 function ready(fn) {
   if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
@@ -236,48 +239,114 @@ ready(function() {
       enabled: false
     },
   });
-  Highcharts.stockChart('js-highcharts-container-1', {
-    series: [{
-      name: 'BTC',
-      color: '#c1f5a9',
-      data: jsonSampleData,
-      tooltip: {
-        valueDecimals: 2
-      }
-    }]
-  });
-  Highcharts.stockChart('js-highcharts-container-2', {
-    series: [{
-      name: 'ETH',
-      color: '#c1f5a9',
-      data: jsonSampleData,
-      tooltip: {
-        valueDecimals: 2
-      }
-    }]
-  });
-  Highcharts.stockChart('js-highcharts-container-3', {
-    series: [{
-      name: 'XRP',
-      color: '#c1f5a9',
-      data: jsonSampleData2,
-      tooltip: {
-        valueDecimals: 2
-      }
-    }]
-  });
+  if (document.querySelector('.js-highcharts-container-1') !== null) {
+    Highcharts.stockChart('js-highcharts-container-1', {
+      series: [{
+        name: 'BTC',
+        color: '#c1f5a9',
+        data: jsonSampleData,
+        tooltip: {
+          valueDecimals: 2
+        }
+      }]
+    });
+  }
+  if (document.querySelector('.js-highcharts-container-2') !== null) {
+    Highcharts.stockChart('js-highcharts-container-2', {
+      series: [{
+        name: 'ETH',
+        color: '#c1f5a9',
+        data: jsonSampleData,
+        tooltip: {
+          valueDecimals: 2
+        }
+      }]
+    });
+  }
+  if (document.querySelector('.js-highcharts-container-3') !== null) {
+    Highcharts.stockChart('js-highcharts-container-3', {
+      series: [{
+        name: 'XRP',
+        color: '#c1f5a9',
+        data: jsonSampleData2,
+        tooltip: {
+          valueDecimals: 2
+        }
+      }]
+    });
+  }
 
   // carousel flickity
-  var flkty = new Flickity( '.js-cw-highcharts-carousel', {
-    watchCSS: true,
-    pageDots: false
-  });
+  if (document.querySelector('.js-cw-highcharts-carousel') !== null) {
+    var flkty = new Flickity( '.js-cw-highcharts-carousel', {
+      watchCSS: true,
+      pageDots: false
+    });
+  }
 
   // Vue for currency conversion
+  fx.base = "USD";
+  fx.rates = {
+  	"EUR" : 0.814080, // eg. 1 USD === 0.745101 EUR
+  	"GBP" : 0.647710, // etc...
+  	"HKD" : 7.781919,
+  	"USD" : 1,        // always include the base rate (1:1)
+  	/* etc */
+  };
+  Vue.use(VueCurrencyFilter,
+  {
+    symbol : '$',
+    thousandsSeparator: '.',
+    fractionCount: 2,
+    fractionSeparator: ',',
+    symbolPosition: 'front',
+    symbolSpacing: true
+  });
   var app = new Vue({
-    el: '#vue',
+    el: '#app',
     data: {
-      message: 'Hello Vue!'
+      currency: 'USD',
+      configSymbol: '$',
+      configSeparator: '.',
+      configFractionCount: 2,
+      configFractionSeparator: ',',
+      configSymbolPosition: 'front',
+      configSymbolSpacing: true,
+      cryptoData:
+      [ //rank, name, cap,
+        {rank: 1, icon: 'cc BTC', currency: 'Bitcoin', cap: 171.48, price: 770.82, change: 14, low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48},
+      ]
+    },
+    computed: {
+      cryptoDataLocal: function () {
+
+        let newdata = JSON.parse(JSON.stringify(this.cryptoData));
+        for (var i = 0; i < newdata.length; i++) {
+          newdata[i].cap = fx(newdata[i].cap).from("USD").to(this.currency);
+          newdata[i].price = fx(newdata[i].price).from("USD").to(this.currency);
+          newdata[i].low = fx(newdata[i].low).from("USD").to(this.currency);
+          newdata[i].high = fx(newdata[i].high).from("USD").to(this.currency);
+          newdata[i].volume = fx(newdata[i].volume).from("USD").to(this.currency);
+          newdata[i].averagevolume = fx(newdata[i].averagevolume).from("USD").to(this.currency);
+        }
+        return newdata;
+      }
+    },
+    methods: {
+      switchCurrencyEUR: function() {
+        this.currency = 'EUR';
+        this.configSymbol = '€';
+        this.configSymbolPosition = 'end';
+        this.configSeparator = ',';
+        this.configFractionSeparator = '.';
+      },
+      switchCurrencyUSD: function() {
+        this.currency = 'USD';
+        this.configSymbol = '$';
+        this.configSymbolPosition = 'front';
+        this.configSeparator = '.';
+        this.configFractionSeparator = ',';
+      }
     }
-  })
+  });
 });

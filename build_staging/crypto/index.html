@@ -245,7 +245,11 @@
           <div class="ad" style="width: 100%; height: 10rem;"></div>
         </div>
         <div class="column is-9">
-          <div id="vue" class="c-rankingfull__container" data-slideout-ignore>
+          <div id="app" class="c-rankingfull__container" data-slideout-ignore>
+  <div class="buttons">
+    <a @click="switchCurrencyUSD" :class="['button', currency == 'USD' ? 'is-primary' : '']">USD</a>
+    <a @click="switchCurrencyEUR" :class="['button', currency == 'EUR' ? 'is-primary' : '']">EUR</a>
+  </div>
   <table class="table is-hoverable c-rankingfull__table">
     <thead class="c-rankingfull__head">
       <tr>
@@ -266,357 +270,200 @@
           <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav is-active animated bounceIn"><i class="fas fa-star"></i></span>
           <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
         </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc BTC"></i></span> Bitcoin</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$171.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$770.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">12.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$271.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$161.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$171.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$211.48B</td>
-      </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">2
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav is-active animated bounceIn"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc ETH"></i></span> Ethereum</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
-      </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">3
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc XRP-alt"></i></span> Ripple</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
-      </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">4
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc LTC"></i></span> Litecoin</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-danger">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-danger"><i class="fas fa-caret-down"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
-      </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">5
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc NMC"></i></span> Namecoin</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
-      </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">6
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc DOGE-alt"></i></span> Dogecoin</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-danger">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-danger"><i class="fas fa-caret-down"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
-      </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">7
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav is-active animated bounceIn"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert is-active animated bounceIn"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc DASH-alt"></i></span> Dash</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
-      </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">8
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc PPC-alt"></i></span> Peercoin</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
+        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i :class="cryptoDataLocal[0].icon"></i></span> {{cryptoDataLocal[0].currency}}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--cap">{{cryptoDataLocal[0].cap | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">{{cryptoDataLocal[0].price | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</span></td>
+        <td class="c-rankingfull__row c-rankingfull__row--change">{{cryptoDataLocal[0].change}}% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
+        <td class="c-rankingfull__row c-rankingfull__row--low">{{cryptoDataLocal[0].low | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--high">{{cryptoDataLocal[0].high | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--volume">{{cryptoDataLocal[0].volume | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">{{cryptoDataLocal[0].averagevolume | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
       </tr>
             <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">1
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav is-active animated bounceIn"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc BTC"></i></span> Bitcoin</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$171.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$770.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">12.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$271.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$161.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$171.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$211.48B</td>
-      </tr>
-
-      <tr>
         <td class="c-rankingfull__row c-rankingfull__row--toggle">2
           <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav is-active animated bounceIn"><i class="fas fa-star"></i></span>
           <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
         </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc ETH"></i></span> Ethereum</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
-      </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">3
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc XRP-alt"></i></span> Ripple</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
-      </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">4
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc LTC"></i></span> Litecoin</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-danger">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-danger"><i class="fas fa-caret-down"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
-      </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">5
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc NMC"></i></span> Namecoin</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
-      </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">6
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc DOGE-alt"></i></span> Dogecoin</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-danger">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-danger"><i class="fas fa-caret-down"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
-      </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">7
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav is-active animated bounceIn"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert is-active animated bounceIn"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc DASH-alt"></i></span> Dash</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
-      </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">8
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc PPC-alt"></i></span> Peercoin</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
+        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i :class="cryptoDataLocal[0].icon"></i></span> {{cryptoDataLocal[0].currency}}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--cap">{{cryptoDataLocal[0].cap | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">{{cryptoDataLocal[0].price | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</span></td>
+        <td class="c-rankingfull__row c-rankingfull__row--change">{{cryptoDataLocal[0].change}}% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
+        <td class="c-rankingfull__row c-rankingfull__row--low">{{cryptoDataLocal[0].low | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--high">{{cryptoDataLocal[0].high | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--volume">{{cryptoDataLocal[0].volume | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">{{cryptoDataLocal[0].averagevolume | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
       </tr>
             <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">1
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav is-active animated bounceIn"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc BTC"></i></span> Bitcoin</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$171.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$770.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">12.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$271.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$161.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$171.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$211.48B</td>
-      </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">2
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav is-active animated bounceIn"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc ETH"></i></span> Ethereum</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
-      </tr>
-
-      <tr>
         <td class="c-rankingfull__row c-rankingfull__row--toggle">3
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav"><i class="fas fa-star"></i></span>
+          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav is-active animated bounceIn"><i class="fas fa-star"></i></span>
           <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
         </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc XRP-alt"></i></span> Ripple</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
+        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i :class="cryptoDataLocal[0].icon"></i></span> {{cryptoDataLocal[0].currency}}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--cap">{{cryptoDataLocal[0].cap | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">{{cryptoDataLocal[0].price | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</span></td>
+        <td class="c-rankingfull__row c-rankingfull__row--change">{{cryptoDataLocal[0].change}}% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
+        <td class="c-rankingfull__row c-rankingfull__row--low">{{cryptoDataLocal[0].low | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--high">{{cryptoDataLocal[0].high | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--volume">{{cryptoDataLocal[0].volume | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">{{cryptoDataLocal[0].averagevolume | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
       </tr>
-
-      <tr>
+            <tr>
         <td class="c-rankingfull__row c-rankingfull__row--toggle">4
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav"><i class="fas fa-star"></i></span>
+          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav is-active animated bounceIn"><i class="fas fa-star"></i></span>
           <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
         </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc LTC"></i></span> Litecoin</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-danger">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-danger"><i class="fas fa-caret-down"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
+        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i :class="cryptoDataLocal[0].icon"></i></span> {{cryptoDataLocal[0].currency}}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--cap">{{cryptoDataLocal[0].cap | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">{{cryptoDataLocal[0].price | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</span></td>
+        <td class="c-rankingfull__row c-rankingfull__row--change">{{cryptoDataLocal[0].change}}% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
+        <td class="c-rankingfull__row c-rankingfull__row--low">{{cryptoDataLocal[0].low | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--high">{{cryptoDataLocal[0].high | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--volume">{{cryptoDataLocal[0].volume | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">{{cryptoDataLocal[0].averagevolume | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
       </tr>
-
-      <tr>
+            <tr>
         <td class="c-rankingfull__row c-rankingfull__row--toggle">5
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav"><i class="fas fa-star"></i></span>
+          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav is-active animated bounceIn"><i class="fas fa-star"></i></span>
           <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
         </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc NMC"></i></span> Namecoin</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
+        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i :class="cryptoDataLocal[0].icon"></i></span> {{cryptoDataLocal[0].currency}}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--cap">{{cryptoDataLocal[0].cap | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">{{cryptoDataLocal[0].price | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</span></td>
+        <td class="c-rankingfull__row c-rankingfull__row--change">{{cryptoDataLocal[0].change}}% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
+        <td class="c-rankingfull__row c-rankingfull__row--low">{{cryptoDataLocal[0].low | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--high">{{cryptoDataLocal[0].high | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--volume">{{cryptoDataLocal[0].volume | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">{{cryptoDataLocal[0].averagevolume | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
       </tr>
-
-      <tr>
+            <tr>
         <td class="c-rankingfull__row c-rankingfull__row--toggle">6
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav"><i class="fas fa-star"></i></span>
+          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav is-active animated bounceIn"><i class="fas fa-star"></i></span>
           <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
         </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc DOGE-alt"></i></span> Dogecoin</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-danger">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-danger"><i class="fas fa-caret-down"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
+        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i :class="cryptoDataLocal[0].icon"></i></span> {{cryptoDataLocal[0].currency}}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--cap">{{cryptoDataLocal[0].cap | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">{{cryptoDataLocal[0].price | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</span></td>
+        <td class="c-rankingfull__row c-rankingfull__row--change">{{cryptoDataLocal[0].change}}% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
+        <td class="c-rankingfull__row c-rankingfull__row--low">{{cryptoDataLocal[0].low | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--high">{{cryptoDataLocal[0].high | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--volume">{{cryptoDataLocal[0].volume | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">{{cryptoDataLocal[0].averagevolume | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
       </tr>
-
-      <tr>
+            <tr>
         <td class="c-rankingfull__row c-rankingfull__row--toggle">7
           <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav is-active animated bounceIn"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert is-active animated bounceIn"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc DASH-alt"></i></span> Dash</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
-      </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">8
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav"><i class="fas fa-star"></i></span>
           <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
         </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc PPC-alt"></i></span> Peercoin</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
+        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i :class="cryptoDataLocal[0].icon"></i></span> {{cryptoDataLocal[0].currency}}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--cap">{{cryptoDataLocal[0].cap | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">{{cryptoDataLocal[0].price | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</span></td>
+        <td class="c-rankingfull__row c-rankingfull__row--change">{{cryptoDataLocal[0].change}}% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
+        <td class="c-rankingfull__row c-rankingfull__row--low">{{cryptoDataLocal[0].low | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--high">{{cryptoDataLocal[0].high | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--volume">{{cryptoDataLocal[0].volume | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">{{cryptoDataLocal[0].averagevolume | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+      </tr>
+            <tr>
+        <td class="c-rankingfull__row c-rankingfull__row--toggle">8
+          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav is-active animated bounceIn"><i class="fas fa-star"></i></span>
+          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
+        </td>
+        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i :class="cryptoDataLocal[0].icon"></i></span> {{cryptoDataLocal[0].currency}}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--cap">{{cryptoDataLocal[0].cap | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">{{cryptoDataLocal[0].price | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</span></td>
+        <td class="c-rankingfull__row c-rankingfull__row--change">{{cryptoDataLocal[0].change}}% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
+        <td class="c-rankingfull__row c-rankingfull__row--low">{{cryptoDataLocal[0].low | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--high">{{cryptoDataLocal[0].high | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--volume">{{cryptoDataLocal[0].volume | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">{{cryptoDataLocal[0].averagevolume | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+      </tr>
+            <tr>
+        <td class="c-rankingfull__row c-rankingfull__row--toggle">9
+          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav is-active animated bounceIn"><i class="fas fa-star"></i></span>
+          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
+        </td>
+        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i :class="cryptoDataLocal[0].icon"></i></span> {{cryptoDataLocal[0].currency}}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--cap">{{cryptoDataLocal[0].cap | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">{{cryptoDataLocal[0].price | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</span></td>
+        <td class="c-rankingfull__row c-rankingfull__row--change">{{cryptoDataLocal[0].change}}% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
+        <td class="c-rankingfull__row c-rankingfull__row--low">{{cryptoDataLocal[0].low | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--high">{{cryptoDataLocal[0].high | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--volume">{{cryptoDataLocal[0].volume | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">{{cryptoDataLocal[0].averagevolume | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+      </tr>
+            <tr>
+        <td class="c-rankingfull__row c-rankingfull__row--toggle">10
+          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav is-active animated bounceIn"><i class="fas fa-star"></i></span>
+          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
+        </td>
+        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i :class="cryptoDataLocal[0].icon"></i></span> {{cryptoDataLocal[0].currency}}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--cap">{{cryptoDataLocal[0].cap | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">{{cryptoDataLocal[0].price | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</span></td>
+        <td class="c-rankingfull__row c-rankingfull__row--change">{{cryptoDataLocal[0].change}}% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
+        <td class="c-rankingfull__row c-rankingfull__row--low">{{cryptoDataLocal[0].low | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--high">{{cryptoDataLocal[0].high | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--volume">{{cryptoDataLocal[0].volume | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">{{cryptoDataLocal[0].averagevolume | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
       </tr>
           </tbody>
   </table>
@@ -660,13 +507,12 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
     <script defer src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highstock/6.0.3/highstock.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
     <link rel="stylesheet" href="/css/main.css?id=c257d4b8dd7827ad3202">
-    <script src="/js/main.js?id=2135b42de2bc1d40af55"></script>
+    <script src="/js/main.js?id=0a8f806c27fd94e0f714"></script>
   </body>
 </html>
