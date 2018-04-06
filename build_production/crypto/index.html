@@ -19,6 +19,7 @@
           <li><a href="/">Start</a></li>
           <li><a href="/thread">Thread</a></li>
           <li><a href="/crypto">All currencies</a></li>
+          <li><a href="/coin">Single coin info</a></li>
         </ul>
       </div>
     </nav>
@@ -244,7 +245,11 @@
           <div class="ad" style="width: 100%; height: 10rem;"></div>
         </div>
         <div class="column is-9">
-          <div class="c-rankingfull__container" data-slideout-ignore>
+          <div id="app" class="c-rankingfull__container" data-slideout-ignore>
+  <div class="buttons">
+    <a @click="switchCurrencyUSD" :class="['button', currency == 'USD' ? 'is-primary' : '']">USD</a>
+    <a @click="switchCurrencyEUR" :class="['button', currency == 'EUR' ? 'is-primary' : '']">EUR</a>
+  </div>
   <table class="table is-hoverable c-rankingfull__table">
     <thead class="c-rankingfull__head">
       <tr>
@@ -259,365 +264,28 @@
         <th>Average volume</th>
       </tr>
     </thead>
-    <tbody>
-            <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">1
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav is-active animated bounceIn"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
+    <tbody v-cloak>
+      <tr v-for="coin in cryptoData">
+        <td class="c-rankingfull__row c-rankingfull__row--toggle">{{ coin.rank }}
+          <span :class="['icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav', {'is-active animated bounceIn': coin.toggleStar}]" @click="cryptoData[coin.rank-1].toggleStar = !coin.toggleStar"><i class="fas fa-star"></i></span>
+          <span :class="['icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert', , {'is-active animated bounceIn': coin.toggleAlert}]" @click="cryptoData[coin.rank-1].toggleAlert = !coin.toggleAlert"><i class="fas fa-exclamation-triangle"></i></span>
         </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc BTC"></i></span> Bitcoin</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$171.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$770.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">12.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$271.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$161.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$171.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$211.48B</td>
+        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i :class="coin.icon"></i></span> {{coin.currency}}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--cap">{{coin.cap | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">{{coin.price | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</span></td>
+        <td class="c-rankingfull__row c-rankingfull__row--change">{{coin.change}}% <span :class="['icon is-small', coin.change >= 0 ? 'has-text-primary' : 'has-text-danger']"><i :class="['fas', coin.change >= 0 ? 'fa-caret-up' : 'fa-caret-down']"></i></span></td>
+        <td class="c-rankingfull__row c-rankingfull__row--low">{{coin.low | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--high">{{coin.high | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--volume">{{coin.volume | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
+        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">{{coin.averagevolume | currency(configSymbol, configSeparator, configFractionCount,
+configFractionSeparator, configSymbolPosition, configSymbolSpacing) }}</td>
       </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">2
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav is-active animated bounceIn"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc ETH"></i></span> Ethereum</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
-      </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">3
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc XRP-alt"></i></span> Ripple</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
-      </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">4
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc LTC"></i></span> Litecoin</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-danger">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-danger"><i class="fas fa-caret-down"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
-      </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">5
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc NMC"></i></span> Namecoin</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
-      </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">6
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc DOGE-alt"></i></span> Dogecoin</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-danger">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-danger"><i class="fas fa-caret-down"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
-      </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">7
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav is-active animated bounceIn"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert is-active animated bounceIn"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc DASH-alt"></i></span> Dash</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
-      </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">8
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc PPC-alt"></i></span> Peercoin</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
-      </tr>
-            <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">1
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav is-active animated bounceIn"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc BTC"></i></span> Bitcoin</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$171.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$770.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">12.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$271.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$161.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$171.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$211.48B</td>
-      </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">2
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav is-active animated bounceIn"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc ETH"></i></span> Ethereum</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
-      </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">3
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc XRP-alt"></i></span> Ripple</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
-      </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">4
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc LTC"></i></span> Litecoin</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-danger">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-danger"><i class="fas fa-caret-down"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
-      </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">5
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc NMC"></i></span> Namecoin</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
-      </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">6
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc DOGE-alt"></i></span> Dogecoin</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-danger">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-danger"><i class="fas fa-caret-down"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
-      </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">7
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav is-active animated bounceIn"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert is-active animated bounceIn"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc DASH-alt"></i></span> Dash</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
-      </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">8
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc PPC-alt"></i></span> Peercoin</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
-      </tr>
-            <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">1
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav is-active animated bounceIn"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc BTC"></i></span> Bitcoin</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$171.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$770.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">12.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$271.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$161.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$171.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$211.48B</td>
-      </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">2
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav is-active animated bounceIn"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc ETH"></i></span> Ethereum</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
-      </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">3
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc XRP-alt"></i></span> Ripple</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
-      </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">4
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc LTC"></i></span> Litecoin</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-danger">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-danger"><i class="fas fa-caret-down"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
-      </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">5
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc NMC"></i></span> Namecoin</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
-      </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">6
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc DOGE-alt"></i></span> Dogecoin</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-danger">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-danger"><i class="fas fa-caret-down"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
-      </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">7
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav is-active animated bounceIn"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert is-active animated bounceIn"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc DASH-alt"></i></span> Dash</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
-      </tr>
-
-      <tr>
-        <td class="c-rankingfull__row c-rankingfull__row--toggle">8
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav"><i class="fas fa-star"></i></span>
-          <span class="icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert"><i class="fas fa-exclamation-triangle"></i></span>
-        </td>
-        <td class="c-rankingfull__row c-rankingfull__row--currency" title="Bitcoin"><span class="c-rankingfull__currency"><i class="cc PPC-alt"></i></span> Peercoin</td>
-        <td class="c-rankingfull__row c-rankingfull__row--cap">$91.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--price"><span class="has-text-primary">$421.82</span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--change">13.5% <span class="icon is-small has-text-primary"><i class="fas fa-caret-up"></i></span></td>
-        <td class="c-rankingfull__row c-rankingfull__row--low">$251.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--high">$131.2</td>
-        <td class="c-rankingfull__row c-rankingfull__row--volume">$151.48B</td>
-        <td class="c-rankingfull__row c-rankingfull__row--averagevolume">$171.48B</td>
-      </tr>
-          </tbody>
+    </tbody>
   </table>
 </div>
         </div>
@@ -664,7 +332,7 @@
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
-    <link rel="stylesheet" href="/css/main.css?id=2dc71cf550ffa27cc032">
-    <script src="/js/main.js?id=0936caea194110d87192"></script>
+    <link rel="stylesheet" href="/css/main.css?id=3d36e7c935d477d1331d">
+    <script src="/js/main.js?id=b18adfc79c9e81b35131"></script>
   </body>
 </html>
