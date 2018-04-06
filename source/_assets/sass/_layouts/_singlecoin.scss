@@ -1,0 +1,43 @@
+.l-singlecoin__header {
+  margin-bottom: 2rem;
+}
+.l-singlecoin__descriptionlist {
+  padding: 0;
+  @include tablet {
+    background-color: #f9f9f9;
+    padding: 2rem 3rem;
+  }
+}
+.l-singlecoin__iconcolumn {
+  background-color: $primary;
+  padding: 2rem 3rem;
+  @include mobile {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+}
+.l-singlecoin__highcharts {
+  @include tablet {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+.l-singlecoin__highcharts-container {
+  height: 400px;
+  margin-bottom: 2rem;
+}
+.l-singlecoin__main {
+  margin-bottom: 3rem;
+}
+.l-singlecoin__aside {
+  @include desktop {
+    padding: 0 5rem;
+  }
+}
+
+.l-singlecoin__alert-mobile {
+  background-color: #f9f9f9;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  padding: 2rem 1rem;
+}

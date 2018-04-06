@@ -926,6 +926,14 @@ ready(function () {
     watchCSS: true,
     pageDots: false
   });
+
+  // Vue for currency conversion
+  var app = new Vue({
+    el: '#vue',
+    data: {
+      message: 'Hello Vue!'
+    }
+  });
 });
 
 /***/ }),

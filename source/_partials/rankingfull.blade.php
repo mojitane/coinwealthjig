@@ -1,4 +1,4 @@
-<div class="c-rankingfull__container" data-slideout-ignore>
+<div id="vue" class="c-rankingfull__container" data-slideout-ignore>
   <table class="table is-hoverable c-rankingfull__table">
     <thead class="c-rankingfull__head">
       <tr>

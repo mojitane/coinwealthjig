@@ -235,107 +235,132 @@
 
     
 <main>
-  <div class="section">
+  <section class="section">
     <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-9">
-          <div class="ad u-hide-mobile" style="width:100%; height: 6rem;"></div>
-          <section class="c-thread">
-            <article class="c-thread__post">
-              <header class="c-thread__header u-hide-desktop">
-                <div class="columns is-mobile is-multiline is-paddingless">
-                  <div class="column is-narrow">
-                    <div class="c-thread__avatar">
-                      <div class="image is-1by1">
-                        <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jadlimcaco/128.jpg" alt="">
-                      </div>
-                    </div>
+      <section class="l-singlecoin__main">
+        <header class="l-singlecoin__header">
+          <h1 class="title is-4 has-text-spaced is-uppercase">Bitcoin | BTC</h1>
+          <ul class="o-listselect">
+            <li class="o-listselect__item is-active">USD</li>
+            <li class="o-listselect__item">BTC</li>
+            <li class="o-listselect__item">ETH</li>
+            <li class="o-listselect__item">XRP</li>
+            <li class="o-listselect__item">BCH</li>
+          </ul>
+        </header>
+        <div class="columns">
+          <div class="column l-singlecoin__descriptionlist">
+            <div class="o-descriptionlist">
+              <div class="o-descriptionlist__item">
+                <div class="o-descriptionlist__title">Rank</div>
+                <div class="o-descriptionlist__description">1</div>
+              </div>
+              <div class="o-descriptionlist__item">
+                <div class="o-descriptionlist__title">
+                  Rank change<!--<br>
+                  1D | 7D | 30D-->
+                </div>
+                <div class="o-descriptionlist__description">0</div>
+              </div>
+              <div class="o-descriptionlist__item">
+                <div class="o-descriptionlist__title">Price</div>
+                <div class="o-descriptionlist__description">$ 1,0166.90</div>
+              </div>
+              <div class="o-descriptionlist__item">
+                <div class="o-descriptionlist__title">Market cap</div>
+                <div class="o-descriptionlist__description">$ 171.48B</div>
+              </div>
+              <div class="o-descriptionlist__item">
+                <div class="o-descriptionlist__title">24 hour price change</div>
+                <div class="o-descriptionlist__description"></div>
+              </div>
+              <div class="o-descriptionlist__item">
+                <div class="o-descriptionlist__title">Volume</div>
+                <div class="o-descriptionlist__description">$ 171.48B</div>
+              </div>
+            </div>
+          </div>
+          <div class="column l-singlecoin__highcharts is-7-desktop is-5-tablet">
+            <div class="l-singlecoin__highcharts-container" id="js-highcharts-container-1"></div>
+            <div class="level is-mobile">
+              <div class="level-left"></div>
+              <div class="level-right">
+                <div class="level-item"><a href="#"><i class="fab fa-facebook-f fa-lg"></i></a></div>
+                <div class="level-item"><a href="#"><i class="fab fa-twitter fa-lg"></i></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="column l-singlecoin__alert-mobile u-hide-desktop has-text-centered">
+            <p class="title is-6 is-uppercase has-font-weight-bold">Want to know when somthing interesting happens?</p>
+            <a href="#" class="button is-primary modal-button js-modal-button" data-target="modal-alert">Set an alert &gt;</a>
+          </div>
+          <div class="column l-singlecoin__iconcolumn">
+            <div class="o-iconcolumn">
+              <div class="o-iconcolumn__item">
+                <div class="o-iconcolumn__icon"><img src="/img/coinicon01.png" alt=""></div>
+                <div class="o-iconcolumn__text">www.bitcoin.com</div>
+              </div>
+              <div class="o-iconcolumn__item">
+                <div class="o-iconcolumn__icon"><img src="/img/coinicon02.png" alt=""></div>
+                <div class="o-iconcolumn__text">Explorer 1</div>
+              </div>
+              <div class="o-iconcolumn__item">
+                <div class="o-iconcolumn__icon"><img src="/img/coinicon03.png" alt=""></div>
+                <div class="o-iconcolumn__text">Message Boards</div>
+              </div>
+              <div class="o-iconcolumn__item">
+                <div class="o-iconcolumn__icon"><img src="/img/coinicon04.png" alt=""></div>
+                <div class="o-iconcolumn__text">Source Code</div>
+              </div>
+            </div>
+            <div class="has-text-centered">
+              <a href="#" class="button is-outlined is-light is-uppercase is-medium">Buy now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <aside>
+        <div class="l-singlecoin__aside">
+          <div class="columns">
+            <div class="column is-7">
+              <section class="l-singlecoin__recent-posts">
+                <div class="columns u-hide-mobile">
+                  <div class="column is-7 has-text-right">
+                    <p class="is-uppercase has-text-spaced is-size-7">Want to know when something interesting happens?</p>
                   </div>
-                  <div class="column">
-                    <p class="has-text-weight-bold is-uppercase has-text-spaced is-size-6-light">James Smith</p>
-                    <p class="c-thread__datetime is-size-7 is-uppercase has-text-spaced">Posted <time datetime="2018-03-27 12:00:00">23 hours</time> ago</p>
-                    <ul class="c-thread__meta is-size-7">
-                      <li><span class="icon is-small"><i class="far fa-dot-circle"></i></span> 11</li>
-                      <li><span class="icon is-small"><i class="fas fa-eye"></i></span> 5</li>
+                  <div class="column is-5">
+                    <a href="#" class="button is-primary is-fullwidth is-uppercase modal-button js-modal-button" data-target="modal-alert">Set an alert &gt;</a>
+                  </div>
+                </div>
+                <header>
+                  <h1 class="title is-5 is-uppercase has-text-spaced">Recent posts</h1>
+                  <p class="subtitle u-subtitle-has-margin">
+                    <ul class="o-listselect is-uppercase has-text-spaced is-size-7">
+                      <li class="o-listselect__item is-active">Date</li>
+                      <li class="o-listselect__item">Votes</li>
+                      <li class="o-listselect__item">Views</li>
                     </ul>
-                  </div>
-                  <div class="column is-12">
-                    <h1 class="c-thread__title title has-text-spaced">UK, US Agencies Join Forces To Study And Regulate Cryptocurrencies</h1>
-                  </div>
-                </div>
-              </header>
-              <header class="c-thread__header u-hide-mobile">
-                <div class="columns is-paddingless">
-                  <div class="column is-3">
-                    <div class="c-thread__avatar">
-                      <div class="image is-1by1">
-                        <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jadlimcaco/128.jpg" alt="">
-                      </div>
-                    </div>
-                    <p class="has-text-weight-bold has-text-centered is-uppercase has-text-spaced is-size-6-light">James Smith</p>
-                  </div>
-                  <div class="column is-9">
-                    <h1 class="c-thread__title title has-text-spaced">UK, US Agencies Join Forces To Study And Regulate Cryptocurrencies</h1>
-                    <ul class="c-thread__meta is-size-7">
-                      <li><span class="icon is-small"><i class="far fa-dot-circle"></i></span> 11</li>
-                      <li><span class="icon is-small"><i class="fas fa-eye"></i></span> 5</li>
-                    </ul>
-                    <p class="c-thread__datetime is-size-7 is-uppercase has-text-spaced">Posted <time datetime="2018-03-27 12:00:00">23 hours</time> ago</p>
-                  </div>
-                </div>
-              </header>
-              <div class="c-thread__body">
-                <div class="columns is-widescreen">
-                  <div class="column is-9 is-offset-3">
-                    <p class="c-thread__source has-text-weight-bold has-text-spaced is-uppercase is-size-6-light">Link: news.com</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta perferendis neque consectetur officiis sunt, itaque amet sequi, iste expedita nihil nobis, dignissimos doloremque ullam recusandae nemo reiciendis nesciunt eligendi! Quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et placeat quasi perferendis officia aspernatur incidunt, facilis autem officiis saepe veritatis suscipit eum deleniti. Aliquam recusandae, quaerat. Nemo accusamus officiis nisi.</p>
-                  </div>
-
-                </div>
-                <div class="ad u-hide-desktop" style="width:100%; height: 12rem;"></div>
-              </div>
-            </article>
-
-            <div class="c-thread__replies">
-              <article class="c-thread-reply">
-  <div class="columns">
+                  </p>
+                </header>
+                <article class="c-post-teaser">
+  <div class="columns is-mobile">
     <div class="column is-3">
-      <header class="c-thread-reply__header u-hide-mobile">
-        <div class="c-thread-reply__avatar">
-          <div class="image is-1by1">
-            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jadlimcaco/128.jpg" alt="">
-          </div>
-        </div>
-        <p class="has-text-weight-bold has-text-centered is-uppercase has-text-spaced is-size-6-light">James Smith</p>
-        <p class="has-text-grey has-text-centered is-size-6-light">Posted 23 hours ago</p>
-      </header>
-      <header class="c-thread-reply__header u-hide-desktop">
-        <div class="columns is-mobile">
-          <div class="column is-narrow">
-            <div class="c-thread-reply__avatar">
-              <div class="image is-1by1">
-                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jadlimcaco/128.jpg" alt="">
-              </div>
-            </div>
-          </div>
-          <div class="column">
-            <p class="has-text-weight-bold is-uppercase has-text-spaced is-size-6-light">James Smith</p>
-            <p class="has-text-grey is-size-6-light">Posted 23 hours ago</p>
-          </div>
-        </div>
-      </header>
+      <div class="image is-4by3"><img src="/img/thumb.jpg" alt=""></div>
     </div>
-    <div class="column is-9">
-      <p><span>Lorem ipsum dolor quisquam laborum iure nisi voluptates quos cum cupiditate porro, ducimus laboriosam!</span><span>Incidunt voluptates doloribus praesentium blanditiis labore nam officia, suscipit voluptatem eveniet temporibus, tempora, dolorem in, repellendus cumque alias aliquam reprehenderit voluptate iusto vel ad magni quam asperiores doloremque et? Quo.</span></p>
-      <div class="c-thread-reply__footer is-uppercase is-size-7 has-text-spaced">
-        <div class="level is-mobile">
+    <div class="column">
+      <h1 class="title is-6 is-marginless">Headline from post</h1>
+      <p>Lorem Ipsum dor sit amet, consectetur loreumdg adipcisekd elit sed lorem ipsum dolor sit dsede</p>
+      <div class="c-post-teaser__footer is-uppercase is-size-7 has-text-spaced">
+        <div class="level">
           <div class="level-left">
-            <ul class="level-item is-narrow">
+            <ul class="level-item">
               <li>In <a href="#">Bitcoin</a></li>
               <li><span class="icon is-small"><i class="far fa-dot-circle"></i></span> 11</li>
               <li><span class="icon is-small"><i class="fas fa-eye"></i></span> 5</li>
             </ul>
-            <ul class="level-item c-thread-reply__votes">
+          </div>
+          <div class="level-right has-text-right c-post-teaser__votes">
+            <ul class="level-item">
               <li class="c-post-teaser__vote js-post-teaser-vote c-post-teaser__vote--up"><span class="icon is-small has-text-weight-bold"><i class="fas fa-caret-up"></i></span> 25</li>
               <li class="c-post-teaser__vote js-post-teaser-vote c-post-teaser__vote--down"><span class="icon is-small has-text-weight-bold"><i class="fas fa-caret-down"></i></span> 32</li>
             </ul>
@@ -345,45 +370,25 @@
     </div>
   </div>
 </article>
-              <article class="c-thread-reply">
-  <div class="columns">
+                <article class="c-post-teaser">
+  <div class="columns is-mobile">
     <div class="column is-3">
-      <header class="c-thread-reply__header u-hide-mobile">
-        <div class="c-thread-reply__avatar">
-          <div class="image is-1by1">
-            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jadlimcaco/128.jpg" alt="">
-          </div>
-        </div>
-        <p class="has-text-weight-bold has-text-centered is-uppercase has-text-spaced is-size-6-light">James Smith</p>
-        <p class="has-text-grey has-text-centered is-size-6-light">Posted 23 hours ago</p>
-      </header>
-      <header class="c-thread-reply__header u-hide-desktop">
-        <div class="columns is-mobile">
-          <div class="column is-narrow">
-            <div class="c-thread-reply__avatar">
-              <div class="image is-1by1">
-                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jadlimcaco/128.jpg" alt="">
-              </div>
-            </div>
-          </div>
-          <div class="column">
-            <p class="has-text-weight-bold is-uppercase has-text-spaced is-size-6-light">James Smith</p>
-            <p class="has-text-grey is-size-6-light">Posted 23 hours ago</p>
-          </div>
-        </div>
-      </header>
+      <div class="image is-4by3"><img src="/img/thumb.jpg" alt=""></div>
     </div>
-    <div class="column is-9">
-      <p><span>Lorem ipsum dolor quisquam laborum iure nisi voluptates quos cum cupiditate porro, ducimus laboriosam!</span><span>Incidunt voluptates doloribus praesentium blanditiis labore nam officia, suscipit voluptatem eveniet temporibus, tempora, dolorem in, repellendus cumque alias aliquam reprehenderit voluptate iusto vel ad magni quam asperiores doloremque et? Quo.</span></p>
-      <div class="c-thread-reply__footer is-uppercase is-size-7 has-text-spaced">
-        <div class="level is-mobile">
+    <div class="column">
+      <h1 class="title is-6 is-marginless">Headline from post</h1>
+      <p>Lorem Ipsum dor sit amet, consectetur loreumdg adipcisekd elit sed lorem ipsum dolor sit dsede</p>
+      <div class="c-post-teaser__footer is-uppercase is-size-7 has-text-spaced">
+        <div class="level">
           <div class="level-left">
-            <ul class="level-item is-narrow">
+            <ul class="level-item">
               <li>In <a href="#">Bitcoin</a></li>
               <li><span class="icon is-small"><i class="far fa-dot-circle"></i></span> 11</li>
               <li><span class="icon is-small"><i class="fas fa-eye"></i></span> 5</li>
             </ul>
-            <ul class="level-item c-thread-reply__votes">
+          </div>
+          <div class="level-right has-text-right c-post-teaser__votes">
+            <ul class="level-item">
               <li class="c-post-teaser__vote js-post-teaser-vote c-post-teaser__vote--up"><span class="icon is-small has-text-weight-bold"><i class="fas fa-caret-up"></i></span> 25</li>
               <li class="c-post-teaser__vote js-post-teaser-vote c-post-teaser__vote--down"><span class="icon is-small has-text-weight-bold"><i class="fas fa-caret-down"></i></span> 32</li>
             </ul>
@@ -393,45 +398,25 @@
     </div>
   </div>
 </article>
-              <article class="c-thread-reply">
-  <div class="columns">
+                <article class="c-post-teaser">
+  <div class="columns is-mobile">
     <div class="column is-3">
-      <header class="c-thread-reply__header u-hide-mobile">
-        <div class="c-thread-reply__avatar">
-          <div class="image is-1by1">
-            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jadlimcaco/128.jpg" alt="">
-          </div>
-        </div>
-        <p class="has-text-weight-bold has-text-centered is-uppercase has-text-spaced is-size-6-light">James Smith</p>
-        <p class="has-text-grey has-text-centered is-size-6-light">Posted 23 hours ago</p>
-      </header>
-      <header class="c-thread-reply__header u-hide-desktop">
-        <div class="columns is-mobile">
-          <div class="column is-narrow">
-            <div class="c-thread-reply__avatar">
-              <div class="image is-1by1">
-                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jadlimcaco/128.jpg" alt="">
-              </div>
-            </div>
-          </div>
-          <div class="column">
-            <p class="has-text-weight-bold is-uppercase has-text-spaced is-size-6-light">James Smith</p>
-            <p class="has-text-grey is-size-6-light">Posted 23 hours ago</p>
-          </div>
-        </div>
-      </header>
+      <div class="image is-4by3"><img src="/img/thumb.jpg" alt=""></div>
     </div>
-    <div class="column is-9">
-      <p><span>Lorem ipsum dolor quisquam laborum iure nisi voluptates quos cum cupiditate porro, ducimus laboriosam!</span><span>Incidunt voluptates doloribus praesentium blanditiis labore nam officia, suscipit voluptatem eveniet temporibus, tempora, dolorem in, repellendus cumque alias aliquam reprehenderit voluptate iusto vel ad magni quam asperiores doloremque et? Quo.</span></p>
-      <div class="c-thread-reply__footer is-uppercase is-size-7 has-text-spaced">
-        <div class="level is-mobile">
+    <div class="column">
+      <h1 class="title is-6 is-marginless">Headline from post</h1>
+      <p>Lorem Ipsum dor sit amet, consectetur loreumdg adipcisekd elit sed lorem ipsum dolor sit dsede</p>
+      <div class="c-post-teaser__footer is-uppercase is-size-7 has-text-spaced">
+        <div class="level">
           <div class="level-left">
-            <ul class="level-item is-narrow">
+            <ul class="level-item">
               <li>In <a href="#">Bitcoin</a></li>
               <li><span class="icon is-small"><i class="far fa-dot-circle"></i></span> 11</li>
               <li><span class="icon is-small"><i class="fas fa-eye"></i></span> 5</li>
             </ul>
-            <ul class="level-item c-thread-reply__votes">
+          </div>
+          <div class="level-right has-text-right c-post-teaser__votes">
+            <ul class="level-item">
               <li class="c-post-teaser__vote js-post-teaser-vote c-post-teaser__vote--up"><span class="icon is-small has-text-weight-bold"><i class="fas fa-caret-up"></i></span> 25</li>
               <li class="c-post-teaser__vote js-post-teaser-vote c-post-teaser__vote--down"><span class="icon is-small has-text-weight-bold"><i class="fas fa-caret-down"></i></span> 32</li>
             </ul>
@@ -441,61 +426,17 @@
     </div>
   </div>
 </article>
-              <article class="c-thread-reply">
-  <div class="columns">
-    <div class="column is-3">
-      <header class="c-thread-reply__header u-hide-mobile">
-        <div class="c-thread-reply__avatar">
-          <div class="image is-1by1">
-            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jadlimcaco/128.jpg" alt="">
-          </div>
-        </div>
-        <p class="has-text-weight-bold has-text-centered is-uppercase has-text-spaced is-size-6-light">James Smith</p>
-        <p class="has-text-grey has-text-centered is-size-6-light">Posted 23 hours ago</p>
-      </header>
-      <header class="c-thread-reply__header u-hide-desktop">
-        <div class="columns is-mobile">
-          <div class="column is-narrow">
-            <div class="c-thread-reply__avatar">
-              <div class="image is-1by1">
-                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jadlimcaco/128.jpg" alt="">
-              </div>
+                <a href="#" class="button is-primary is-outlined is-uppercase has-text-spaced">Join our community &gt;</a>
+              </section>
+            </div>
+            <div class="column is-4 is-offset-1">
+            <div class="ad" style="height: 200px;"></div>
             </div>
           </div>
-          <div class="column">
-            <p class="has-text-weight-bold is-uppercase has-text-spaced is-size-6-light">James Smith</p>
-            <p class="has-text-grey is-size-6-light">Posted 23 hours ago</p>
-          </div>
         </div>
-      </header>
+      </aside>
     </div>
-    <div class="column is-9">
-      <p><span>Lorem ipsum dolor quisquam laborum iure nisi voluptates quos cum cupiditate porro, ducimus laboriosam!</span><span>Incidunt voluptates doloribus praesentium blanditiis labore nam officia, suscipit voluptatem eveniet temporibus, tempora, dolorem in, repellendus cumque alias aliquam reprehenderit voluptate iusto vel ad magni quam asperiores doloremque et? Quo.</span></p>
-      <div class="c-thread-reply__footer is-uppercase is-size-7 has-text-spaced">
-        <div class="level is-mobile">
-          <div class="level-left">
-            <ul class="level-item is-narrow">
-              <li>In <a href="#">Bitcoin</a></li>
-              <li><span class="icon is-small"><i class="far fa-dot-circle"></i></span> 11</li>
-              <li><span class="icon is-small"><i class="fas fa-eye"></i></span> 5</li>
-            </ul>
-            <ul class="level-item c-thread-reply__votes">
-              <li class="c-post-teaser__vote js-post-teaser-vote c-post-teaser__vote--up"><span class="icon is-small has-text-weight-bold"><i class="fas fa-caret-up"></i></span> 25</li>
-              <li class="c-post-teaser__vote js-post-teaser-vote c-post-teaser__vote--down"><span class="icon is-small has-text-weight-bold"><i class="fas fa-caret-down"></i></span> 32</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-            </div>
-            <a href="#" class="button is-primary is-outlined has-text-spaced is-uppercase">Reply to thread</a>
-          </section>
-        </div>
-      </div>
-    </div>
-  </div>
+  </section>
 </main>
 
 

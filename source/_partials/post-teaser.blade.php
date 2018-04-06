@@ -1,7 +1,7 @@
 <article class="c-post-teaser">
   <div class="columns is-mobile">
     <div class="column is-3">
-      <div class="image is-4by3"><img src="img/thumb.jpg" alt=""></div>
+      <div class="image is-4by3"><img src="/img/thumb.jpg" alt=""></div>
     </div>
     <div class="column">
       <h1 class="title is-6 is-marginless">Headline from post</h1>

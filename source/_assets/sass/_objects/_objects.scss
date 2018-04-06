@@ -1,3 +1,68 @@
 .o-burger {
   @include hamburger($navbar-height);
 }
+
+.o-listselect {
+  font-size: 0.9rem;
+  > li {
+    display: inline-block;
+    padding: 0 0.5rem;
+    border-right: 1px solid $black;
+    &:first-of-type {
+      padding-left: 0;
+    }
+    &:last-of-type {
+      border-right: 0;
+      padding-right: 0;
+    }
+  }
+  & .is-active {
+    color: $primary;
+    font-weight: 700;
+  }
+}
+
+.o-descriptionlist {
+  text-align: center;
+  letter-spacing: 0.1em;
+  font-size: 0.8rem;
+  @include mobile {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.o-descriptionlist__item {
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @include mobile {
+    width: 33.3333%;
+    margin-bottom: 1rem;
+  }
+}
+.o-descriptionlist__title {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.o-descriptionlist__description {
+
+}
+
+.o-iconcolumn {
+  margin-bottom: 1.5rem;
+}
+.o-iconcolumn__item {
+  margin-bottom: 1rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.o-iconcolumn__icon {
+  text-align: center;
+}
+.o-iconcolumn__text {
+  text-align: center;
+  font-size: 1rem;
+}
