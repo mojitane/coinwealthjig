@@ -20,6 +20,8 @@
           <li><a href="/thread">Thread</a></li>
           <li><a href="/crypto">All currencies</a></li>
           <li><a href="/coin">Single coin info</a></li>
+          <li><a href="/exchangesvolume">All exchanges by volume</a></li>
+          <li><a href="/home-returning">Home returning users</a></li>
         </ul>
       </div>
     </nav>

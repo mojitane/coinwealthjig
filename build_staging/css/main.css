@@ -13034,7 +13034,7 @@ label.panel-block:hover {
 }
 
 .c-ranking__head tr {
-  border-bottom: 0.3rem solid white;
+  border-bottom: 0.3rem solid transparent;
 }
 
 .c-ranking__head th {
@@ -13606,6 +13606,18 @@ body {
 .o-iconcolumn__text {
   text-align: center;
   font-size: 1rem;
+}
+
+.l-home__watchlist {
+  padding: 2rem 0;
+}
+
+@media screen and (min-width: 769px), print {
+  .l-home__watchlist {
+    background-color: #f8f8f8;
+    padding: 2rem 3rem;
+    margin-bottom: 2rem;
+  }
 }
 
 .l-singlecoin__header {
