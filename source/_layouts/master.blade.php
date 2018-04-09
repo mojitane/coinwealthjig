@@ -22,6 +22,7 @@
           <li><a href="/coin">Single coin info</a></li>
           <li><a href="/exchangesvolume">All exchanges by volume</a></li>
           <li><a href="/home-returning">Home returning users</a></li>
+          <li><a href="/community-home">Community home</a></li>
         </ul>
       </div>
     </nav>
