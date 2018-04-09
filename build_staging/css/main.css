@@ -10728,6 +10728,57 @@ label.panel-block:hover {
   padding: 3rem 1.5rem 6rem;
 }
 
+.is-divider, .is-divider-vertical {
+  display: block;
+  position: relative;
+}
+
+.is-divider[data-content]::after, .is-divider-vertical[data-content]::after {
+  background: white;
+  color: #4a4a4a;
+  content: attr(data-content);
+  display: inline-block;
+  font-size: 1rem;
+  padding: .5rem .8rem;
+  -webkit-transform: translateY(-1.1rem);
+  transform: translateY(-1.1rem);
+  text-align: center;
+}
+
+.is-divider {
+  border-top: 0.1rem solid #dbdbdb;
+  height: .1rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.is-divider-vertical {
+  display: block;
+  padding: 2rem;
+  position: relative;
+}
+
+.is-divider-vertical::before {
+  border-left: 0.1rem solid #dbdbdb;
+  bottom: 1rem;
+  content: "";
+  display: block;
+  left: 50%;
+  position: absolute;
+  top: 1rem;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.is-divider-vertical[data-content]::after {
+  left: 50%;
+  padding: .4rem 0;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 /*! Cryptocoins - cryptocurrency icon font | https://github.com/allienworks/cryptocoins */
 @font-face {
   font-family: "cryptocoins";
@@ -13467,6 +13518,62 @@ body {
   .cw-track__top {
     text-align: center;
   }
+}
+
+.c-feed-menu {
+  background-color: whitesmoke;
+  padding: 1rem 1rem 1rem 3rem;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+}
+
+@media screen and (min-width: 769px), print {
+  .c-feed-menu {
+    padding: 2rem 1rem 4rem 1rem;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1116px) {
+  .c-feed-menu {
+    padding: 2rem 1rem 4rem 3rem;
+  }
+}
+
+.c-feed-menu__header {
+  display: inline-block;
+  font-size: 0.9rem;
+  padding-right: 1rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #0a0a0a;
+}
+
+.c-feed__item {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding: 0.3rem 0;
+  letter-spacing: 0.2em;
+}
+
+.c-feed__item > a {
+  color: #0a0a0a;
+}
+
+.c-feed__item > a:hover {
+  color: #7a7a7a;
+}
+
+.c-feed__item.is-active > a {
+  color: #80ce5e;
+}
+
+.c-feed__item.is-active > a:hover {
+  color: #9fda85;
+}
+
+.c-feed__item.is-active > a:before {
+  content: '\2013';
 }
 
 .o-burger {
