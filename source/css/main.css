@@ -12784,6 +12784,15 @@ label.panel-block:hover {
   }
 }
 
+.c-profile__editbutton {
+  color: #b5b5b5;
+  cursor: pointer;
+}
+
+.c-profile__editbutton:hover {
+  color: #363636;
+}
+
 .cw-alert .column:first-child {
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;

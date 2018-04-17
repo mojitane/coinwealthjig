@@ -196,6 +196,134 @@ __WEBPACK_IMPORTED_MODULE_0_money___default.a.rates = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./source/_assets/js/vue/Profile.vue":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      editing: false
+    };
+  },
+
+  computed: {},
+  methods: {
+    toggleEdit: function toggleEdit() {
+      this.editing = !this.editing;
+      console.log('switched');
+      console.log(this.editing);
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./source/_assets/js/vue/Searchbar.vue":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1935,6 +2063,259 @@ if (false) {
   module.hot.accept()
   if (module.hot.data) {
     require("vue-hot-reload-api")      .rerender("data-v-4f5a704a", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-fa79b346\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./source/_assets/js/vue/Profile.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("h1", { staticClass: "title is-uppercase has-text-spaced is-5" }, [
+      _vm._v("Your Profile "),
+      _c("span", { on: { click: _vm.toggleEdit } }, [
+        _c("i", { staticClass: "fas fa-pencil-alt c-profile__editbutton" })
+      ])
+    ]),
+    _vm._v(" "),
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "field is-horizontal" }, [
+      _vm._m(1),
+      _vm._v(" "),
+      _c("div", { staticClass: "field-body" }, [
+        _c("div", { staticClass: "field" }, [
+          _c("div", { staticClass: "control" }, [
+            _c(
+              "div",
+              {
+                directives: [
+                  {
+                    name: "show",
+                    rawName: "v-show",
+                    value: _vm.editing,
+                    expression: "editing"
+                  }
+                ],
+                staticClass: "file is-small"
+              },
+              [_vm._m(2)]
+            )
+          ])
+        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "field is-horizontal" }, [
+      _vm._m(3),
+      _vm._v(" "),
+      _c("div", { staticClass: "field-body" }, [
+        _c("div", { staticClass: "field" }, [
+          _c("div", { staticClass: "control" }, [
+            _c("input", {
+              class: ["input", { "is-static": !_vm.editing }],
+              attrs: {
+                type: "email",
+                value: "alexsmith@gmail.com",
+                readonly: !_vm.editing
+              }
+            })
+          ])
+        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "field is-horizontal" }, [
+      _vm._m(4),
+      _vm._v(" "),
+      _c("div", { staticClass: "field-body" }, [
+        _c("div", { staticClass: "field" }, [
+          _c("div", { staticClass: "control" }, [
+            _c("input", {
+              class: ["input", { "is-static": !_vm.editing }],
+              attrs: {
+                type: "text",
+                value: "alexsmithcoinwealth",
+                readonly: !_vm.editing
+              }
+            })
+          ])
+        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "field is-horizontal" }, [
+      _vm._m(5),
+      _vm._v(" "),
+      _c("div", { staticClass: "field-body" }, [
+        _c("div", { staticClass: "field" }, [
+          _c("div", { staticClass: "control" }, [
+            _c("input", {
+              class: ["input", { "is-static": !_vm.editing }],
+              attrs: {
+                type: "password",
+                value: "asdasdasdasd",
+                readonly: !_vm.editing
+              }
+            })
+          ])
+        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "field is-horizontal" }, [
+      _vm._m(6),
+      _vm._v(" "),
+      _c("div", { staticClass: "field-body" }, [
+        _c("div", { staticClass: "field" }, [
+          _c("div", { staticClass: "control" }, [
+            _c("input", {
+              class: ["input", { "is-static": !_vm.editing }],
+              attrs: {
+                type: "tel",
+                value: "123 456 789",
+                readonly: !_vm.editing
+              }
+            })
+          ])
+        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.editing,
+            expression: "editing"
+          }
+        ],
+        staticClass: "buttons"
+      },
+      [
+        _c(
+          "a",
+          {
+            staticClass:
+              "button is-outlined is-primary is-uppercase has-text-spaced",
+            attrs: { href: "#" },
+            on: { click: _vm.toggleEdit }
+          },
+          [_vm._v("Update")]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            staticClass: "button is-outlined is-uppercase has-text-spaced",
+            attrs: { href: "#" },
+            on: { click: _vm.toggleEdit }
+          },
+          [_vm._v("Cancel")]
+        )
+      ]
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "field is-horizontal" }, [
+      _c("div", { staticClass: "field-label is-normal" }, [
+        _c("label", { staticClass: "label" }, [_vm._v("Picture")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "field-body" }, [
+        _c("div", { staticClass: "field" }, [
+          _c("div", { staticClass: "control" }, [
+            _c("div", { staticClass: "image is-64x64" }, [
+              _c("img", {
+                attrs: { src: "https://picsum.photos/64/64", alt: "" }
+              })
+            ])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "field-label is-normal" }, [
+      _c("label", { staticClass: "label" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "file-label" }, [
+      _c("input", {
+        staticClass: "file-input",
+        attrs: { type: "file", name: "resume" }
+      }),
+      _vm._v(" "),
+      _c("span", { staticClass: "file-cta" }, [
+        _c("span", { staticClass: "file-icon" }, [
+          _c("i", { staticClass: "fas fa-upload" })
+        ]),
+        _vm._v(" "),
+        _c("span", { staticClass: "file-label" }, [
+          _vm._v("\n                  Change...\n                ")
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "field-label is-normal" }, [
+      _c("label", { staticClass: "label" }, [_vm._v("E-Mail")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "field-label is-normal" }, [
+      _c("label", { staticClass: "label" }, [_vm._v("Username")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "field-label is-normal" }, [
+      _c("label", { staticClass: "label" }, [_vm._v("Password")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "field-label is-normal" }, [
+      _c("label", { staticClass: "label" }, [_vm._v("Phone Number")])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-fa79b346", module.exports)
   }
 }
 
@@ -13516,7 +13897,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__vue_Searchbar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__vue_Searchbar_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__vue_Cryptolist_vue__ = __webpack_require__("./source/_assets/js/vue/Cryptolist.vue");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__vue_Cryptolist_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__vue_Cryptolist_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__vue_Profile_vue__ = __webpack_require__("./source/_assets/js/vue/Profile.vue");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__vue_Profile_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__vue_Profile_vue__);
 /*jshint esversion: 6 */
+
 
 
 
@@ -13833,6 +14217,14 @@ ready(function () {
       }
     });
   }
+  if (document.getElementById("vm4")) {
+    var vm4 = new __WEBPACK_IMPORTED_MODULE_3_vue___default.a({
+      el: '#vm4',
+      components: {
+        'v-profile': __WEBPACK_IMPORTED_MODULE_6__vue_Profile_vue___default.a
+      }
+    });
+  }
 });
 
 /***/ }),
@@ -13874,6 +14266,54 @@ if (false) {(function () {
     hotAPI.createRecord("data-v-4f5a704a", Component.options)
   } else {
     hotAPI.reload("data-v-4f5a704a", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ "./source/_assets/js/vue/Profile.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__("./node_modules/vue-loader/lib/component-normalizer.js")
+/* script */
+var __vue_script__ = __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./source/_assets/js/vue/Profile.vue")
+/* template */
+var __vue_template__ = __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-fa79b346\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./source/_assets/js/vue/Profile.vue")
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "source\\_assets\\js\\vue\\Profile.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-fa79b346", Component.options)
+  } else {
+    hotAPI.reload("data-v-fa79b346", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true

@@ -6,7 +6,8 @@ import jsonSampleData2 from './data2.json';
 
 import Vue from 'vue';
 import Searchbar from './vue/Searchbar.vue';
-import cryptolist from './vue/Cryptolist.vue';
+import Cryptolist from './vue/Cryptolist.vue';
+import Profile from './vue/Profile.vue';
 
 function ready(fn) {
   if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
@@ -298,7 +299,7 @@ ready(function() {
     var vm1 = new Vue({
       el: '#vm1',
       components: {
-        'v-cryptolist': cryptolist
+        'v-cryptolist': Cryptolist
       }
     });
   }
@@ -315,6 +316,14 @@ ready(function() {
       el: '#vm3',
       components: {
         'v-searchbar': Searchbar,
+      }
+    });
+  }
+  if (document.getElementById("vm4")) {
+    var vm4 = new Vue({
+      el: '#vm4',
+      components: {
+        'v-profile': Profile,
       }
     });
   }
