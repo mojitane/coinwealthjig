@@ -28,12 +28,14 @@
     </nav>
 
     <div id="panel">
-    @include('_partials.header')
-    @include('_partials.modals')
+      <div id="app">
+        @include('_partials.header')
+        @include('_partials.modals')
 
-    @yield('body')
+        @yield('body')
 
-    @include('_partials.footer')
+        @include('_partials.footer')
+      </div>
     </div>
 
 

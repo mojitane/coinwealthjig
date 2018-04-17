@@ -28,7 +28,8 @@
     </nav>
 
     <div id="panel">
-    <div class="c-navbar">
+      <div id="app">
+        <div class="c-navbar">
   <div class="container">
     <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
@@ -44,15 +45,8 @@
       <div class="navbar-menu">
         <div class="navbar-end is-size-6-light">
           <div class="navbar-item">
-            <div class="c-searchbar">
-              <div class="field">
-                <p class="control has-icons-right">
-                  <input class="input is-small c-searchbar__input" type="text" placeholder="Search">
-                  <span class="icon is-small is-right has-text-primary">
-                    <i class="fas fa-caret-right"></i>
-                  </span>
-                </p>
-              </div>
+            <div class="c-searchbar" id="vm2">
+              <v-searchbar></v-searchbar>
             </div>
           </div>
           <a href="#" class="navbar-item c-navbar__item c-navbar__item--border-right modal-button js-modal-button" data-target="modal-login">Login</a>
@@ -67,15 +61,8 @@
     </nav>
   </div>
 </div>
-<div class="c-searchbar--mobile u-hide-desktop">
-  <div class="field">
-    <p class="control has-icons-right">
-      <input class="input c-searchbar__input" type="text" placeholder="Search">
-      <span class="icon is-small is-right has-text-primary">
-        <i class="fas fa-caret-right"></i>
-      </span>
-    </p>
-  </div>
+<div class="c-searchbar--mobile u-hide-desktop" id="vm3">
+  <v-searchbar></v-searchbar>
 </div>
 <div class="cw-ticker has-text-weight-normal">
   <div class="container">
@@ -86,7 +73,7 @@
     </ul>
   </div>
 </div>
-    <div class="modal cw-modal" id="modal-alert">
+        <div class="modal cw-modal" id="modal-alert">
   <div class="modal-background"></div>
   <div class="modal-content">
     <div class="cw-modal-card">
@@ -236,7 +223,7 @@
   <button class="modal-close is-large" aria-label="close"></button>
 </div>
 
-    
+        
 <main>
   <section class="section">
     <div class="container">
@@ -443,7 +430,7 @@
 </main>
 
 
-    <div class="cw-ticker cw-ticker--mobile-spacers has-text-centered has-text-weight-normal">
+        <div class="cw-ticker cw-ticker--mobile-spacers has-text-centered has-text-weight-normal">
   <div class="container">
     <ul class="cw-ticker__list">
       <li class="cw-ticker__item">AAON 1.30%</li>
@@ -468,6 +455,7 @@
     COPYRIGHT 2018 COINWEALTH
   </p>
 </div>
+      </div>
     </div>
 
 
@@ -480,7 +468,7 @@
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
-    <link rel="stylesheet" href="/css/main.css?id=891fe9f3135d93468e4d">
-    <script src="/js/main.js?id=aa7d5eccde9c3a7f6c2b"></script>
+    <link rel="stylesheet" href="/css/main.css?id=6118cc1ea5f0da9171e9">
+    <script src="/js/main.js?id=74602462c8894fb82877"></script>
   </body>
 </html>

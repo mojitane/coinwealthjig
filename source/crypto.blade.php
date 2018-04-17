@@ -13,7 +13,7 @@
           <div class="ad" style="width: 100%; height: 10rem;"></div>
         </div>
         <div class="column is-9">
-          @include('_partials.rankingfull-v')
+          @include('_partials.rankingfull-v2')
         </div>
       </div>
     </div>

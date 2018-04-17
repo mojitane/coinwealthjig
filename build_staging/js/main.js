@@ -65,6 +65,186 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./source/_assets/js/vue/Cryptolist.vue":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_money__ = __webpack_require__("./node_modules/money/money.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_money___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_money__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue__ = __webpack_require__("./node_modules/vue/dist/vue.common.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vue_currency_filter__ = __webpack_require__("./node_modules/vue-currency-filter/dist/VueCurrencyFilter.bundle.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vue_currency_filter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_vue_currency_filter__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+__WEBPACK_IMPORTED_MODULE_1_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_2_vue_currency_filter___default.a, {
+  symbol: '$',
+  thousandsSeparator: '.',
+  fractionCount: 2,
+  fractionSeparator: ',',
+  symbolPosition: 'front',
+  symbolSpacing: true
+});
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+__WEBPACK_IMPORTED_MODULE_0_money___default.a.base = "USD";
+__WEBPACK_IMPORTED_MODULE_0_money___default.a.rates = {
+  "EUR": 0.814080, // eg. 1 USD === 0.745101 EUR
+  "GBP": 0.647710, // etc...
+  "HKD": 7.781919,
+  "USD": 1 // always include the base rate (1:1)
+  /* etc */
+};
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      currency: 'USD',
+      configSymbol: '$',
+      configSeparator: '.',
+      configFractionCount: 2,
+      configFractionSeparator: ',',
+      configSymbolPosition: 'front',
+      configSymbolSpacing: true,
+      cryptoData: [//rank, name, cap,
+      { rank: 1, toggleStar: true, toggleAlert: true, icon: 'cc BTC', currency: 'Bitcoin', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }, { rank: 2, toggleStar: false, toggleAlert: true, icon: 'cc ETH-alt', currency: 'Ethereum', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }, { rank: 3, toggleStar: false, toggleAlert: false, icon: 'cc XRP-alt', currency: 'Ripple', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }, { rank: 4, toggleStar: false, toggleAlert: false, icon: 'cc BTC', currency: 'Bitcoin', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }, { rank: 5, toggleStar: false, toggleAlert: true, icon: 'cc ETH-alt', currency: 'Ethereum', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }, { rank: 6, toggleStar: false, toggleAlert: false, icon: 'cc XRP-alt', currency: 'Ripple', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }, { rank: 7, toggleStar: false, toggleAlert: false, icon: 'cc BTC', currency: 'Bitcoin', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }, { rank: 8, toggleStar: false, toggleAlert: false, icon: 'cc ETH-alt', currency: 'Ethereum', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }, { rank: 9, toggleStar: false, toggleAlert: false, icon: 'cc XRP-alt', currency: 'Ripple', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }, { rank: 10, toggleStar: true, toggleAlert: false, icon: 'cc BTC', currency: 'Bitcoin', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }, { rank: 11, toggleStar: false, toggleAlert: false, icon: 'cc ETH-alt', currency: 'Ethereum', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }, { rank: 12, toggleStar: false, toggleAlert: false, icon: 'cc XRP-alt', currency: 'Ripple', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }]
+    };
+  },
+
+  computed: {
+    cryptoDataLocal: function cryptoDataLocal() {
+      var newdata = JSON.parse(JSON.stringify(this.cryptoData));
+      for (var i = 0; i < newdata.length; i++) {
+        newdata[i].cap = __WEBPACK_IMPORTED_MODULE_0_money___default()(newdata[i].cap).from("USD").to(this.currency);
+        newdata[i].price = __WEBPACK_IMPORTED_MODULE_0_money___default()(newdata[i].price).from("USD").to(this.currency);
+        newdata[i].low = __WEBPACK_IMPORTED_MODULE_0_money___default()(newdata[i].low).from("USD").to(this.currency);
+        newdata[i].high = __WEBPACK_IMPORTED_MODULE_0_money___default()(newdata[i].high).from("USD").to(this.currency);
+        newdata[i].volume = __WEBPACK_IMPORTED_MODULE_0_money___default()(newdata[i].volume).from("USD").to(this.currency);
+        newdata[i].averagevolume = __WEBPACK_IMPORTED_MODULE_0_money___default()(newdata[i].averagevolume).from("USD").to(this.currency);
+      }
+      return newdata;
+    }
+  },
+  methods: {
+    switchCurrencyEUR: function switchCurrencyEUR() {
+      this.currency = 'EUR';
+      this.configSymbol = '€';
+      this.configSymbolPosition = 'end';
+      this.configSeparator = ',';
+      this.configFractionSeparator = '.';
+    },
+    switchCurrencyUSD: function switchCurrencyUSD() {
+      this.currency = 'USD';
+      this.configSymbol = '$';
+      this.configSymbolPosition = 'front';
+      this.configSeparator = '.';
+      this.configFractionSeparator = ',';
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./source/_assets/js/vue/Searchbar.vue":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_simple_suggest__ = __webpack_require__("./node_modules/vue-simple-suggest/dist/es6.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+// import 'vue-simple-suggest/dist/styles.css'; // Optional CSS
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    VueSuggest: __WEBPACK_IMPORTED_MODULE_0_vue_simple_suggest__["a" /* default */]
+  },
+  data: function data() {
+    return {
+      chosen: '',
+      testlist: ['Vue.js', 'React.js', 'Angular.js', 'test'],
+      objectlist: [{ title: 'Bitcoin', icon: 'cc BTC' }, { title: 'Ethereum', icon: 'cc ETH-alt' }, { title: 'Ripple', icon: 'cc XRP-alt' }, { title: 'Dogecoin', icon: 'cc DOGE-alt' }, { title: 'Dash', icon: 'cc DASH-alt' }, { title: 'FuelCoin', icon: 'cc FC2-alt' }, { title: 'Vertcoin', icon: 'cc VTC-alt' }, { title: 'Tether', icon: 'cc USDT' }, { title: 'Rubies', icon: 'cc RBIES' }]
+    };
+  },
+
+  methods: {}
+});
+
+/***/ }),
+
 /***/ "./node_modules/decouple/index.js":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1269,6 +1449,1044 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
  */
 !function(n,e){function o(r){return!!(""===r||r&&r.charCodeAt&&r.substr)}function a(r){return m?m(r):"[object Array]"===d.call(r)}function i(r){return r&&"[object Object]"===d.call(r)}function u(r,t){var n;r=r||{},t=t||{};for(n in t)t.hasOwnProperty(n)&&null==r[n]&&(r[n]=t[n]);return r}function s(r,t,n){var e,o,a=[];if(!r)return a;if(p&&r.map===p)return r.map(t,n);for(e=0,o=r.length;e<o;e++)a[e]=t.call(n,r[e],e,r);return a}function c(r,t){return r=Math.round(Math.abs(r)),isNaN(r)?t:r}function f(r){var t=l.settings.currency.format;return"function"==typeof r&&(r=r()),o(r)&&r.match("%v")?{pos:r,neg:r.replace("-","").replace("%v","-%v"),zero:r}:r&&r.pos&&r.pos.match("%v")?r:o(t)?l.settings.currency.format={pos:t,neg:t.replace("%v","-%v"),zero:t}:t}var l={};l.version="0.4.1",l.settings={currency:{symbol:"$",format:"%s%v",decimal:".",thousand:",",precision:2,grouping:3},number:{precision:0,grouping:3,thousand:",",decimal:"."}};var p=Array.prototype.map,m=Array.isArray,d=Object.prototype.toString,y=l.unformat=l.parse=function(r,t){if(a(r))return s(r,function(r){return y(r,t)});if("number"==typeof(r=r||0))return r;t=t||l.settings.number.decimal;var n=new RegExp("[^0-9-"+t+"]",["g"]),e=parseFloat((""+r).replace(/\((.*)\)/,"-$1").replace(n,"").replace(t,"."));return isNaN(e)?0:e},b=l.toFixed=function(r,t){t=c(t,l.settings.number.precision);var n=Math.pow(10,t);return(Math.round(l.unformat(r)*n)/n).toFixed(t)},v=l.formatNumber=l.format=function(r,t,n,e){if(a(r))return s(r,function(r){return v(r,t,n,e)});r=y(r);var o=u(i(t)?t:{precision:t,thousand:n,decimal:e},l.settings.number),f=c(o.precision),p=r<0?"-":"",m=parseInt(b(Math.abs(r||0),f),10)+"",d=m.length>3?m.length%3:0;return p+(d?m.substr(0,d)+o.thousand:"")+m.substr(d).replace(/(\d{3})(?=\d)/g,"$1"+o.thousand)+(f?o.decimal+b(Math.abs(r),f).split(".")[1]:"")},g=l.formatMoney=function(r,t,n,e,o,p){if(a(r))return s(r,function(r){return g(r,t,n,e,o,p)});r=y(r);var m=u(i(t)?t:{symbol:t,precision:n,thousand:e,decimal:o,format:p},l.settings.currency),d=f(m.format);return(r>0?d.pos:r<0?d.neg:d.zero).replace("%s",m.symbol).replace("%v",v(Math.abs(r),c(m.precision),m.thousand,m.decimal))};l.formatColumn=function(r,t,n,e,p,m){if(!r)return[];var d=u(i(t)?t:{symbol:t,precision:n,thousand:e,decimal:p,format:m},l.settings.currency),b=f(d.format),g=b.pos.indexOf("%s")<b.pos.indexOf("%v"),h=0;return s(s(r,function(r,t){if(a(r))return l.formatColumn(r,d);r=y(r);var n=r>0?b.pos:r<0?b.neg:b.zero,e=n.replace("%s",d.symbol).replace("%v",v(Math.abs(r),c(d.precision),d.thousand,d.decimal));return e.length>h&&(h=e.length),e}),function(r,t){return o(r)&&r.length<h?g?r.replace(d.symbol,d.symbol+new Array(h-r.length+1).join(" ")):new Array(h-r.length+1).join(" ")+r:r})},void 0!==r&&r.exports&&(t=r.exports=l),t.accounting=l}()}])});
 //# sourceMappingURL=VueCurrencyFilter.bundle.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/component-normalizer.js":
+/***/ (function(module, exports) {
+
+/* globals __VUE_SSR_CONTEXT__ */
+
+// IMPORTANT: Do NOT use ES2015 features in this file.
+// This module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle.
+
+module.exports = function normalizeComponent (
+  rawScriptExports,
+  compiledTemplate,
+  functionalTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier /* server only */
+) {
+  var esModule
+  var scriptExports = rawScriptExports = rawScriptExports || {}
+
+  // ES6 modules interop
+  var type = typeof rawScriptExports.default
+  if (type === 'object' || type === 'function') {
+    esModule = rawScriptExports
+    scriptExports = rawScriptExports.default
+  }
+
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // render functions
+  if (compiledTemplate) {
+    options.render = compiledTemplate.render
+    options.staticRenderFns = compiledTemplate.staticRenderFns
+    options._compiled = true
+  }
+
+  // functional template
+  if (functionalTemplate) {
+    options.functional = true
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = injectStyles
+  }
+
+  if (hook) {
+    var functional = options.functional
+    var existing = functional
+      ? options.render
+      : options.beforeCreate
+
+    if (!functional) {
+      // inject component registration as beforeCreate hook
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    } else {
+      // for template-only hot-reload because in that case the render fn doesn't
+      // go through the normalizer
+      options._injectStyles = hook
+      // register for functioal component in vue file
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return existing(h, context)
+      }
+    }
+  }
+
+  return {
+    esModule: esModule,
+    exports: scriptExports,
+    options: options
+  }
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-33e30a1f\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./source/_assets/js/vue/Searchbar.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c(
+        "vue-suggest",
+        {
+          attrs: {
+            list: _vm.objectlist,
+            "value-attribute": "title",
+            "filter-by-query": true
+          },
+          scopedSlots: _vm._u([
+            {
+              key: "suggestion-item",
+              fn: function(ref) {
+                var suggestion = ref.suggestion
+                var query = ref.query
+                return _c("div", {}, [
+                  _c("div", [
+                    _c("i", { class: suggestion.icon }),
+                    _vm._v(" " + _vm._s(suggestion.title))
+                  ])
+                ])
+              }
+            }
+          ]),
+          model: {
+            value: _vm.chosen,
+            callback: function($$v) {
+              _vm.chosen = $$v
+            },
+            expression: "chosen"
+          }
+        },
+        [
+          _c("div", { staticClass: "field" }, [
+            _c("p", { staticClass: "control has-icons-right" }, [
+              _c("input", {
+                staticClass: "input is-small c-searchbar__input",
+                attrs: { type: "text", placeholder: "Search" }
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                { staticClass: "icon is-small is-right has-text-primary" },
+                [_c("i", { staticClass: "fas fa-caret-right" })]
+              )
+            ])
+          ])
+        ]
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-33e30a1f", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-4f5a704a\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./source/_assets/js/vue/Cryptolist.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      staticClass: "c-rankingfull__container",
+      attrs: { id: "app", "data-slideout-ignore": "" }
+    },
+    [
+      _c("div", { staticClass: "buttons" }, [
+        _c(
+          "a",
+          {
+            class: ["button", _vm.currency == "USD" ? "is-primary" : ""],
+            on: { click: _vm.switchCurrencyUSD }
+          },
+          [_vm._v("USD")]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            class: ["button", _vm.currency == "EUR" ? "is-primary" : ""],
+            on: { click: _vm.switchCurrencyEUR }
+          },
+          [_vm._v("EUR")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("table", { staticClass: "table is-hoverable c-rankingfull__table" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c(
+          "tbody",
+          {},
+          _vm._l(_vm.cryptoData, function(coin) {
+            return _c("tr", [
+              _c(
+                "td",
+                {
+                  staticClass: "c-rankingfull__row c-rankingfull__row--toggle"
+                },
+                [
+                  _vm._v(_vm._s(coin.rank) + "\n          "),
+                  _c(
+                    "span",
+                    {
+                      class: [
+                        "icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--fav",
+                        { "is-active animated bounceIn": coin.toggleStar }
+                      ],
+                      on: {
+                        click: function($event) {
+                          _vm.cryptoData[
+                            coin.rank - 1
+                          ].toggleStar = !coin.toggleStar
+                        }
+                      }
+                    },
+                    [_c("i", { staticClass: "fas fa-star" })]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      class: [
+                        "icon is-small js-ranking-toggle c-rankingfull__toggle c-rankingfull__toggle--alert",
+                        ,
+                        { "is-active animated bounceIn": coin.toggleAlert }
+                      ],
+                      on: {
+                        click: function($event) {
+                          _vm.cryptoData[
+                            coin.rank - 1
+                          ].toggleAlert = !coin.toggleAlert
+                        }
+                      }
+                    },
+                    [_c("i", { staticClass: "fas fa-exclamation-triangle" })]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "td",
+                {
+                  staticClass:
+                    "c-rankingfull__row c-rankingfull__row--currency",
+                  attrs: { title: "Bitcoin" }
+                },
+                [
+                  _c("span", { staticClass: "c-rankingfull__currency" }, [
+                    _c("i", { class: coin.icon })
+                  ]),
+                  _vm._v(" " + _vm._s(coin.currency))
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "td",
+                { staticClass: "c-rankingfull__row c-rankingfull__row--cap" },
+                [
+                  _vm._v(
+                    _vm._s(
+                      _vm._f("currency")(
+                        coin.cap,
+                        _vm.configSymbol,
+                        _vm.configSeparator,
+                        _vm.configFractionCount,
+                        _vm.configFractionSeparator,
+                        _vm.configSymbolPosition,
+                        _vm.configSymbolSpacing
+                      )
+                    )
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "td",
+                { staticClass: "c-rankingfull__row c-rankingfull__row--price" },
+                [
+                  _c("span", { staticClass: "has-text-primary" }, [
+                    _vm._v(
+                      _vm._s(
+                        _vm._f("currency")(
+                          coin.price,
+                          _vm.configSymbol,
+                          _vm.configSeparator,
+                          _vm.configFractionCount,
+                          _vm.configFractionSeparator,
+                          _vm.configSymbolPosition,
+                          _vm.configSymbolSpacing
+                        )
+                      )
+                    )
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "td",
+                {
+                  staticClass: "c-rankingfull__row c-rankingfull__row--change"
+                },
+                [
+                  _vm._v(_vm._s(coin.change) + "% "),
+                  _c(
+                    "span",
+                    {
+                      class: [
+                        "icon is-small",
+                        coin.change >= 0
+                          ? "has-text-primary"
+                          : "has-text-danger"
+                      ]
+                    },
+                    [
+                      _c("i", {
+                        class: [
+                          "fas",
+                          coin.change >= 0 ? "fa-caret-up" : "fa-caret-down"
+                        ]
+                      })
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "td",
+                { staticClass: "c-rankingfull__row c-rankingfull__row--low" },
+                [
+                  _vm._v(
+                    _vm._s(
+                      _vm._f("currency")(
+                        coin.low,
+                        _vm.configSymbol,
+                        _vm.configSeparator,
+                        _vm.configFractionCount,
+                        _vm.configFractionSeparator,
+                        _vm.configSymbolPosition,
+                        _vm.configSymbolSpacing
+                      )
+                    )
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "td",
+                { staticClass: "c-rankingfull__row c-rankingfull__row--high" },
+                [
+                  _vm._v(
+                    _vm._s(
+                      _vm._f("currency")(
+                        coin.high,
+                        _vm.configSymbol,
+                        _vm.configSeparator,
+                        _vm.configFractionCount,
+                        _vm.configFractionSeparator,
+                        _vm.configSymbolPosition,
+                        _vm.configSymbolSpacing
+                      )
+                    )
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "td",
+                {
+                  staticClass: "c-rankingfull__row c-rankingfull__row--volume"
+                },
+                [
+                  _vm._v(
+                    _vm._s(
+                      _vm._f("currency")(
+                        coin.volume,
+                        _vm.configSymbol,
+                        _vm.configSeparator,
+                        _vm.configFractionCount,
+                        _vm.configFractionSeparator,
+                        _vm.configSymbolPosition,
+                        _vm.configSymbolSpacing
+                      )
+                    )
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "td",
+                {
+                  staticClass:
+                    "c-rankingfull__row c-rankingfull__row--averagevolume"
+                },
+                [
+                  _vm._v(
+                    _vm._s(
+                      _vm._f("currency")(
+                        coin.averagevolume,
+                        _vm.configSymbol,
+                        _vm.configSeparator,
+                        _vm.configFractionCount,
+                        _vm.configFractionSeparator,
+                        _vm.configSymbolPosition,
+                        _vm.configSymbolSpacing
+                      )
+                    )
+                  )
+                ]
+              )
+            ])
+          })
+        )
+      ])
+    ]
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", { staticClass: "c-rankingfull__head" }, [
+      _c("tr", [
+        _c("th", [_vm._v("Rank")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Exchange")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Market Cap")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Price")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Change")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Day low")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Day high")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Volume")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Average volume")])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-4f5a704a", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/vue-simple-suggest/dist/es6.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+const defaultControls = {
+  selectionUp: [38],
+  selectionDown: [40],
+  select: [13],
+  hideList: [27],
+  autocomplete: [32, 13]
+};
+
+const modes = {
+  input: String,
+  select: Object
+};
+
+const inputProp = {
+  type: String
+};
+
+const inputProps = {
+  type: inputProp,
+  accesskey: inputProp,
+  autocomplete: inputProp,
+  form: inputProp,
+  formaction: inputProp,
+  formenctype: inputProp,
+  formmethod: inputProp,
+  formtarget: inputProp,
+  height: inputProp,
+  width: inputProp,
+  inputmode: inputProp,
+  max: inputProp,
+  min: inputProp,
+  minlength: inputProp,
+  maxlength: inputProp,
+  name: inputProp,
+  pattern: inputProp,
+  placeholder: inputProp,
+  selectionDirection: inputProp,
+  selectionEnd: inputProp,
+  selectionStart: inputProp,
+  size: inputProp,
+  src: inputProp,
+  step: inputProp,
+  tabindex: inputProp,
+  title: inputProp,
+  spellcheck: {},
+  readonly: {},
+  required: {},
+  multiple: {},
+  formnovalidate: {},
+  autofocus: {},
+  checked: {},
+  disabled: {}
+};
+
+function fromPath(obj, path) {
+  return path.split('.').reduce((o, i) => o === Object(o) ? o[i] : o, obj);
+}
+
+function hasKeyCode(arr, event) {
+  if (arr.length <= 0) return false;
+
+  const has = arr => arr.some(code => code === event.keyCode);
+  if (Array.isArray(arr[0])) {
+    return arr.some(array => has(array));
+  } else {
+    return has(arr);
+  }
+}
+
+function _finally(body, finalizer) {
+  try {
+    var result = body();
+  } catch (e) {
+    return finalizer();
+  }if (result && result.then) {
+    return result.then(finalizer, finalizer);
+  }return finalizer();
+}function _catch(body, recover) {
+  try {
+    var result = body();
+  } catch (e) {
+    return recover(e);
+  }if (result && result.then) {
+    return result.then(void 0, recover);
+  }return result;
+}
+function _invokeIgnored(body) {
+  var result = body();if (result && result.then) {
+    return result.then(_empty);
+  }
+}function _await(value, then, direct) {
+  if (direct) {
+    return then ? then(value) : value;
+  }value = Promise.resolve(value);return then ? value.then(then) : value;
+}const _async = function () {
+  try {
+    if (isNaN.apply(null, {})) {
+      return function (f) {
+        return function () {
+          try {
+            return Promise.resolve(f.apply(this, arguments));
+          } catch (e) {
+            return Promise.reject(e);
+          }
+        };
+      };
+    }
+  } catch (e) {}return function (f) {
+    // Pre-ES5.1 JavaScript runtimes don't accept array-likes in Function.apply
+    return function () {
+      try {
+        return Promise.resolve(f.apply(this, Array.prototype.slice.call(arguments)));
+      } catch (e) {
+        return Promise.reject(e);
+      }
+    };
+  };
+}();function _invoke(body, then) {
+  var result = body();if (result && result.then) {
+    return result.then(then);
+  }return then(result);
+}function _awaitIgnored(value, direct) {
+  if (!direct) {
+    return Promise.resolve(value).then(_empty);
+  }
+}function _empty() {}
+let event = 'input';
+
+var VueSimpleSuggest = {
+  render: function () {
+    var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('div', { staticClass: "vue-simple-suggest", class: { designed: !_vm.destyled, focus: _vm.isInFocus }, on: { "keydown": function ($event) {
+          if (!('button' in $event) && _vm._k($event.keyCode, "tab", 9, $event.key, "Tab")) {
+            return null;
+          }_vm.isTabbed = true;
+        } } }, [_c('div', { ref: "inputSlot", staticClass: "input-wrapper", on: { "click": _vm.showSuggestions, "input": _vm.onInput, "keydown": function ($event) {
+          _vm.moveSelection($event), _vm.onAutocomplete($event);
+        }, "keyup": _vm.onListKeyUp } }, [_vm._t("default", [_c('input', _vm._b({ staticClass: "default-input", domProps: { "value": _vm.text || '' } }, 'input', _vm.$props, false))])], 2), _vm._v(" "), !!_vm.listShown && !_vm.removeList ? _c('div', { staticClass: "suggestions", on: { "mouseenter": function ($event) {
+          _vm.hoverList(true);
+        }, "mouseleave": function ($event) {
+          _vm.hoverList(false);
+        } } }, [_vm._t("misc-item-above", null, { suggestions: _vm.suggestions, query: _vm.text }), _vm._v(" "), _vm._l(_vm.suggestions, function (suggestion, index) {
+      return _c('div', { key: _vm.isPlainSuggestion ? 'suggestion-' + index : _vm.valueProperty(suggestion), staticClass: "suggest-item", class: {
+          selected: _vm.selected && _vm.valueProperty(suggestion) == _vm.valueProperty(_vm.selected),
+          hover: _vm.hovered && _vm.valueProperty(_vm.hovered) == _vm.valueProperty(suggestion)
+        }, on: { "mouseenter": function ($event) {
+            _vm.hover(suggestion, $event.target);
+          }, "mouseleave": function ($event) {
+            _vm.hover(null, $event.target);
+          }, "click": function ($event) {
+            _vm.suggestionClick(suggestion, $event);
+          } } }, [_vm._t("suggestion-item", [_c('span', [_vm._v(_vm._s(_vm.displayProperty(suggestion)))])], { autocomplete: function () {
+          return _vm.autocompleteText(suggestion);
+        }, suggestion: suggestion, query: _vm.text })], 2);
+    }), _vm._v(" "), _vm._t("misc-item-below", null, { suggestions: _vm.suggestions, query: _vm.text })], 2) : _vm._e()]);
+  },
+  staticRenderFns: [],
+  name: 'vue-simple-suggest',
+  model: {
+    prop: 'value',
+    get event() {
+      return event;
+    }
+  },
+  props: Object.assign({}, inputProps, {
+    controls: {
+      type: Object,
+      default: () => defaultControls
+    },
+    minLength: {
+      type: Number,
+      default: 1
+    },
+    maxSuggestions: {
+      type: Number,
+      default: 10
+    },
+    displayAttribute: {
+      type: String,
+      default: 'title'
+    },
+    valueAttribute: {
+      type: String,
+      default: 'id'
+    },
+    list: {
+      type: [Function, Array],
+      default: () => []
+    },
+    removeList: {
+      type: Boolean,
+      default: false
+    },
+    destyled: {
+      type: Boolean,
+      default: false
+    },
+    filterByQuery: {
+      type: Boolean,
+      default: false
+    },
+    filter: {
+      type: Function,
+      default(el, value) {
+        return value ? ~this.displayProperty(el).toLowerCase().indexOf(value.toLowerCase()) : true;
+      }
+    },
+    debounce: {
+      type: Number,
+      default: 0
+    },
+    value: {},
+    mode: {
+      type: String,
+      default: event,
+      validator: value => !!~Object.keys(modes).indexOf(value.toLowerCase())
+    }
+  }),
+  // Handle run-time mode changes:
+  watch: {
+    mode: v => event = v
+  },
+  //
+  data() {
+    return {
+      selected: null,
+      hovered: null,
+      suggestions: [],
+      listShown: false,
+      inputElement: null,
+      canSend: true,
+      timeoutInstance: null,
+      text: this.value,
+      isPlainSuggestion: false,
+      isClicking: false,
+      isOverList: false,
+      isInFocus: false,
+      isTabbed: false,
+      controlScheme: {}
+    };
+  },
+  computed: {
+    listIsRequest() {
+      return typeof this.list === 'function';
+    },
+    inputIsComponent() {
+      return this.$slots.default && this.$slots.default.length > 0 && !!this.$slots.default[0].componentInstance;
+    },
+    input() {
+      return this.inputIsComponent ? this.$slots.default[0].componentInstance : this.inputElement;
+    },
+    on() {
+      return this.inputIsComponent ? '$on' : 'addEventListener';
+    },
+    off() {
+      return this.inputIsComponent ? '$off' : 'removeEventListener';
+    },
+    hoveredIndex() {
+      return this.suggestions.findIndex(el => this.hovered && this.valueProperty(this.hovered) == this.valueProperty(el));
+    }
+  },
+  created() {
+    this.controlScheme = Object.assign({}, defaultControls, this.controls);
+    event = this.mode;
+  },
+  mounted() {
+    this.inputElement = this.$refs['inputSlot'].querySelector('input');
+    this.input[this.on]('blur', this.onBlur);
+    this.input[this.on]('focus', this.onFocus);
+  },
+  beforeDestroy() {
+    this.input[this.off]('blur', this.onBlur);
+    this.input[this.off]('focus', this.onFocus);
+  },
+  methods: {
+    isScopedSlotEmpty(slot) {
+      return slot && typeof slot === 'function' ? !slot(this) : !slot;
+    },
+    miscSlotsAreEmpty() {
+      return ['above', 'below'].some(slotName => this.isScopedSlotEmpty(this.$scopedSlots['misc-item-' + slotName]));
+    },
+    displayProperty(obj) {
+      return (this.isPlainSuggestion ? obj : fromPath(obj, this.displayAttribute)) + '';
+    },
+    valueProperty(obj) {
+      return this.isPlainSuggestion ? obj : fromPath(obj, this.valueAttribute);
+    },
+    autocompleteText(text) {
+      this.$emit('input', text);
+      this.inputElement.value = text;
+      this.text = text;
+    },
+    select(item) {
+      this.hovered = null;
+      this.selected = item;
+
+      this.$emit('select', item);
+
+      this.autocompleteText(this.displayProperty(item));
+    },
+    hover(item, elem) {
+      this.hovered = item;
+
+      if (this.hovered != null) {
+        this.$emit('hover', item, elem);
+      }
+    },
+    hoverList(isOverList) {
+      this.isOverList = isOverList;
+    },
+    hideList() {
+      if (this.listShown) {
+        this.listShown = false;
+        this.$emit('hide-list');
+      }
+    },
+    showList() {
+      if (!this.listShown) {
+        const textLength = this.text && this.text.length || 0;
+        if (textLength >= this.minLength && (this.suggestions.length > 0 || !this.miscSlotsAreEmpty())) {
+          this.listShown = true;
+          this.$emit('show-list');
+        }
+      }
+    },
+    showSuggestions: _async(function () {
+      var _this = this;
+
+      return _invoke(function () {
+        if (_this.suggestions.length === 0 && _this.minLength === 0 && !_this.text) {
+          return _awaitIgnored(_this.research());
+        }
+      }, function () {
+        _this.showList();
+      });
+    }),
+
+    moveSelection(e) {
+      if (hasKeyCode([this.controlScheme.selectionUp, this.controlScheme.selectionDown], e)) {
+        e.preventDefault();
+        this.showSuggestions();
+
+        const isMovingDown = hasKeyCode(this.controlScheme.selectionDown, e);
+        const direction = isMovingDown * 2 - 1;
+        const listEdge = isMovingDown ? 0 : this.suggestions.length - 1;
+        const hoversBetweenEdges = isMovingDown ? this.hoveredIndex < this.suggestions.length - 1 : this.hoveredIndex > 0;
+
+        let item = null;
+
+        if (!this.hovered) {
+          item = this.selected || this.suggestions[listEdge];
+        } else if (hoversBetweenEdges) {
+          item = this.suggestions[this.hoveredIndex + direction];
+        } else /* if hovers on edge */{
+            item = this.suggestions[listEdge];
+          }
+
+        this.hover(item);
+      }
+    },
+    onListKeyUp(e) {
+      const select = this.controlScheme.select,
+            hideList = this.controlScheme.hideList;
+
+      if (hasKeyCode([select, hideList], e)) {
+        e.preventDefault();
+        if (this.listShown) {
+          if (hasKeyCode(select, e) && this.hovered) {
+            this.select(this.hovered);
+          }
+
+          this.hideList();
+        } else if (hasKeyCode(select, e)) {
+          this.research();
+        }
+      }
+    },
+    onAutocomplete(e) {
+      if (hasKeyCode(this.controlScheme.autocomplete, e) && (e.ctrlKey || e.shiftKey) && this.suggestions.length > 0 && this.suggestions[0] && this.listShown) {
+        e.preventDefault();
+        this.hover(this.suggestions[0]);
+        this.autocompleteText(this.displayProperty(this.suggestions[0]));
+      }
+    },
+    suggestionClick(suggestion, e) {
+      this.$emit('suggestion-click', suggestion, e);
+      this.select(suggestion);
+      this.hideList();
+
+      /// Ensure, that all needed flags are off before finishing the click.
+      this.isClicking = this.isOverList = false;
+    },
+    onBlur(e) {
+      if (this.isInFocus) {
+
+        /// Clicking starts here, because input's blur occurs before the suggestionClick
+        /// and exactly when the user clicks the mouse button or taps the screen.
+        this.isClicking = this.isOverList && !this.isTabbed;
+
+        if (!this.isClicking) {
+          this.isInFocus = false;
+          this.hideList();
+
+          this.$emit('blur', e);
+        } else if (e.isTrusted && !this.isTabbed) {
+          this.inputElement.focus();
+        }
+      } else {
+        this.inputElement.blur();
+        console.error(`This should never happen!
+          If you encouneterd this error, please report at https://github.com/KazanExpress/vue-simple-suggest/issues`);
+      }
+
+      this.isTabbed = false;
+    },
+    onFocus(e) {
+      this.isInFocus = true;
+
+      // Only emit, if it was a native input focus
+      if (e.sourceCapabilities) {
+        this.$emit('focus', e);
+      }
+
+      // Show list only if the item has not been clicked
+      if (!this.isClicking) {
+        this.showList();
+      }
+    },
+    onInput(inputEvent) {
+      this.text = inputEvent.target.value;
+      this.$emit('input', this.text);
+
+      if (this.selected) {
+        this.selected = null;
+        this.$emit('select', null);
+      }
+
+      if (this.debounce) {
+        clearTimeout(this.timeoutInstance);
+        this.timeoutInstance = setTimeout(this.research, this.debounce);
+      } else {
+        this.research();
+      }
+    },
+    research: _async(function () {
+      var _this2 = this;
+
+      return _finally(function () {
+        return _catch(function () {
+          return _invokeIgnored(function () {
+            if (_this2.canSend) {
+              _this2.canSend = false;
+              var _$set = _this2.$set;
+              return _await(_this2.getSuggestions(_this2.text), function (_this2$getSuggestions) {
+                _$set.call(_this2, _this2, 'suggestions', _this2$getSuggestions);
+                _this2.canSend = true;
+              });
+            }
+          });
+        }, function (e) {
+          _this2.clearSuggestions();
+          throw e;
+        });
+      }, function () {
+        if (_this2.suggestions.length === 0 && _this2.miscSlotsAreEmpty()) {
+          _this2.hideList();
+        } else {
+          _this2.showList();
+        }
+
+        return _this2.suggestions;
+      });
+    }),
+    getSuggestions: _async(function (value = '') {
+      var _this3 = this;
+
+      if (_this3.listShown && !value && _this3.minLength > 0) {
+        _this3.hideList();
+        _this3.clearSuggestions();
+        return _this3.suggestions;
+      }
+
+      if (value.length < _this3.minLength) {
+        return _this3.suggestions;
+      }
+
+      _this3.selected = null;
+
+      // Start request if can
+      if (_this3.listIsRequest) {
+        _this3.$emit('request-start', value);
+      }
+
+      let result = [];
+      return _finally(function () {
+        return _catch(function () {
+          return _invoke(function () {
+            if (_this3.listIsRequest) {
+              return _await(_this3.list(value), function (_this3$list) {
+                result = _this3$list || [];
+              });
+            } else {
+              result = _this3.list;
+            }
+          }, function () {
+            // IFF the result is not an array (just in case!) - make it an array
+            if (!Array.isArray(result)) {
+              result = [result];
+            }
+
+            _this3.isPlainSuggestion = typeof result[0] !== 'object' || Array.isArray(result[0]);
+
+            if (_this3.filterByQuery) {
+              result = result.filter(el => _this3.filter(el, value));
+            }
+
+            if (_this3.listIsRequest) {
+              _this3.$emit('request-done', result);
+            }
+          });
+        }, function (e) {
+          if (_this3.listIsRequest) {
+            _this3.$emit('request-failed', e);
+          } else {
+            throw e;
+          }
+        });
+      }, function () {
+        if (_this3.maxSuggestions) {
+          result.splice(_this3.maxSuggestions);
+        }
+
+        return result;
+      });
+    }),
+
+    clearSuggestions() {
+      this.suggestions.splice(0);
+    }
+  }
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (VueSimpleSuggest);
+
 
 /***/ }),
 
@@ -12294,11 +13512,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data2_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__data2_json__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vue__ = __webpack_require__("./node_modules/vue/dist/vue.common.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_vue_currency_filter__ = __webpack_require__("./node_modules/vue-currency-filter/dist/VueCurrencyFilter.bundle.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_vue_currency_filter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_vue_currency_filter__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_money__ = __webpack_require__("./node_modules/money/money.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_money___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_money__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__vue_Searchbar_vue__ = __webpack_require__("./source/_assets/js/vue/Searchbar.vue");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__vue_Searchbar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__vue_Searchbar_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__vue_Cryptolist_vue__ = __webpack_require__("./source/_assets/js/vue/Cryptolist.vue");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__vue_Cryptolist_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__vue_Cryptolist_vue__);
 /*jshint esversion: 6 */
+
 
 
 
@@ -12589,72 +13808,128 @@ ready(function () {
     });
   }
 
-  // Vue for currency conversion
-  function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+  // convert to full vue app later
+  if (document.getElementById("vm1")) {
+    var vm1 = new __WEBPACK_IMPORTED_MODULE_3_vue___default.a({
+      el: '#vm1',
+      components: {
+        'v-cryptolist': __WEBPACK_IMPORTED_MODULE_5__vue_Cryptolist_vue___default.a
+      }
+    });
   }
-  __WEBPACK_IMPORTED_MODULE_5_money___default.a.base = "USD";
-  __WEBPACK_IMPORTED_MODULE_5_money___default.a.rates = {
-    "EUR": 0.814080, // eg. 1 USD === 0.745101 EUR
-    "GBP": 0.647710, // etc...
-    "HKD": 7.781919,
-    "USD": 1 // always include the base rate (1:1)
-    /* etc */
-  };
-  __WEBPACK_IMPORTED_MODULE_3_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_4_vue_currency_filter___default.a, {
-    symbol: '$',
-    thousandsSeparator: '.',
-    fractionCount: 2,
-    fractionSeparator: ',',
-    symbolPosition: 'front',
-    symbolSpacing: true
-  });
-  var app = new __WEBPACK_IMPORTED_MODULE_3_vue___default.a({
-    el: '#app',
-    data: {
-      currency: 'USD',
-      configSymbol: '$',
-      configSeparator: '.',
-      configFractionCount: 2,
-      configFractionSeparator: ',',
-      configSymbolPosition: 'front',
-      configSymbolSpacing: true,
-      cryptoData: [//rank, name, cap,
-      { rank: 1, toggleStar: true, toggleAlert: true, icon: 'cc BTC', currency: 'Bitcoin', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }, { rank: 2, toggleStar: false, toggleAlert: true, icon: 'cc ETH-alt', currency: 'Ethereum', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }, { rank: 3, toggleStar: false, toggleAlert: false, icon: 'cc XRP-alt', currency: 'Ripple', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }, { rank: 4, toggleStar: false, toggleAlert: false, icon: 'cc BTC', currency: 'Bitcoin', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }, { rank: 5, toggleStar: false, toggleAlert: true, icon: 'cc ETH-alt', currency: 'Ethereum', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }, { rank: 6, toggleStar: false, toggleAlert: false, icon: 'cc XRP-alt', currency: 'Ripple', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }, { rank: 7, toggleStar: false, toggleAlert: false, icon: 'cc BTC', currency: 'Bitcoin', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }, { rank: 8, toggleStar: false, toggleAlert: false, icon: 'cc ETH-alt', currency: 'Ethereum', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }, { rank: 9, toggleStar: false, toggleAlert: false, icon: 'cc XRP-alt', currency: 'Ripple', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }, { rank: 10, toggleStar: true, toggleAlert: false, icon: 'cc BTC', currency: 'Bitcoin', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }, { rank: 11, toggleStar: false, toggleAlert: false, icon: 'cc ETH-alt', currency: 'Ethereum', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }, { rank: 12, toggleStar: false, toggleAlert: false, icon: 'cc XRP-alt', currency: 'Ripple', cap: 171.48, price: 770.82, change: getRandomInt(-60, 60), low: 161.2, high: 271.48, volume: 161.2, averagevolume: 211.48 }]
-    },
-    computed: {
-      cryptoDataLocal: function cryptoDataLocal() {
-
-        var newdata = JSON.parse(JSON.stringify(this.cryptoData));
-        for (var i = 0; i < newdata.length; i++) {
-          newdata[i].cap = __WEBPACK_IMPORTED_MODULE_5_money___default()(newdata[i].cap).from("USD").to(this.currency);
-          newdata[i].price = __WEBPACK_IMPORTED_MODULE_5_money___default()(newdata[i].price).from("USD").to(this.currency);
-          newdata[i].low = __WEBPACK_IMPORTED_MODULE_5_money___default()(newdata[i].low).from("USD").to(this.currency);
-          newdata[i].high = __WEBPACK_IMPORTED_MODULE_5_money___default()(newdata[i].high).from("USD").to(this.currency);
-          newdata[i].volume = __WEBPACK_IMPORTED_MODULE_5_money___default()(newdata[i].volume).from("USD").to(this.currency);
-          newdata[i].averagevolume = __WEBPACK_IMPORTED_MODULE_5_money___default()(newdata[i].averagevolume).from("USD").to(this.currency);
-        }
-        return newdata;
+  if (document.getElementById("vm2")) {
+    var vm2 = new __WEBPACK_IMPORTED_MODULE_3_vue___default.a({
+      el: '#vm2',
+      components: {
+        'v-searchbar': __WEBPACK_IMPORTED_MODULE_4__vue_Searchbar_vue___default.a
       }
-    },
-    methods: {
-      switchCurrencyEUR: function switchCurrencyEUR() {
-        this.currency = 'EUR';
-        this.configSymbol = '€';
-        this.configSymbolPosition = 'end';
-        this.configSeparator = ',';
-        this.configFractionSeparator = '.';
-      },
-      switchCurrencyUSD: function switchCurrencyUSD() {
-        this.currency = 'USD';
-        this.configSymbol = '$';
-        this.configSymbolPosition = 'front';
-        this.configSeparator = '.';
-        this.configFractionSeparator = ',';
+    });
+  }
+  if (document.getElementById("vm3")) {
+    var vm3 = new __WEBPACK_IMPORTED_MODULE_3_vue___default.a({
+      el: '#vm3',
+      components: {
+        'v-searchbar': __WEBPACK_IMPORTED_MODULE_4__vue_Searchbar_vue___default.a
       }
-    }
-  });
+    });
+  }
 });
+
+/***/ }),
+
+/***/ "./source/_assets/js/vue/Cryptolist.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__("./node_modules/vue-loader/lib/component-normalizer.js")
+/* script */
+var __vue_script__ = __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./source/_assets/js/vue/Cryptolist.vue")
+/* template */
+var __vue_template__ = __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-4f5a704a\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./source/_assets/js/vue/Cryptolist.vue")
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "source\\_assets\\js\\vue\\Cryptolist.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-4f5a704a", Component.options)
+  } else {
+    hotAPI.reload("data-v-4f5a704a", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ "./source/_assets/js/vue/Searchbar.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__("./node_modules/vue-loader/lib/component-normalizer.js")
+/* script */
+var __vue_script__ = __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./source/_assets/js/vue/Searchbar.vue")
+/* template */
+var __vue_template__ = __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-33e30a1f\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./source/_assets/js/vue/Searchbar.vue")
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "source\\_assets\\js\\vue\\Searchbar.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-33e30a1f", Component.options)
+  } else {
+    hotAPI.reload("data-v-33e30a1f", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
 
 /***/ }),
 

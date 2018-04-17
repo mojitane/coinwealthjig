@@ -14,15 +14,8 @@
       <div class="navbar-menu">
         <div class="navbar-end is-size-6-light">
           <div class="navbar-item">
-            <div class="c-searchbar">
-              <div class="field">
-                <p class="control has-icons-right">
-                  <input class="input is-small c-searchbar__input" type="text" placeholder="Search">
-                  <span class="icon is-small is-right has-text-primary">
-                    <i class="fas fa-caret-right"></i>
-                  </span>
-                </p>
-              </div>
+            <div class="c-searchbar" id="vm2">
+              <v-searchbar></v-searchbar>
             </div>
           </div>
           <a href="#" class="navbar-item c-navbar__item c-navbar__item--border-right modal-button js-modal-button" data-target="modal-login">Login</a>
@@ -37,15 +30,8 @@
     </nav>
   </div>
 </div>
-<div class="c-searchbar--mobile u-hide-desktop">
-  <div class="field">
-    <p class="control has-icons-right">
-      <input class="input c-searchbar__input" type="text" placeholder="Search">
-      <span class="icon is-small is-right has-text-primary">
-        <i class="fas fa-caret-right"></i>
-      </span>
-    </p>
-  </div>
+<div class="c-searchbar--mobile u-hide-desktop" id="vm3">
+  <v-searchbar></v-searchbar>
 </div>
 <div class="cw-ticker has-text-weight-normal">
   <div class="container">
