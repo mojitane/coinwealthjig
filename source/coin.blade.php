@@ -91,7 +91,7 @@
         <div class="l-singlecoin__aside">
           <div class="columns">
             <div class="column is-7">
-              <section class="l-singlecoin__recent-posts">
+              <section>
                 <div class="columns u-hide-mobile">
                   <div class="column is-7 has-text-right">
                     <p class="is-uppercase has-text-spaced is-size-7">Want to know when something interesting happens?</p>
@@ -100,6 +100,16 @@
                     <a href="#" class="button is-primary is-fullwidth is-uppercase modal-button js-modal-button" data-target="modal-alert-vue">Set an alert &gt;</a>
                   </div>
                 </div>
+                <header>
+                  <h1 class="title is-5 is-uppercase has-text-spaced">Current Alerts</h1>
+                </header>
+                <ul class="is-size-6-light l-singlecoin__alert-list fa-ul">
+                  <li><span class="fa-li has-text-primary"><i class="fas fa-exclamation-triangle"></i></span> Price changes by more than 20% in less than 24 hours via cell <i class="fas fa-pencil-alt"></i> <i class="fas fa-trash-alt"></i></li>
+                  <li><span class="fa-li has-text-primary"><i class="fas fa-exclamation-triangle"></i></span> Price touches $7.50 or $9.00 via cell <i class="fas fa-pencil-alt"></i> <i class="fas fa-trash-alt"></i></li>
+                  <li><span class="fa-li has-text-primary"><i class="fas fa-exclamation-triangle"></i></span> Price changes by more than 10% in less than 15 minutes via cell <i class="fas fa-pencil-alt"></i> <i class="fas fa-trash-alt"></i></li>
+                </ul>
+              </section>
+              <section class="l-singlecoin__recent-posts">
                 <header>
                   <h1 class="title is-5 is-uppercase has-text-spaced">Recent posts</h1>
                   <p class="subtitle u-subtitle-has-margin">

@@ -13792,6 +13792,14 @@ body {
   padding: 2rem 1rem;
 }
 
+.l-singlecoin__alert-list {
+  margin: 0.5rem 0 1.5rem 1.7em;
+}
+
+.l-singlecoin__alert-list > li {
+  margin-bottom: 0.5em;
+}
+
 .l-post-new__sidebar-header {
   margin-bottom: 2rem;
 }
