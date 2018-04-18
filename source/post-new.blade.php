@@ -14,7 +14,7 @@
                 <input class="input" type="text" placeholder="Title">
               </div>
             </div>
-            <div class="level">
+            {{-- <div class="level">
               <div class="level-left">
                 <div class="level-item">
                   <input class="input is-static is-size-7" type="text" value="www.coinwealth.pro/community/thread/user/" readonly style="min-width: 260px;">
@@ -26,7 +26,7 @@
                   <a href="#" class="button is-small">Update</a>
                 </div>
               </div>
-            </div>
+            </div> --}}
             <div class="level is-mobile">
               <div class="level-left">
                 <div class="level-item"><i class="fas fa-align-left"></i></div>
@@ -52,7 +52,7 @@
             </div>
           </div>
         </div>
-        <div class="column">
+        {{-- <div class="column">
           <div class="l-post-new__sidebar-header">
             <a href="#" class="button is-outlined is-uppercase has-text-spaced is-small">Save draft</a>
           </div>
@@ -76,7 +76,7 @@
               </label>
             </div>
           </div>
-        </div>
+        </div> --}}
       </div>
     </div>
   </section>
