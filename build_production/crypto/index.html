@@ -15,6 +15,7 @@
         <ul class="cw-side-menu__links has-text-right">
           <li><a href="#" class="modal-button js-modal-button" data-target="modal-login">Login</a></li>
           <li><a href="#" class="modal-button js-modal-button" data-target="modal-register">Register</a></li>
+          <li><a href="#" class="modal-button js-modal-button" data-target="modal-profile">Profile</a></li>
           <li><a href="#"></a></li>
           <li><a href="/">Start</a></li>
           <li><a href="/thread">Thread</a></li>
@@ -23,7 +24,7 @@
           <li><a href="/exchangesvolume">All exchanges by volume</a></li>
           <li><a href="/home-returning">Home returning users</a></li>
           <li><a href="/community-home">Community home</a></li>
-          <li><a href="/profile">Profile</a></li>
+          <li><a href="/profile">Profile page</a></li>
           <li><a href="/post-new">New post</a></li>
         </ul>
       </div>
@@ -225,6 +226,30 @@
   <button class="modal-close is-large" aria-label="close"></button>
 </div>
 
+<div class="modal cw-modal" id="modal-profile">
+  <div class="modal-background"></div>
+  <div class="modal-content" style="max-width: 550px;">
+    <div class="cw-modal-card">
+      <div class="profile" id="vm5">
+        <v-profile></v-profile>
+      </div>
+    </div>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+<div class="modal cw-modal" id="modal-alert-vue">
+  <div class="modal-background"></div>
+  <div class="modal-content" style="max-width: 550px;">
+    <div class="cw-modal-card">
+      <div class="alert" id="vm6">
+        <v-alert></v-alert>
+      </div>
+    </div>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
         
 <main>
   <section class="section">
@@ -275,7 +300,9 @@
       </div>
     </div>
 
-
+    
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
     <script defer src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>
@@ -285,7 +312,7 @@
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
-    <link rel="stylesheet" href="/css/main.css?id=1474d7bf8ab6aa48ea4c">
-    <script src="/js/main.js?id=394ce28913eb52b53037"></script>
+    <link rel="stylesheet" href="/css/main.css?id=bd87173c92bda44fdd3e">
+    <script src="/js/main.js?id=2541a5fe9d5a5a6f7a05"></script>
   </body>
 </html>
