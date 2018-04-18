@@ -327,4 +327,12 @@ ready(function() {
       }
     });
   }
+  if (document.getElementById("vm5")) {
+    var vm4 = new Vue({
+      el: '#vm5',
+      components: {
+        'v-profile': Profile,
+      }
+    });
+  }
 });

@@ -147,3 +147,15 @@
   </div>
   <button class="modal-close is-large" aria-label="close"></button>
 </div>
+
+<div class="modal cw-modal" id="modal-profile">
+  <div class="modal-background"></div>
+  <div class="modal-content" style="max-width: 550px;">
+    <div class="cw-modal-card">
+      <div class="profile" id="vm5">
+        <v-profile></v-profile>
+      </div>
+    </div>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>

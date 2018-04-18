@@ -15,6 +15,7 @@
         <ul class="cw-side-menu__links has-text-right">
           <li><a href="#" class="modal-button js-modal-button" data-target="modal-login">Login</a></li>
           <li><a href="#" class="modal-button js-modal-button" data-target="modal-register">Register</a></li>
+          <li><a href="#" class="modal-button js-modal-button" data-target="modal-profile">Profile</a></li>
           <li><a href="#"></a></li>
           <li><a href="/">Start</a></li>
           <li><a href="/thread">Thread</a></li>
@@ -23,7 +24,7 @@
           <li><a href="/exchangesvolume">All exchanges by volume</a></li>
           <li><a href="/home-returning">Home returning users</a></li>
           <li><a href="/community-home">Community home</a></li>
-          <li><a href="/profile">Profile</a></li>
+          <li><a href="/profile">Profile page</a></li>
           <li><a href="/post-new">New post</a></li>
         </ul>
       </div>

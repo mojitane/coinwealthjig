@@ -14225,6 +14225,14 @@ ready(function () {
       }
     });
   }
+  if (document.getElementById("vm5")) {
+    var vm4 = new __WEBPACK_IMPORTED_MODULE_3_vue___default.a({
+      el: '#vm5',
+      components: {
+        'v-profile': __WEBPACK_IMPORTED_MODULE_6__vue_Profile_vue___default.a
+      }
+    });
+  }
 });
 
 /***/ }),
