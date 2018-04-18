@@ -8,6 +8,7 @@ import Vue from 'vue';
 import Searchbar from './vue/Searchbar.vue';
 import Cryptolist from './vue/Cryptolist.vue';
 import Profile from './vue/Profile.vue';
+import Alert from './vue/Alert.vue';
 
 function ready(fn) {
   if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
@@ -294,6 +295,21 @@ ready(function() {
     });
   }
 
+  // quilljs
+  var toolbarOptions = [
+    [{ align: '' }, { align: 'center' }, { align: 'right' }],
+    ['bold', 'italic', 'underline', 'blockquote'],        // toggled buttons
+    ['image', 'link'],
+  ];
+  if (document.getElementById("js-quill-editor")) {
+    var quill = new Quill('#js-quill-editor', {
+      modules: {
+        toolbar: toolbarOptions
+      },
+      theme: 'snow'
+    });
+  }
+
   // convert to full vue app later
   if (document.getElementById("vm1")) {
     var vm1 = new Vue({
@@ -328,10 +344,18 @@ ready(function() {
     });
   }
   if (document.getElementById("vm5")) {
-    var vm4 = new Vue({
+    var vm5 = new Vue({
       el: '#vm5',
       components: {
         'v-profile': Profile,
+      }
+    });
+  }
+  if (document.getElementById("vm6")) {
+    var vm6 = new Vue({
+      el: '#vm6',
+      components: {
+        'v-alert': Alert,
       }
     });
   }

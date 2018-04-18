@@ -159,3 +159,15 @@
   </div>
   <button class="modal-close is-large" aria-label="close"></button>
 </div>
+
+<div class="modal cw-modal" id="modal-alert-vue">
+  <div class="modal-background"></div>
+  <div class="modal-content" style="max-width: 550px;">
+    <div class="cw-modal-card">
+      <div class="alert" id="vm6">
+        <v-alert></v-alert>
+      </div>
+    </div>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>

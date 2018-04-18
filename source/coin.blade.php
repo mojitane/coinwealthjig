@@ -60,7 +60,7 @@
           </div>
           <div class="column l-singlecoin__alert-mobile u-hide-desktop has-text-centered">
             <p class="title is-6 is-uppercase has-font-weight-bold">Want to know when somthing interesting happens?</p>
-            <a href="#" class="button is-primary modal-button js-modal-button" data-target="modal-alert">Set an alert &gt;</a>
+            <a href="#" class="button is-primary modal-button js-modal-button" data-target="modal-alert-vue">Set an alert &gt;</a>
           </div>
           <div class="column l-singlecoin__iconcolumn">
             <div class="o-iconcolumn">
@@ -97,7 +97,7 @@
                     <p class="is-uppercase has-text-spaced is-size-7">Want to know when something interesting happens?</p>
                   </div>
                   <div class="column is-5">
-                    <a href="#" class="button is-primary is-fullwidth is-uppercase modal-button js-modal-button" data-target="modal-alert">Set an alert &gt;</a>
+                    <a href="#" class="button is-primary is-fullwidth is-uppercase modal-button js-modal-button" data-target="modal-alert-vue">Set an alert &gt;</a>
                   </div>
                 </div>
                 <header>

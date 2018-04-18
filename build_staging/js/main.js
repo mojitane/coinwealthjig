@@ -65,6 +65,159 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./source/_assets/js/vue/Alert.vue":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Tabs_vue__ = __webpack_require__("./source/_assets/js/vue/Tabs.vue");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Tabs_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Tabs_vue__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    Tabs: __WEBPACK_IMPORTED_MODULE_0__Tabs_vue___default.a
+  },
+  data: function data() {
+    return {
+      price: false,
+      movement: false
+    };
+  },
+
+  computed: {},
+  methods: {
+    togglePrice: function togglePrice() {}
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./source/_assets/js/vue/Cryptolist.vue":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -369,6 +522,69 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   },
 
   methods: {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./source/_assets/js/vue/Tabs.vue":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__("./node_modules/vue/dist/vue.common.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('tab', {
+  template: "\n    <div v-show=\"isActive\"><slot></slot></div>\n  ",
+
+  props: {
+    name: { required: true },
+    selected: { default: false }
+  },
+  data: function data() {
+    return {
+      isActive: false
+    };
+  },
+  mounted: function mounted() {
+    this.isActive = this.selected;
+  }
+});
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      tabs: []
+    };
+  },
+  created: function created() {
+    this.tabs = this.$children;
+  },
+
+  computed: {},
+  methods: {
+    selectTab: function selectTab(selectedTab) {
+      this.tabs.forEach(function (tab) {
+        tab.isActive = tab.name == selectedTab.name;
+      });
+    }
+  }
 });
 
 /***/ }),
@@ -1759,6 +1975,372 @@ if (false) {
   module.hot.accept()
   if (module.hot.data) {
     require("vue-hot-reload-api")      .rerender("data-v-33e30a1f", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-39020b90\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./source/_assets/js/vue/Alert.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _vm._m(0),
+      _vm._v(" "),
+      _c(
+        "tabs",
+        [
+          _c("tab", { attrs: { name: "Price Target" } }, [
+            _c(
+              "div",
+              { staticClass: "cw-modal-card__body has-text-centered" },
+              [
+                _c(
+                  "div",
+                  { staticClass: "cw-modal-card__alert-form has-text-spaced" },
+                  [
+                    _c("div", { staticClass: "field" }, [
+                      _c("p", { staticClass: "is-size-6-light" }, [
+                        _vm._v(
+                          "Notify me if the price of Binance touches (enter up to 4)"
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "field" }, [
+                      _c("div", { staticClass: "control has-text-centered" }, [
+                        _c("input", {
+                          staticClass: "input",
+                          staticStyle: { "max-width": "300px" },
+                          attrs: {
+                            type: "text",
+                            placeholder: "Price in dollar"
+                          }
+                        })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "field" }, [
+                      _c("div", { staticClass: "control has-text-centered" }, [
+                        _c("input", {
+                          staticClass: "input",
+                          staticStyle: { "max-width": "300px" },
+                          attrs: {
+                            type: "text",
+                            placeholder: "Price in dollar"
+                          }
+                        })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "field" }, [
+                      _c("div", { staticClass: "control has-text-centered" }, [
+                        _c("input", {
+                          staticClass: "input",
+                          staticStyle: { "max-width": "300px" },
+                          attrs: {
+                            type: "text",
+                            placeholder: "Price in dollar"
+                          }
+                        })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "field" }, [
+                      _c("div", { staticClass: "control has-text-centered" }, [
+                        _c("input", {
+                          staticClass: "input",
+                          staticStyle: { "max-width": "300px" },
+                          attrs: {
+                            type: "text",
+                            placeholder: "Price in dollar"
+                          }
+                        })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "cw-modal-card__alert-item level" },
+                      [
+                        _c("div", { staticClass: "level-item" }, [
+                          _vm._v("\n              via\n            ")
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "level-item" }, [
+                          _c(
+                            "select",
+                            {
+                              staticClass:
+                                "cw-modal__select is-uppercase is-size-6 has-text-spaced"
+                            },
+                            [
+                              _c("option", [_vm._v("cell")]),
+                              _vm._v(" "),
+                              _c("option", [_vm._v("email")])
+                            ]
+                          )
+                        ])
+                      ]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", [
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "cw-modal-card__action button is-primary has-text-spaced",
+                      attrs: { href: "#" }
+                    },
+                    [_vm._v("Set alert >")]
+                  )
+                ])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("tab", { attrs: { name: "Price Movement", selected: "true" } }, [
+            _c(
+              "div",
+              { staticClass: "cw-modal-card__body has-text-centered" },
+              [
+                _c(
+                  "div",
+                  { staticClass: "cw-modal-card__alert-form has-text-spaced" },
+                  [
+                    _c(
+                      "div",
+                      { staticClass: "cw-modal-card__alert-item level" },
+                      [
+                        _c("div", { staticClass: "level-item" }, [
+                          _vm._v(
+                            "\n              Notify me if the\n            "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "level-item" }, [
+                          _c(
+                            "select",
+                            {
+                              staticClass:
+                                "cw-modal__select is-uppercase is-size-6 has-text-spaced"
+                            },
+                            [
+                              _c("option", [_vm._v("volume")]),
+                              _vm._v(" "),
+                              _c("option", [_vm._v("other")])
+                            ]
+                          )
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "cw-modal-card__alert-item level" },
+                      [
+                        _c("div", { staticClass: "level-item" }, [
+                          _vm._v("\n              of Biance\n            ")
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "level-item" }, [
+                          _c(
+                            "select",
+                            {
+                              staticClass:
+                                "cw-modal__select is-uppercase is-size-6 has-text-spaced"
+                            },
+                            [
+                              _c("option", [_vm._v("increases")]),
+                              _vm._v(" "),
+                              _c("option", [_vm._v("decreases")])
+                            ]
+                          )
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "cw-modal-card__alert-item level" },
+                      [
+                        _c("div", { staticClass: "level-item" }, [
+                          _vm._v("\n              by more than\n            ")
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "level-item" }, [
+                          _c(
+                            "select",
+                            {
+                              staticClass:
+                                "cw-modal__select is-uppercase is-size-6 has-text-spaced"
+                            },
+                            [
+                              _c("option", [_vm._v("10%")]),
+                              _vm._v(" "),
+                              _c("option", [_vm._v("20%")]),
+                              _vm._v(" "),
+                              _c("option", [_vm._v("30%")])
+                            ]
+                          )
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "cw-modal-card__alert-item level" },
+                      [
+                        _c("div", { staticClass: "level-item" }, [
+                          _vm._v("\n              in less than\n            ")
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "level-item" }, [
+                          _c(
+                            "select",
+                            {
+                              staticClass:
+                                "cw-modal__select is-uppercase is-size-6 has-text-spaced"
+                            },
+                            [
+                              _c("option", [_vm._v("6")]),
+                              _vm._v(" "),
+                              _c("option", [_vm._v("12")]),
+                              _vm._v(" "),
+                              _c("option", [_vm._v("24")])
+                            ]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "level-item" }, [
+                          _vm._v("\n              hours\n            ")
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "cw-modal-card__alert-item level" },
+                      [
+                        _c("div", { staticClass: "level-item" }, [
+                          _vm._v("\n              via\n            ")
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "level-item" }, [
+                          _c(
+                            "select",
+                            {
+                              staticClass:
+                                "cw-modal__select is-uppercase is-size-6 has-text-spaced"
+                            },
+                            [
+                              _c("option", [_vm._v("cell")]),
+                              _vm._v(" "),
+                              _c("option", [_vm._v("email")])
+                            ]
+                          )
+                        ])
+                      ]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", [
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "cw-modal-card__action button is-primary has-text-spaced",
+                      attrs: { href: "#" }
+                    },
+                    [_vm._v("Set alert >")]
+                  )
+                ])
+              ]
+            )
+          ])
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "cw-modal-card__header" }, [
+      _c(
+        "p",
+        {
+          staticClass:
+            "title has-text-centered is-uppercase has-text-spaced is-5"
+        },
+        [_vm._v("Create a price alert")]
+      )
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-39020b90", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-3aecf5fa\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./source/_assets/js/vue/Tabs.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "tabs is-centered" }, [
+      _c(
+        "ul",
+        _vm._l(_vm.tabs, function(tab) {
+          return _c("li", { class: { "is-active": tab.isActive } }, [
+            _c(
+              "a",
+              {
+                attrs: { href: "#" },
+                on: {
+                  click: function($event) {
+                    _vm.selectTab(tab)
+                  }
+                }
+              },
+              [_vm._v(_vm._s(tab.name))]
+            )
+          ])
+        })
+      )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "tabs-content" }, [_vm._t("default")], 2)
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-3aecf5fa", module.exports)
   }
 }
 
@@ -13899,7 +14481,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__vue_Cryptolist_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__vue_Cryptolist_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__vue_Profile_vue__ = __webpack_require__("./source/_assets/js/vue/Profile.vue");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__vue_Profile_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__vue_Profile_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__vue_Alert_vue__ = __webpack_require__("./source/_assets/js/vue/Alert.vue");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__vue_Alert_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__vue_Alert_vue__);
 /*jshint esversion: 6 */
+
 
 
 
@@ -14192,6 +14777,18 @@ ready(function () {
     });
   }
 
+  // quilljs
+  var toolbarOptions = [[{ align: '' }, { align: 'center' }, { align: 'right' }], ['bold', 'italic', 'underline', 'blockquote'], // toggled buttons
+  ['image', 'link']];
+  if (document.getElementById("js-quill-editor")) {
+    var quill = new Quill('#js-quill-editor', {
+      modules: {
+        toolbar: toolbarOptions
+      },
+      theme: 'snow'
+    });
+  }
+
   // convert to full vue app later
   if (document.getElementById("vm1")) {
     var vm1 = new __WEBPACK_IMPORTED_MODULE_3_vue___default.a({
@@ -14226,14 +14823,70 @@ ready(function () {
     });
   }
   if (document.getElementById("vm5")) {
-    var vm4 = new __WEBPACK_IMPORTED_MODULE_3_vue___default.a({
+    var vm5 = new __WEBPACK_IMPORTED_MODULE_3_vue___default.a({
       el: '#vm5',
       components: {
         'v-profile': __WEBPACK_IMPORTED_MODULE_6__vue_Profile_vue___default.a
       }
     });
   }
+  if (document.getElementById("vm6")) {
+    var vm6 = new __WEBPACK_IMPORTED_MODULE_3_vue___default.a({
+      el: '#vm6',
+      components: {
+        'v-alert': __WEBPACK_IMPORTED_MODULE_7__vue_Alert_vue___default.a
+      }
+    });
+  }
 });
+
+/***/ }),
+
+/***/ "./source/_assets/js/vue/Alert.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__("./node_modules/vue-loader/lib/component-normalizer.js")
+/* script */
+var __vue_script__ = __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./source/_assets/js/vue/Alert.vue")
+/* template */
+var __vue_template__ = __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-39020b90\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./source/_assets/js/vue/Alert.vue")
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "source\\_assets\\js\\vue\\Alert.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-39020b90", Component.options)
+  } else {
+    hotAPI.reload("data-v-39020b90", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
 
 /***/ }),
 
@@ -14370,6 +15023,54 @@ if (false) {(function () {
     hotAPI.createRecord("data-v-33e30a1f", Component.options)
   } else {
     hotAPI.reload("data-v-33e30a1f", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ "./source/_assets/js/vue/Tabs.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__("./node_modules/vue-loader/lib/component-normalizer.js")
+/* script */
+var __vue_script__ = __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./source/_assets/js/vue/Tabs.vue")
+/* template */
+var __vue_template__ = __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-3aecf5fa\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./source/_assets/js/vue/Tabs.vue")
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "source\\_assets\\js\\vue\\Tabs.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-3aecf5fa", Component.options)
+  } else {
+    hotAPI.reload("data-v-3aecf5fa", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
