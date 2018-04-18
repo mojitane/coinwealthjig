@@ -1,2 +1,18 @@
 @import "home";
 @import "singlecoin";
+
+.l-post-new__sidebar-header {
+  margin-bottom: 2rem;
+  @include tablet {
+    text-align: right;
+  }
+}
+.l-post-new__sidebar-heading {
+  padding-bottom: 0.2em;
+  border-bottom: 2px solid $grey;
+  margin-bottom: 1em;
+  margin-top: 2rem;
+  &:first-of-type {
+    margin-top: 0;
+  }
+}

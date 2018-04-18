@@ -13792,6 +13792,27 @@ body {
   padding: 2rem 1rem;
 }
 
+.l-post-new__sidebar-header {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 769px), print {
+  .l-post-new__sidebar-header {
+    text-align: right;
+  }
+}
+
+.l-post-new__sidebar-heading {
+  padding-bottom: 0.2em;
+  border-bottom: 2px solid #7a7a7a;
+  margin-bottom: 1em;
+  margin-top: 2rem;
+}
+
+.l-post-new__sidebar-heading:first-of-type {
+  margin-top: 0;
+}
+
 @media screen and (min-width: 769px), print {
   .u-hide-desktop {
     display: none;

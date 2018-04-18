@@ -23,6 +23,8 @@
           <li><a href="/exchangesvolume">All exchanges by volume</a></li>
           <li><a href="/home-returning">Home returning users</a></li>
           <li><a href="/community-home">Community home</a></li>
+          <li><a href="/profile">Profile</a></li>
+          <li><a href="/post-new">New post</a></li>
         </ul>
       </div>
     </nav>
