@@ -1,4 +1,8 @@
-.cw-posts__header {
+/* ===============
+  COMPONENT POSTS
+   =============== */
+
+.c-posts__header {
   margin-bottom: 3rem;
   text-align: center;
   @include widescreen {
@@ -6,14 +10,14 @@
   }
 }
 
-.cw-posts__header-cta {
+.c-posts__header-cta {
   vertical-align: middle;
   @include widescreen {
     display: inline-block;
   }
 }
 
-.cw-posts__header-title {
+.c-posts__header-title {
   margin-right: 0.5rem;
   @include widescreen {
     display: inline-block;

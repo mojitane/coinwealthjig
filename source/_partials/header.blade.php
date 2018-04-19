@@ -33,12 +33,12 @@
 <div class="c-searchbar--mobile u-hide-desktop" id="vm3">
   <v-searchbar></v-searchbar>
 </div>
-<div class="cw-ticker has-text-weight-normal">
+<div class="c-ticker has-text-weight-normal">
   <div class="container">
-    <ul class="cw-ticker__list">
-      <li class="cw-ticker__item">cryptocurrencies in our universe: <span class="has-text-primary">255</span></li>
-      <li class="cw-ticker__item">total market cap: <span class="has-text-primary">$648B (+5% today)</span></li>
-      <li class="cw-ticker__item">24hr volume: <span class="has-text-primary">$65B</span></li>
+    <ul class="c-ticker__list">
+      <li class="c-ticker__item">cryptocurrencies in our universe: <span class="has-text-primary">255</span></li>
+      <li class="c-ticker__item">total market cap: <span class="has-text-primary">$648B (+5% today)</span></li>
+      <li class="c-ticker__item">24hr volume: <span class="has-text-primary">$65B</span></li>
     </ul>
   </div>
 </div>

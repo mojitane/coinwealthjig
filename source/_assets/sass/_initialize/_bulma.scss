@@ -23,8 +23,6 @@ $weight-bold: 700;
 
 $radius: 0;
 
-// $desktop: 900px;
-// $tablet: $desktop;
 $widescreen: 1052px + (2 * $gap);
 $fullhd: $widescreen;
 
@@ -36,6 +34,11 @@ $table-head-cell-border-width: 0;
 
 @import "~bulma/bulma";
 
+/* ===============
+    BULMA PLUGINS
+   =============== */
+
 $divider-font-size: $size-6;
 $divider-color: $text;
+
 @import '~bulma-divider'

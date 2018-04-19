@@ -1,6 +1,7 @@
 /*jshint esversion: 6 */
 
 import Slideout from 'slideout';
+// import json sample data for graphs
 import jsonSampleData from './data.json';
 import jsonSampleData2 from './data2.json';
 
@@ -10,6 +11,7 @@ import Cryptolist from './vue/Cryptolist.vue';
 import Profile from './vue/Profile.vue';
 import Alert from './vue/Alert.vue';
 
+// ready function
 function ready(fn) {
   if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
     fn();
@@ -19,7 +21,6 @@ function ready(fn) {
 }
 
 // array.from polyfill
-// Production steps of ECMA-262, Edition 6, 22.1.2.1
 if (!Array.from) {
   Array.from = (function () {
     var toStr = Object.prototype.toString;
@@ -72,7 +73,11 @@ if (!Array.from) {
   }());
 }
 
+
 ready(function() {
+  //
+  // SLIDEOUT MENU
+  //
   var slideout = new Slideout({
     'panel': document.getElementById('panel'),
     'menu': document.getElementById('menu'),
@@ -94,21 +99,22 @@ ready(function() {
       this.panel.classList.remove('panel-open');
       this.panel.removeEventListener('click', close);
     });
-  // Menu Toggle button
   document.querySelector('.js-slide-menu-toggle').addEventListener('click', function() {
     slideout.toggle();
   });
   document.querySelector('.js-slide-menu-toggle-desktop').addEventListener('click', function() {
     slideout.toggle();
   });
+  // close slideout menu when modal link is clicked
   Array.from(document.querySelectorAll('.js-modal-button')).forEach(link => {
       link.addEventListener('click', function(event) {
           slideout.close();
       });
   });
 
-  // star icons
-
+  //
+  // RANKING TOGGLE
+  //
   var $favIcons = document.querySelectorAll('.js-ranking-toggle');
   if ($favIcons.length > 0) {
     $favIcons.forEach(function ($el) {
@@ -119,6 +125,9 @@ ready(function() {
       });
     });
   }
+  //
+  // POST UP & DOWNVOTE
+  //
   var $teaserVotes = document.querySelectorAll('.js-post-teaser-vote');
   if ($teaserVotes.length > 0) {
     $teaserVotes.forEach(function ($el) {
@@ -135,7 +144,9 @@ ready(function() {
     });
   }
 
-  // Modals
+  //
+  // MODALS
+  //
   var rootEl = document.documentElement;
   var $modals = getAll('.modal');
   var $modalButtons = getAll('.modal-button');
@@ -174,7 +185,11 @@ ready(function() {
     return Array.prototype.slice.call(document.querySelectorAll(selector), 0);
   }
 
-  // Create the chart
+  //
+  // HIGHCHARTS
+  //
+
+  // Options for all charts
   Highcharts.setOptions({
     lang:{
         rangeSelectorZoom: ''
@@ -206,11 +221,6 @@ ready(function() {
       selected: 0,
       inputEnabled: false,
       buttons: [
-      //   {
-      //     type: 'day',
-      //     count: 1,
-      //     text: '1d'
-      // },
       {
           type: 'month',
           count: 1,
@@ -242,6 +252,8 @@ ready(function() {
       enabled: false
     },
   });
+
+  // initialize the 3 sample charts
   if (document.getElementById('js-highcharts-container-1') !== null) {
     Highcharts.stockChart('js-highcharts-container-1', {
       series: [{
@@ -253,9 +265,6 @@ ready(function() {
         }
       }]
     });
-  }
-  else {
-    console.log('no chart 1');
   }
   if (document.getElementById('js-highcharts-container-2') !== null) {
     Highcharts.stockChart('js-highcharts-container-2', {
@@ -269,9 +278,6 @@ ready(function() {
       }]
     });
   }
-  else {
-    console.log('no chart 2');
-  }
   if (document.getElementById('js-highcharts-container-3') !== null) {
     Highcharts.stockChart('js-highcharts-container-3', {
       series: [{
@@ -284,18 +290,20 @@ ready(function() {
       }]
     });
   }
-  else {
-    console.log('no chart 3');
-  }
-  // carousel flickity
-  if (document.querySelector('.js-cw-highcharts-carousel') !== null) {
-    var flkty = new Flickity( '.js-cw-highcharts-carousel', {
+
+  //
+  // FLICKITY CAROUSEL
+  //
+  if (document.querySelector('.js-c-highcharts-carousel') !== null) {
+    var flkty = new Flickity( '.js-c-highcharts-carousel', {
       watchCSS: true,
       pageDots: false
     });
   }
 
-  // quilljs
+  //
+  // QUILLJS WYSIWYG EDITOR
+  //
   var toolbarOptions = [
     [{ align: '' }, { align: 'center' }, { align: 'right' }],
     ['bold', 'italic', 'underline', 'blockquote'],        // toggled buttons
@@ -310,7 +318,11 @@ ready(function() {
     });
   }
 
-  // convert to full vue app later
+  //
+  // VUE
+  //
+
+  // Multiple Vue instances for mockup purposes, refactor for full app
   if (document.getElementById("vm1")) {
     var vm1 = new Vue({
       el: '#vm1',

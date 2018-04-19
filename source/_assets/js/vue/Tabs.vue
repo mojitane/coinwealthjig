@@ -43,8 +43,6 @@
     created() {
       this.tabs = this.$children;
     },
-    computed: {
-    },
     methods: {
       selectTab(selectedTab) {
         this.tabs.forEach(tab => {

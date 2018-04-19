@@ -1,3 +1,7 @@
+/* ===============
+      OBJECTS
+   =============== */
+
 .o-burger {
   @include hamburger($navbar-height);
 }
@@ -45,9 +49,6 @@
 .o-descriptionlist__title {
   text-transform: uppercase;
   font-weight: 700;
-}
-.o-descriptionlist__description {
-
 }
 
 .o-iconcolumn {

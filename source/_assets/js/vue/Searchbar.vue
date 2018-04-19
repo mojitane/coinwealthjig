@@ -2,7 +2,7 @@
   <div>
     <vue-suggest
       v-model="chosen"
-      :list="objectlist"
+      :list="suggestionList"
       value-attribute="title"
       :filter-by-query="true">
       <div class="field">
@@ -31,13 +31,7 @@
     data() {
       return {
         chosen: '',
-        testlist: [
-          'Vue.js',
-          'React.js',
-          'Angular.js',
-          'test',
-        ],
-        objectlist: [
+        suggestionList: [
           { title: 'Bitcoin', icon: 'cc BTC' },
           { title: 'Ethereum', icon: 'cc ETH-alt' },
           { title: 'Ripple', icon: 'cc XRP-alt' },
@@ -50,7 +44,5 @@
         ]
       }
     },
-    methods: {
-    }
   }
 </script>

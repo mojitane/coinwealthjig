@@ -1,3 +1,7 @@
+/* ===============
+      UTILITY
+   =============== */
+
 .u-hide-desktop {
   @include tablet {
     display: none;

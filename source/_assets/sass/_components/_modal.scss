@@ -1,27 +1,31 @@
-.cw-modal {
+/* ===============
+  COMPONENT MODAL
+   =============== */
+
+.c-modal {
   .modal-content {
     max-width: 400px;
   }
 }
 
-.cw-modal-card {
+.c-modal__card {
   background-color: $white;
   padding: 6rem 3rem 4rem;
 }
 
-.cw-modal-card__header {
+.c-modal__header {
   margin-bottom: 2rem;
 }
 
-.cw-modal-card__form  {
+.c-modal__form  {
   margin-bottom: 2rem;
 }
 
-.cw-modal-card__alert-form {
+.c-modal__alert-form {
   margin-bottom: 1.5rem;
 }
 
-.cw-modal-card__alert-item {
+.c-modal__alert-item {
   justify-content: center;
   > div {
     flex-grow: 0!important;
@@ -29,7 +33,7 @@
   }
 }
 
-.cw-modal__select {
+.c-modal__select {
   font-weight: 700;
   border-top: 0;
   border-left: 0;

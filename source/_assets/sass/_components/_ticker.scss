@@ -1,10 +1,14 @@
-.cw-ticker {
+/* ===============
+  COMPONENT TICKER
+   =============== */
+
+.c-ticker {
   padding: 0.5rem 1rem;
   background-color: $black;
   color: $white;
 }
 
-.cw-ticker__item {
+.c-ticker__item {
   text-align: center;
   @include tablet {
     display: inline;
@@ -19,8 +23,8 @@
     }
   }
 }
-.cw-ticker--mobile-spacers {
-  .cw-ticker__item {
+.c-ticker--mobile-spacers {
+  .c-ticker__item {
     display: inline;
     text-align: left;
     &:after {

@@ -192,10 +192,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
 
 
 
@@ -208,11 +204,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       price: false,
       movement: false
     };
-  },
-
-  computed: {},
-  methods: {
-    togglePrice: function togglePrice() {}
   }
 });
 
@@ -469,8 +460,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   methods: {
     toggleEdit: function toggleEdit() {
       this.editing = !this.editing;
-      console.log('switched');
-      console.log(this.editing);
     }
   }
 });
@@ -516,12 +505,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   data: function data() {
     return {
       chosen: '',
-      testlist: ['Vue.js', 'React.js', 'Angular.js', 'test'],
-      objectlist: [{ title: 'Bitcoin', icon: 'cc BTC' }, { title: 'Ethereum', icon: 'cc ETH-alt' }, { title: 'Ripple', icon: 'cc XRP-alt' }, { title: 'Dogecoin', icon: 'cc DOGE-alt' }, { title: 'Dash', icon: 'cc DASH-alt' }, { title: 'FuelCoin', icon: 'cc FC2-alt' }, { title: 'Vertcoin', icon: 'cc VTC-alt' }, { title: 'Tether', icon: 'cc USDT' }, { title: 'Rubies', icon: 'cc RBIES' }]
+      suggestionList: [{ title: 'Bitcoin', icon: 'cc BTC' }, { title: 'Ethereum', icon: 'cc ETH-alt' }, { title: 'Ripple', icon: 'cc XRP-alt' }, { title: 'Dogecoin', icon: 'cc DOGE-alt' }, { title: 'Dash', icon: 'cc DASH-alt' }, { title: 'FuelCoin', icon: 'cc FC2-alt' }, { title: 'Vertcoin', icon: 'cc VTC-alt' }, { title: 'Tether', icon: 'cc USDT' }, { title: 'Rubies', icon: 'cc RBIES' }]
     };
-  },
-
-  methods: {}
+  }
 });
 
 /***/ }),
@@ -577,7 +563,6 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('tab', {
     this.tabs = this.$children;
   },
 
-  computed: {},
   methods: {
     selectTab: function selectTab(selectedTab) {
       this.tabs.forEach(function (tab) {
@@ -1920,7 +1905,7 @@ var render = function() {
         "vue-suggest",
         {
           attrs: {
-            list: _vm.objectlist,
+            list: _vm.suggestionList,
             "value-attribute": "title",
             "filter-by-query": true
           },
@@ -1996,275 +1981,229 @@ var render = function() {
         "tabs",
         [
           _c("tab", { attrs: { name: "Price Target" } }, [
-            _c(
-              "div",
-              { staticClass: "cw-modal-card__body has-text-centered" },
-              [
+            _c("div", { staticClass: "c-modal__body has-text-centered" }, [
+              _c(
+                "div",
+                { staticClass: "c-modal__alert-form has-text-spaced" },
+                [
+                  _c("div", { staticClass: "field" }, [
+                    _c("p", { staticClass: "is-size-6-light" }, [
+                      _vm._v(
+                        "Notify me if the price of Binance touches (enter up to 4)"
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "field" }, [
+                    _c("div", { staticClass: "control has-text-centered" }, [
+                      _c("input", {
+                        staticClass: "input",
+                        staticStyle: { "max-width": "300px" },
+                        attrs: { type: "text", placeholder: "Price in dollar" }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "field" }, [
+                    _c("div", { staticClass: "control has-text-centered" }, [
+                      _c("input", {
+                        staticClass: "input",
+                        staticStyle: { "max-width": "300px" },
+                        attrs: { type: "text", placeholder: "Price in dollar" }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "field" }, [
+                    _c("div", { staticClass: "control has-text-centered" }, [
+                      _c("input", {
+                        staticClass: "input",
+                        staticStyle: { "max-width": "300px" },
+                        attrs: { type: "text", placeholder: "Price in dollar" }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "field" }, [
+                    _c("div", { staticClass: "control has-text-centered" }, [
+                      _c("input", {
+                        staticClass: "input",
+                        staticStyle: { "max-width": "300px" },
+                        attrs: { type: "text", placeholder: "Price in dollar" }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "c-modal__alert-item level" }, [
+                    _c("div", { staticClass: "level-item" }, [
+                      _vm._v("\n              via\n            ")
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "level-item" }, [
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "c-modal__select is-uppercase is-size-6 has-text-spaced"
+                        },
+                        [
+                          _c("option", [_vm._v("cell")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("email")])
+                        ]
+                      )
+                    ])
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", [
                 _c(
-                  "div",
-                  { staticClass: "cw-modal-card__alert-form has-text-spaced" },
-                  [
-                    _c("div", { staticClass: "field" }, [
-                      _c("p", { staticClass: "is-size-6-light" }, [
-                        _vm._v(
-                          "Notify me if the price of Binance touches (enter up to 4)"
-                        )
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "field" }, [
-                      _c("div", { staticClass: "control has-text-centered" }, [
-                        _c("input", {
-                          staticClass: "input",
-                          staticStyle: { "max-width": "300px" },
-                          attrs: {
-                            type: "text",
-                            placeholder: "Price in dollar"
-                          }
-                        })
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "field" }, [
-                      _c("div", { staticClass: "control has-text-centered" }, [
-                        _c("input", {
-                          staticClass: "input",
-                          staticStyle: { "max-width": "300px" },
-                          attrs: {
-                            type: "text",
-                            placeholder: "Price in dollar"
-                          }
-                        })
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "field" }, [
-                      _c("div", { staticClass: "control has-text-centered" }, [
-                        _c("input", {
-                          staticClass: "input",
-                          staticStyle: { "max-width": "300px" },
-                          attrs: {
-                            type: "text",
-                            placeholder: "Price in dollar"
-                          }
-                        })
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "field" }, [
-                      _c("div", { staticClass: "control has-text-centered" }, [
-                        _c("input", {
-                          staticClass: "input",
-                          staticStyle: { "max-width": "300px" },
-                          attrs: {
-                            type: "text",
-                            placeholder: "Price in dollar"
-                          }
-                        })
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "cw-modal-card__alert-item level" },
-                      [
-                        _c("div", { staticClass: "level-item" }, [
-                          _vm._v("\n              via\n            ")
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "level-item" }, [
-                          _c(
-                            "select",
-                            {
-                              staticClass:
-                                "cw-modal__select is-uppercase is-size-6 has-text-spaced"
-                            },
-                            [
-                              _c("option", [_vm._v("cell")]),
-                              _vm._v(" "),
-                              _c("option", [_vm._v("email")])
-                            ]
-                          )
-                        ])
-                      ]
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c("div", [
-                  _c(
-                    "a",
-                    {
-                      staticClass:
-                        "cw-modal-card__action button is-primary has-text-spaced",
-                      attrs: { href: "#" }
-                    },
-                    [_vm._v("Set alert >")]
-                  )
-                ])
-              ]
-            )
+                  "a",
+                  {
+                    staticClass:
+                      "c-modal__action button is-primary has-text-spaced",
+                    attrs: { href: "#" }
+                  },
+                  [_vm._v("Set alert >")]
+                )
+              ])
+            ])
           ]),
           _vm._v(" "),
           _c("tab", { attrs: { name: "Price Movement", selected: "true" } }, [
-            _c(
-              "div",
-              { staticClass: "cw-modal-card__body has-text-centered" },
-              [
+            _c("div", { staticClass: "c-modal__body has-text-centered" }, [
+              _c(
+                "div",
+                { staticClass: "c-modal__alert-form has-text-spaced" },
+                [
+                  _c("div", { staticClass: "c-modal__alert-item level" }, [
+                    _c("div", { staticClass: "level-item" }, [
+                      _vm._v("\n              Notify me if the\n            ")
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "level-item" }, [
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "c-modal__select is-uppercase is-size-6 has-text-spaced"
+                        },
+                        [
+                          _c("option", [_vm._v("volume")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("other")])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "c-modal__alert-item level" }, [
+                    _c("div", { staticClass: "level-item" }, [
+                      _vm._v("\n              of Biance\n            ")
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "level-item" }, [
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "c-modal__select is-uppercase is-size-6 has-text-spaced"
+                        },
+                        [
+                          _c("option", [_vm._v("increases")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("decreases")])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "c-modal__alert-item level" }, [
+                    _c("div", { staticClass: "level-item" }, [
+                      _vm._v("\n              by more than\n            ")
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "level-item" }, [
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "c-modal__select is-uppercase is-size-6 has-text-spaced"
+                        },
+                        [
+                          _c("option", [_vm._v("10%")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("20%")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("30%")])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "c-modal__alert-item level" }, [
+                    _c("div", { staticClass: "level-item" }, [
+                      _vm._v("\n              in less than\n            ")
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "level-item" }, [
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "c-modal__select is-uppercase is-size-6 has-text-spaced"
+                        },
+                        [
+                          _c("option", [_vm._v("6")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("12")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("24")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "level-item" }, [
+                      _vm._v("\n              hours\n            ")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "c-modal__alert-item level" }, [
+                    _c("div", { staticClass: "level-item" }, [
+                      _vm._v("\n              via\n            ")
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "level-item" }, [
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "c-modal__select is-uppercase is-size-6 has-text-spaced"
+                        },
+                        [
+                          _c("option", [_vm._v("cell")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("email")])
+                        ]
+                      )
+                    ])
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", [
                 _c(
-                  "div",
-                  { staticClass: "cw-modal-card__alert-form has-text-spaced" },
-                  [
-                    _c(
-                      "div",
-                      { staticClass: "cw-modal-card__alert-item level" },
-                      [
-                        _c("div", { staticClass: "level-item" }, [
-                          _vm._v(
-                            "\n              Notify me if the\n            "
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "level-item" }, [
-                          _c(
-                            "select",
-                            {
-                              staticClass:
-                                "cw-modal__select is-uppercase is-size-6 has-text-spaced"
-                            },
-                            [
-                              _c("option", [_vm._v("volume")]),
-                              _vm._v(" "),
-                              _c("option", [_vm._v("other")])
-                            ]
-                          )
-                        ])
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "cw-modal-card__alert-item level" },
-                      [
-                        _c("div", { staticClass: "level-item" }, [
-                          _vm._v("\n              of Biance\n            ")
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "level-item" }, [
-                          _c(
-                            "select",
-                            {
-                              staticClass:
-                                "cw-modal__select is-uppercase is-size-6 has-text-spaced"
-                            },
-                            [
-                              _c("option", [_vm._v("increases")]),
-                              _vm._v(" "),
-                              _c("option", [_vm._v("decreases")])
-                            ]
-                          )
-                        ])
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "cw-modal-card__alert-item level" },
-                      [
-                        _c("div", { staticClass: "level-item" }, [
-                          _vm._v("\n              by more than\n            ")
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "level-item" }, [
-                          _c(
-                            "select",
-                            {
-                              staticClass:
-                                "cw-modal__select is-uppercase is-size-6 has-text-spaced"
-                            },
-                            [
-                              _c("option", [_vm._v("10%")]),
-                              _vm._v(" "),
-                              _c("option", [_vm._v("20%")]),
-                              _vm._v(" "),
-                              _c("option", [_vm._v("30%")])
-                            ]
-                          )
-                        ])
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "cw-modal-card__alert-item level" },
-                      [
-                        _c("div", { staticClass: "level-item" }, [
-                          _vm._v("\n              in less than\n            ")
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "level-item" }, [
-                          _c(
-                            "select",
-                            {
-                              staticClass:
-                                "cw-modal__select is-uppercase is-size-6 has-text-spaced"
-                            },
-                            [
-                              _c("option", [_vm._v("6")]),
-                              _vm._v(" "),
-                              _c("option", [_vm._v("12")]),
-                              _vm._v(" "),
-                              _c("option", [_vm._v("24")])
-                            ]
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "level-item" }, [
-                          _vm._v("\n              hours\n            ")
-                        ])
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "cw-modal-card__alert-item level" },
-                      [
-                        _c("div", { staticClass: "level-item" }, [
-                          _vm._v("\n              via\n            ")
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "level-item" }, [
-                          _c(
-                            "select",
-                            {
-                              staticClass:
-                                "cw-modal__select is-uppercase is-size-6 has-text-spaced"
-                            },
-                            [
-                              _c("option", [_vm._v("cell")]),
-                              _vm._v(" "),
-                              _c("option", [_vm._v("email")])
-                            ]
-                          )
-                        ])
-                      ]
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c("div", [
-                  _c(
-                    "a",
-                    {
-                      staticClass:
-                        "cw-modal-card__action button is-primary has-text-spaced",
-                      attrs: { href: "#" }
-                    },
-                    [_vm._v("Set alert >")]
-                  )
-                ])
-              ]
-            )
+                  "a",
+                  {
+                    staticClass:
+                      "c-modal__action button is-primary has-text-spaced",
+                    attrs: { href: "#" }
+                  },
+                  [_vm._v("Set alert >")]
+                )
+              ])
+            ])
           ])
         ],
         1
@@ -2278,7 +2217,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "cw-modal-card__header" }, [
+    return _c("div", { staticClass: "c-modal__header" }, [
       _c(
         "p",
         {
@@ -14486,6 +14425,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /*jshint esversion: 6 */
 
 
+// import json sample data for graphs
 
 
 
@@ -14495,6 +14435,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+// ready function
 function ready(fn) {
   if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
     fn();
@@ -14504,7 +14445,6 @@ function ready(fn) {
 }
 
 // array.from polyfill
-// Production steps of ECMA-262, Edition 6, 22.1.2.1
 if (!Array.from) {
   Array.from = function () {
     var toStr = Object.prototype.toString;
@@ -14562,6 +14502,9 @@ if (!Array.from) {
 }
 
 ready(function () {
+  //
+  // SLIDEOUT MENU
+  //
   var slideout = new __WEBPACK_IMPORTED_MODULE_0_slideout___default.a({
     'panel': document.getElementById('panel'),
     'menu': document.getElementById('menu'),
@@ -14580,21 +14523,22 @@ ready(function () {
     this.panel.classList.remove('panel-open');
     this.panel.removeEventListener('click', close);
   });
-  // Menu Toggle button
   document.querySelector('.js-slide-menu-toggle').addEventListener('click', function () {
     slideout.toggle();
   });
   document.querySelector('.js-slide-menu-toggle-desktop').addEventListener('click', function () {
     slideout.toggle();
   });
+  // close slideout menu when modal link is clicked
   Array.from(document.querySelectorAll('.js-modal-button')).forEach(function (link) {
     link.addEventListener('click', function (event) {
       slideout.close();
     });
   });
 
-  // star icons
-
+  //
+  // RANKING TOGGLE
+  //
   var $favIcons = document.querySelectorAll('.js-ranking-toggle');
   if ($favIcons.length > 0) {
     $favIcons.forEach(function ($el) {
@@ -14605,6 +14549,9 @@ ready(function () {
       });
     });
   }
+  //
+  // POST UP & DOWNVOTE
+  //
   var $teaserVotes = document.querySelectorAll('.js-post-teaser-vote');
   if ($teaserVotes.length > 0) {
     $teaserVotes.forEach(function ($el) {
@@ -14620,7 +14567,9 @@ ready(function () {
     });
   }
 
-  // Modals
+  //
+  // MODALS
+  //
   var rootEl = document.documentElement;
   var $modals = getAll('.modal');
   var $modalButtons = getAll('.modal-button');
@@ -14659,7 +14608,11 @@ ready(function () {
     return Array.prototype.slice.call(document.querySelectorAll(selector), 0);
   }
 
-  // Create the chart
+  //
+  // HIGHCHARTS
+  //
+
+  // Options for all charts
   Highcharts.setOptions({
     lang: {
       rangeSelectorZoom: ''
@@ -14690,13 +14643,7 @@ ready(function () {
       },
       selected: 0,
       inputEnabled: false,
-      buttons: [
-      //   {
-      //     type: 'day',
-      //     count: 1,
-      //     text: '1d'
-      // },
-      {
+      buttons: [{
         type: 'month',
         count: 1,
         text: '1M'
@@ -14727,6 +14674,8 @@ ready(function () {
       enabled: false
     }
   });
+
+  // initialize the 3 sample charts
   if (document.getElementById('js-highcharts-container-1') !== null) {
     Highcharts.stockChart('js-highcharts-container-1', {
       series: [{
@@ -14738,8 +14687,6 @@ ready(function () {
         }
       }]
     });
-  } else {
-    console.log('no chart 1');
   }
   if (document.getElementById('js-highcharts-container-2') !== null) {
     Highcharts.stockChart('js-highcharts-container-2', {
@@ -14752,8 +14699,6 @@ ready(function () {
         }
       }]
     });
-  } else {
-    console.log('no chart 2');
   }
   if (document.getElementById('js-highcharts-container-3') !== null) {
     Highcharts.stockChart('js-highcharts-container-3', {
@@ -14766,18 +14711,21 @@ ready(function () {
         }
       }]
     });
-  } else {
-    console.log('no chart 3');
   }
-  // carousel flickity
-  if (document.querySelector('.js-cw-highcharts-carousel') !== null) {
-    var flkty = new Flickity('.js-cw-highcharts-carousel', {
+
+  //
+  // FLICKITY CAROUSEL
+  //
+  if (document.querySelector('.js-c-highcharts-carousel') !== null) {
+    var flkty = new Flickity('.js-c-highcharts-carousel', {
       watchCSS: true,
       pageDots: false
     });
   }
 
-  // quilljs
+  //
+  // QUILLJS WYSIWYG EDITOR
+  //
   var toolbarOptions = [[{ align: '' }, { align: 'center' }, { align: 'right' }], ['bold', 'italic', 'underline', 'blockquote'], // toggled buttons
   ['image', 'link']];
   if (document.getElementById("js-quill-editor")) {
@@ -14789,7 +14737,11 @@ ready(function () {
     });
   }
 
-  // convert to full vue app later
+  //
+  // VUE
+  //
+
+  // Multiple Vue instances for mockup purposes, refactor for full app
   if (document.getElementById("vm1")) {
     var vm1 = new __WEBPACK_IMPORTED_MODULE_3_vue___default.a({
       el: '#vm1',

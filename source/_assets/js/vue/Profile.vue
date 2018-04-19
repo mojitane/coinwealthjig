@@ -113,8 +113,6 @@
     methods: {
       toggleEdit: function () {
         this.editing = !this.editing;
-        console.log('switched');
-        console.log(this.editing);
       }
     }
   }
